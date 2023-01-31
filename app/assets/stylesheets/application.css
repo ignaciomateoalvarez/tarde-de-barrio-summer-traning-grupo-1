@@ -1,15 +1,66 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 55.4375rem;
+    height: 36.5rem;
+    
+    
+
+    background: #FFFFFF;
+    box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
+    border-radius: 0.5rem;
+}
+
+.login {
+    background: #0090AF; 
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-card {
+    height: 100%;
+    display: flex;
+    
+}
+
+.form-card {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+
+}
+
+.imag-card {
+    display: flex;
+    align-items: center;
+}
+
+.nav-card {
+    
+}
+
+.signin-button{
+    color: white;
+    border-radius: 3.4537px;
+    background-color: #0090AF;
+    height: 2.5rem;
+    width: 15.625rem;
+}
+.signin-button-google{
+    border-color: #0090AF;
+    border-radius: 3.4537px;
+    border: 1px solid;
+    height: 2.5rem;
+    width: 15.625rem;
+
+    background-color: transparent;
+}

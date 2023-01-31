@@ -1,1 +1,35 @@
-<h1>HOLA MUNDO</h1>
+<section class="login">
+    <div class="container">
+        <div class="card">
+            <div class="nav-card">
+            </div>
+            <div class="container-card">
+                <%= image_tag("Frame.svg", class: 'imag-card') %>
+                <div class="form-card">
+                    <h1>Registro<h1>
+                    <%= form_with(model: @user) do |form| %>
+                        <div>
+                            <%= form.label :user_name %>
+                            <%= form.text_field :user_name,value: params[:user_name] %>
+                        </div>
+                        <div>
+                            <%= form.label :email %>
+                            <%= form.email_field :email,value: params[:email] %>
+                        </div>
+                        <div>
+                            <%= form.label :password %>
+                            <%= form.password_field :password,value: params[:password] %>
+                        </div>
+                        <div>
+                            <%= form.label :confirm_password %>
+                            <%= form.password_field :confirm_password,value: params[:confirm_password] %>
+                        </div>
+                    <%= form.submit class:'signin-button' %>
+              
+                    <% end %>
+                    <%= button_to "Register with google", '/' , {class:'signin-button-google'} %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
