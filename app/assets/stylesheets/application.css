@@ -27,21 +27,30 @@
 }
 
 .container-card {
-    height: 100%;
     display: flex;
-    
+    align-items: center;  
+}
+
+.form-label{
+    font-size: 14px;
+    font-family:'Roboto';
+    color: black;
 }
 
 .form-card {
     display: flex;
     justify-content: center;
-    text-align: right;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
 }
 
 .imag-card {
     display: flex;
     align-items: center;
+    width: 50%;
+    height: 100%;
 }
 
 .nav-card {
@@ -63,4 +72,25 @@
     width: 15.625rem;
 
     background-color: transparent;
+}
+
+.form-label{
+    font-size: 0.8125rem;
+    font-family:'Roboto';
+    color: black;
+    font-style: normal;
+}
+
+.center-form-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-card > h1 {
+    text-align: center;
+}
+
+.imag-size {
+    
 }
