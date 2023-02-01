@@ -1,37 +1,38 @@
 <section class="login">
-    <div class="container">
-        <div class="card">
-            <div class="nav-card">
-            </div>
-            <div class="container-card">
-              <div class="imag-card">
-                <%= image_tag("Frame.svg", class: 'imag-size') %>
-              </div>
-                <div class="form-card">
-                    <h1>Registro</h1>
-                    <%= form_with(model: @user) do |form| %>
-                        <div class='center-form-content'>
-                            <%= form.label :user_name , {class: 'form-label'} %>
-                            <%= form.text_field :user_name,value: params[:user_name] %>
-                        </div>
-                        <div  class='center-form-content'>
-                            <%= form.label :email , {class: 'form-label'}%>
-                            <%= form.email_field :email,value: params[:email] %>
-                        </div>
-                        <div  class='center-form-content'>
-                            <%= form.label :password , {class: 'form-label'}%>
-                            <%= form.password_field :password,value: params[:password] %>
-                        </div>
-                        <div  class='center-form-content'>
-                            <%= form.label :confirm_password , {class: 'form-label'}%>
-                            <%= form.password_field :confirm_password,value: params[:confirm_password] %>
-                        </div>
-                    <%= form.submit class:'signin-button' %>
-              
-                    <% end %>
-                    <%= button_to "Register with google", '/' , {class:'signin-button-google'} %>
-                </div>
-            </div>
+<div class="container">
+  <div class="card">
+    <nav class="menu">
+      <%= link_to "Sesion"%>
+      <%= link_to "Registro"%>
+    </nav>
+    <div class="container-card">
+      <div class="imag-card">
+        <%= image_tag("Frame.svg", class: 'imag-size') %>
+      </div>
+      <div class="form-card">
+        <h1>Registro</h1>
+        <%= form_with(model: @user) do |form| %>
+        <div class='center-form-content'>
+          <%= form.label :user_name , {class: 'form-label'} %>
+          <%= form.text_field :user_name,value: params[:user_name] %>
         </div>
+        <div  class='center-form-content'>
+          <%= form.label :email , {class: 'form-label'}%>
+          <%= form.email_field :email,value: params[:email] %>
+        </div>
+        <div  class='center-form-content'>
+          <%= form.label :password , {class: 'form-label'}%>
+          <%= form.password_field :password,value: params[:password] %>
+        </div>
+        <div  class='center-form-content'>
+          <%= form.label :confirm_password , {class: 'form-label'}%>
+          <%= form.password_field :confirm_password,value: params[:confirm_password] %>
+        </div>
+        <%= form.submit class:'signin-button' %>
+        <% end %>
+        <%= button_to "Register with google", '/' , {class:'signin-button-google'} %>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
