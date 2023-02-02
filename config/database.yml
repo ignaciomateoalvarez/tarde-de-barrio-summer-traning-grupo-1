@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  url: postgres://postgres:root@localhost:5432/product_dev
+  url: postgres://postgres:root@localhost:5432/tarde_de_barrio
 
 test:
   <<: *default
-  url: postgres://postgres:root@localhost:5432/product_test
+  url: postgres://postgres:root@localhost:5432/tarde_de_barrio_test
 
 production:
   <<: *default

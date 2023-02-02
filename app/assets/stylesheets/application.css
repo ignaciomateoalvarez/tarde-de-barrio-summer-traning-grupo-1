@@ -1,3 +1,8 @@
+/* ...
+ *= require_self
+ *= require_tree .
+ */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +13,12 @@
     width: 55.4375rem;
     height: 36.5rem;
     
-    
-
     background: #FFFFFF;
     box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
     border-radius: 0.5rem;
+
+    margin: 5rem 10rem 0rem 10rem;
+    padding: 20px 100px 50px 100px;
 }
 
 .login {
@@ -54,6 +60,19 @@
 }
 
 .menu {
+
+    height: 100px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    /* or 163% */
+    
+    text-align: center;
+    
+    color: #0090AF;
    
 }
 
@@ -82,15 +101,32 @@
 }
 
 .center-form-content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .form-card > h1 {
-    text-align: center;
+  ext-align: center;
 }
 
-.imag-size {
-    
+.h1 {
+  position: absolute;
+  width: 218px;
+  height: 29px;
+  left: 555px;
+  top: 93px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24.1759px;
+  line-height: 29px;
+
+
+text-align: center;
+
+color: #000000;
+
 }
+
