@@ -10,14 +10,14 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:email) }
   end
 
-  describe 'First Name Format' do
+  describe 'first_name_format' do
     it { should allow_value("Julián D'Feregotti").for(:first_name) }
     it { should allow_value('Gaston Núñez').for(:first_name) }
     it { should_not allow_value('Pepe1234').for(:first_name) }
     it { should_not allow_value('R@ul Perez').for(:first_name) }
   end
 
-  describe 'Last Name Format' do
+  describe 'last_name_format' do
     it { should allow_value('Perez Gonzales').for(:last_name) }
     it { should allow_value('Perez Gonzales').for(:last_name) }
     it { should_not allow_value('Acuña Fulanito12').for(:last_name) }

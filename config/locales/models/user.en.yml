@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: "Name is a required field"
+            last_name:
+              blank: "Last name is a required field"
+            email:
+              blank: "Email is a required field"
+              taken: "Email has already been registered"
+            first_name_format:
+              invalid: "Name can only contain letters"
+            last_name_format:
+              invalid: "Last name can only contain letters"

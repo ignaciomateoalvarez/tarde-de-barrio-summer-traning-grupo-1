@@ -1,0 +1,17 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: "El nombre es un campo requerido"
+            last_name:
+              blank: "El apellido es un campo requerido"
+            mail:
+              blank: "El correo electrónico es un campo requerido"
+              taken: "El correo electrónico ya ha sido registrado"
+            first_name_format:
+              invalid: "El nombre solo puede contener letras"
+            last_name_format:
+              invalid: "El apellido solo puede contener letras"
