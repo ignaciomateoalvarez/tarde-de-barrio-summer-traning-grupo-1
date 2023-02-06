@@ -1,0 +1,42 @@
+.flash-message{
+  color: black;
+  position: absolute;
+  top: 1rem;
+  margin: auto;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  width: fit-content;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+.login-warning{
+  color: red;
+  position: absolute;
+  top: 1rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  width: fit-content;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+
+}
+.login-success{
+  color: green;
+  position: absolute;
+  top: 1rem;
+  margin: auto;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  width: fit-content;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}

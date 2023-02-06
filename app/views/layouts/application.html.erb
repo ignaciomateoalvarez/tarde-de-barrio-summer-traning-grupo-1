@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <% flash.each do |type, msg| %>
+      <% case type when "warning" %>
+      <div class="login-warning">
+        <%= msg %>
+      </div>
+      <% when "success" %>
+        <div class="login-success">
+          <%= msg %>
+        </div>
+      <% else %>
+        <div class="flash-message">
+          <%= msg %>
+        </div>
+      <% end %>
+      <% end %>
     <%= yield %>
   </body>
 </html>
