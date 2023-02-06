@@ -4,129 +4,202 @@
  */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#line {
+  width: 50rem;
+  margin-top: 0.625rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
-    width: 55.4375rem;
-    height: 36.5rem;
-    
-    background: #FFFFFF;
-    box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
-    border-radius: 0.5rem;
+  width: 55.4375rem;
+  height: 36.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;
 
-    margin: 5rem 10rem 0rem 10rem;
-    padding: 20px 100px 50px 100px;
+  background: #FFFFFF;
+  border-radius: 0.5rem;
 }
 
-.login {
-    background: #0090AF; 
+body{
+  background: #0090AF; 
+  height: 100vh;
 }
 
 .container {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    height: 100vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
 
 .container-card {
-    display: flex;
-    align-items: center;  
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .form-label{
-    font-size: 14px;
-    font-family:'Roboto';
-    color: black;
+  font-family:'Roboto';
+  color: black;
+  font-size: 0.8125rem;
+  margin-top: 0.9375rem;
 }
 
 .form-card {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  align-items: center;
+  margin-bottom: 1.5625rem;
 }
 
 .imag-card {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+  width: 50%;
 }
 
 .menu {
-
-    height: 100px;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 29px;
-    /* or 163% */
-    
-    text-align: center;
-    
-    color: #0090AF;
-   
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+  display: flex;
+  gap: 1.25rem;
+  color: #0090af;
+  justify-content: center;
+  align-items: center;
 }
 
 .signin-button{
-    color: white;
-    border-radius: 3.4537px;
-    background-color: #0090AF;
-    height: 2.5rem;
-    width: 15.625rem;
+  color: white;
+  border-radius: 0.2159rem;
+  background-color: #0090AF;
+  margin-top: 1.875rem;
+  width: 15.625rem;
+
+  padding: 0.625rem;
+
+  background: #0090af;
+  border-radius: 0.2159rem;
+    
 }
 .signin-button-google{
-    border-color: #0090AF;
-    border-radius: 3.4537px;
-    border: 1px solid;
-    height: 2.5rem;
-    width: 15.625rem;
+  border-color: #0090AF;
+  border-radius: 0.2159rem;
+  border: 0.0625rem solid;
+  width: 15.625rem;
 
-    background-color: transparent;
+  padding: 0.625rem;
+  margin-top:0.9375rem;
+  background: #0090af;
+  border-radius: 0.2159rem;
+
+  background-color: transparent;
 }
 
-.form-label{
-    font-size: 0.8125rem;
-    font-family:'Roboto';
-    color: black;
-    font-style: normal;
+.signin-button, .signin-button-google {
+  align-self: center;
 }
+
 
 .center-form-content {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  width: 21.875rem;
 }
 
 .form-card > h1 {
-  ext-align: center;
+  text-align: center;
 }
 
-.h1 {
-  position: absolute;
-  width: 218px;
-  height: 29px;
-  left: 555px;
-  top: 93px;
+.login-button {
+  height: 2.5rem;
+  background: #0090af;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  border:none;
 
+  width: 14.5694rem;
+  height: 2.5rem;
+  left: 51.4931rem;
+  top: 37.6875rem;
+  border-radius: 0.2159rem;
+}
+
+.login-google {
+  display: flex;
+  height: 2.5rem;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  justify-content: center;
+
+  width: 14.5694rem;
+  left: 51.4931rem;
+  top: 37.6875rem;
+
+  border-radius: 0.2159rem;
+  border: 0.0625rem solid #0090af;
+
+}
+
+.recover-password {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 300;
-  font-size: 24.1759px;
-  line-height: 29px;
-
-
-text-align: center;
-
-color: #000000;
-
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.8125rem;
+  color: #0090AF;
 }
 
+.remember-me {
+  top: 94.1%;
+  bottom: -94.1%;
+  display: flex;
+  border-radius: 0.1079rem;
+  margin-top: 0.625rem;
+}
+
+.remember-me-label {
+  margin-top: 0.625rem;
+  gap: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.7555rem;
+  color: #000000;
+}
+
+.login-warning{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  margin: auto;
+  background-color: white;
+  padding: 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.625rem
+}
+.login-success{
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  margin: auto;
+  background-color: white;
+  padding: 0.5rem;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.625rem
+}

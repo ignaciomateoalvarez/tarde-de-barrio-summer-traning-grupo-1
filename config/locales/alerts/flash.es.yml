@@ -1,0 +1,7 @@
+es:
+  session:
+    create:
+      success: "Inicio de Sesion Exitoso"
+      warning: "Inicio de Sesion Fallido"
+    destroy:
+      notice: "Usted cerro sesion!"

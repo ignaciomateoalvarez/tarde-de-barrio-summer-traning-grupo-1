@@ -1,0 +1,7 @@
+en:
+  session:
+    create:
+      success: "Login Successful"
+      warning: "Failed to Login"
+    destroy:
+      notice: "Session Closed!"
