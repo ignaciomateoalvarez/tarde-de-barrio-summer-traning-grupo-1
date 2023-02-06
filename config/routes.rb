@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get 'signup' => 'session#register', :as => 'signup'
 
   resources :users
+  resources :students
 end

@@ -1,0 +1,26 @@
+<h1><%=t('.user-list')%></h1>
+
+<%= form_with(model: @presenter.filter, url: students_path, method: :get) do |f| %>
+  <%= f.text_field :full_name %>
+  <%= f.submit :value => t('.filter')%>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%=t('.first-name')%></th>
+      <th><%=t('.last-name')%></th>
+      <th><%=t('.email')%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @records.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.mail %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%== pagy_nav(@pagy) %>

@@ -1,0 +1,8 @@
+en:
+  students:
+    index:
+      user-list: "Users List" 
+      first-name: "First Name" 
+      last-name: "Last Name"
+      email: "Email"
+      filter: "Filter"
