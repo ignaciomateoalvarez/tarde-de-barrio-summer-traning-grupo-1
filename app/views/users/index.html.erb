@@ -1,10 +1,11 @@
+<%= render "navbar/nav" %>
 <h1><%=t('.user-list')%></h1>
 
-<%= form_with(model: @presenter.filter, url: students_path, method: :get) do |f| %>
-  <%= f.text_field :full_name %>
-  <%= f.submit :value => t('.filter')%>
-<% end %>
-
+<div class="index-container">
+<section class="nav-users-container">
+  <%= render partial: "index_search_filter", locals: {filter: @presenter.filter} %>
+  <%= button_to "Nuevo Usuario", login_path ,method: :post %>
+</section>
 <table>
   <thead>
     <tr>
@@ -18,7 +19,7 @@
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
-        <td><%= user.mail %></td>
+        <td><%= user.email %></td>
       </tr>
     <% end %>
   </tbody>

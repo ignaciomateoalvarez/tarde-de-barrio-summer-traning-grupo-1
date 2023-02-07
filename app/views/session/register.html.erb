@@ -9,10 +9,14 @@
       <%= image_tag("Frame.svg")%>
       <div class="form-card">
         <h1><%=t('.title')%></h1>
-        <%= form_with(model: @user) do |form| %>
+        <%= form_with(scope: :user, method: :post, url: post_signup_path) do |form| %>
         <section class='center-form-content'>
-          <%= form.label :user_name ,t('.name-user'), {class: 'form-label'} %>
-          <%= form.text_field :user_name,value: params[:user_name] %>
+          <%= form.label :first_name ,t('.name-user'), {class: 'form-label'} %>
+          <%= form.text_field :first_name,value: params[:first_name] %>
+        </section>
+        <section class='center-form-content'>
+          <%= form.label :last_name,t('.name-user'), {class: 'form-label'} %>
+          <%= form.text_field :last_name,value: params[:last_name] %>
         </section>
         <section class='center-form-content'>
           <%= form.label :email ,t('.email'), {class: 'form-label'}%>
@@ -23,8 +27,8 @@
           <%= form.password_field :password,value: params[:password] %>
         </section>
         <section class='center-form-content'>
-          <%= form.label :confirm_password ,t('.confirm-password'), {class: 'form-label'}%>
-          <%= form.password_field :confirm_password,value: params[:confirm_password] %>
+          <%= form.label :password_confirmation, t('.confirm-password'), {class: 'form-label'}%>
+          <%= form.password_field :password_confirmation, value: params[:password_confirmation] %>
         </section>
         <section class= 'center-form-content'>
           <%= form.submit :value => t('.register-button'), class:'signin-button' %>
