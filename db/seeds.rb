@@ -10,5 +10,6 @@ require 'faker'
   end
   
 end
+User.create(first_name: "Gianlucas", last_name: "Galati", email: "gianlucas@gmail.com",password:'123') 
 
 p "Creadas #{User.count} usuarios"

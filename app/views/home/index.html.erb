@@ -1,26 +1,2 @@
-<h1>Lista de Usuarios</h1>
-
-<%= form_with(model: @filter, url: root_path, method: :get) do |f| %>
-  <%= f.text_field :first_name %>
-  <%= f.text_field :last_name %>
-  <%= f.submit %>
-<% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.mail %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1><%=t('.title')%></h1>
+<%= button_to t('.log-out'), logout_path ,method: :delete %>

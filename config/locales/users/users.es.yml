@@ -1,5 +1,5 @@
 es:
-  students:
+  users:
     index:
       user-list: "Lista de Usuarios" 
       first-name: "Nombre" 
