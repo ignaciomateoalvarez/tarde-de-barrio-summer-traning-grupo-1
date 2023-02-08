@@ -1,0 +1,20 @@
+<%= turbo_frame_tag "modal" do %>
+ <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "modal", action: 
+    "turbo:submit-end->turbo-modal#submitEnd 
+    keyup@window->turbo-modal#closeWithKeyboard 
+    click@window->turbo-modal#closeBackground" } do %>
+  <h1><%=t('.title')%></h1>
+  <%= form_with(scope: :user,method: :put, url: user_path) do |form| %>
+    <%= form.label :first_name ,t('.first-name'), {class: 'form-label'}%>
+    <%= form.text_field :first_name,value: params[:first_name],value: @user.first_name%>
+    <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
+    <%= form.text_field :last_name,value: params[:last_name], value: @user.last_name %>
+    <%= form.label :email,t('.email'), {class: 'form-label'} %>
+    <%= form.email_field :email,disabled:true,value: params[:email], value: @user.email %>
+    <%= form.label :rol ,t('.rol'), {class: 'form-label'} %>
+    <%= form.select :rol, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
+    <%= form.submit %>
+  <% end %>
+  <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button", class: "rounded-lg py-3 px-5 bg-red-600 text-white" %>
+  <% end %>
+<% end %>

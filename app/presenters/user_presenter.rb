@@ -6,7 +6,7 @@ class UserPresenter
   end
 
   def filter
-    @filter ||= UserFilter.new(User.all, filter_params)
+    @filter ||= UserFilter.new(User.all.order(updated_at: :desc), filter_params)
   end
 
   def users

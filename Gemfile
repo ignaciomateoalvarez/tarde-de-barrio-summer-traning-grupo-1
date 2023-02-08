@@ -49,7 +49,10 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'sorcery'
+
 gem 'pagy', '~> 6.0' # omit patch digit
+
+gem 'font-awesome-sass', '~> 6.2.1'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -79,3 +82,5 @@ group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
+
+gem "view_component", "~> 2.82"

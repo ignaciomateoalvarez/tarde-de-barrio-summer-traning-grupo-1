@@ -21,3 +21,14 @@ en:
       confirm-password: Confirm your password
       register-button: Register
       google-login: Register with Google
+
+    new:
+      login: Login
+      sign-up: Sign up
+      title: Login in my account
+      email: Email
+      password: Password
+      remember-me: Remember me
+      recover-password: Forgot your password?
+      sign-in: Sign in
+      register-google: Login with Google 
