@@ -1,10 +1,10 @@
 <%= render "navbar/nav" %>
 <h1><%=t('.user-list')%></h1>
 
-<div class="index-container">
+<div class="index-container"> 
 <section class="nav-users-container">
   <%= render partial: "index_search_filter", locals: {filter: @presenter.filter} %>
-  <%= button_to "Nuevo Usuario", login_path ,method: :post %>
+  <%= button_to "Nuevo Usuario"%>
 </section>
 <table>
   <thead>
@@ -20,6 +20,7 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
+        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -5,3 +5,8 @@ en:
       warning: "Failed to Login"
     destroy:
       notice: "Session Closed!"
+
+  users:
+    create:
+      notice: "Welcome!"
+      warning: "Failed to Login"

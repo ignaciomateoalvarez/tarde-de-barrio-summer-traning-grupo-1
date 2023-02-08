@@ -2,7 +2,6 @@
  *= require_self
  *= require_tree .
  */
-
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +10,23 @@
 
 body{
   height: 100vh;
+}
+
+#modal {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-top: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2;
+  width: 400px;
+  word-break: break-word;
+  border-radius: 6px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

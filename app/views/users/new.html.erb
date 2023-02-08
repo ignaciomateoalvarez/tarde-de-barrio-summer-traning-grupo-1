@@ -1,8 +1,8 @@
 <article class="container">
   <div class="card">
     <nav class="menu">
-      <%= link_to "login" %>
-      <%= link_to "sign-up" %>
+      <%= link_to t('login') %>
+      <%= link_to t('.sign-up') %>
     </nav>
     <hr id='line'>
     <div class="container-card">
@@ -10,30 +10,31 @@
         <%= image_tag("Frame.svg", class: 'imag-size') %>
       </div>
       <div class="form-card">
-        <h1>Registro</h1>
+        <h1><%=t('.title')%></h1>
         <%= form_with(model: @user) do |form| %>
         <section class='center-form-content'>
-          <%= form.label :user_name , {class: 'form-label'} %>
+          <%= form.label :user_name ,t('.user-name'), {class: 'form-label'} %>
           <%= form.text_field :user_name,value: params[:user_name] %>
         </section>
         <section class='center-form-content'>
-          <%= form.label :email , {class: 'form-label'}%>
+          <%= form.label :email ,t('.email'), {class: 'form-label'}%>
           <%= form.email_field :email,value: params[:email] %>
         </section>
         <section class='center-form-content'>
-          <%= form.label :password , {class: 'form-label'}%>
+          <%= form.label :password ,t('.password'), {class: 'form-label'}%>
           <%= form.password_field :password,value: params[:password] %>
         </section>
         <section  class='center-form-content'>
-          <%= form.label :confirm_password , {class: 'form-label'}%>
+          <%= form.label :confirm_password ,t('.confirm-password'), {class: 'form-label'}%>
           <%= form.password_field :confirm_password,value: params[:confirm_password] %>
         </div>
         <div class= 'center-form-content'>
-          <%= form.submit class:'signin-button' %>
-          <%= button_to "Register with google", '/' , {class:'signin-button-google'} %>
+          <%= form.submit :value => t('.sign-in') class:'signin-button' %>
+          <%= button_to t(.'register-google'), '/' , {class:'signin-button-google'} %>
         </div>
         <% end %>
         </div>
+      <% end %>
       </div>
     </div>
 </article>

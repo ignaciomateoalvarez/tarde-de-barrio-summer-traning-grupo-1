@@ -24,3 +24,9 @@
   align-items: center;
   flex-direction: column;
 }
+.button-users{
+  background-color: #0090AF;
+  border-radius: 0.2159rem;
+  color: white;
+  width: 10rem;
+}

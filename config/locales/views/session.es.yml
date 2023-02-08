@@ -21,3 +21,14 @@ es:
       confirm-password: Confirmar contraseña
       register-button: Registrarme
       google-login: Regristrarme con Google
+
+    new:
+      login: Sesión
+      sign-up: Registro
+      title: Ingresar a mi cuenta
+      email: Email
+      password: Contraseña
+      remember-me: Recordarme
+      sign-in: Ingresar
+      recoverd-password: Olvidé mi contraseña
+      register-google: Registrarme con google

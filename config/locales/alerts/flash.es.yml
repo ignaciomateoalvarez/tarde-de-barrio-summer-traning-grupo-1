@@ -5,3 +5,8 @@ es:
       warning: "Inicio de Sesion Fallido"
     destroy:
       notice: "Usted cerro sesion!"
+
+  users:
+    create:
+      notice: "Bienvenido!"
+      warning: "Inicio de Sesion fallido"
