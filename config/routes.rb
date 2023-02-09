@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'login' => 'session#create', :as => 'login'
   get 'signup' => 'session#register', :as => 'signup'
   post 'signup' => 'users#create', :as => 'post_signup'
-
-  resources :users
+  post 'post_new_user',  to: 'users#new_user'
+  resources :users 
   resources :students
 end

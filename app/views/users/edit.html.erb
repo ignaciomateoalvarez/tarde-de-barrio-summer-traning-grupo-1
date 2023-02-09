@@ -15,6 +15,6 @@
     <%= form.select :rol, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
     <%= form.submit %>
   <% end %>
-  <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button", class: "rounded-lg py-3 px-5 bg-red-600 text-white" %>
+  <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button" %>
   <% end %>
 <% end %>

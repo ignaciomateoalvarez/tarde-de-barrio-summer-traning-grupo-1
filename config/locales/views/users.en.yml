@@ -2,10 +2,12 @@ en:
   users:
     index:
       user-list: "Users List" 
+      new-user: "New User"
       first-name: "First Name" 
       last-name: "Last Name"
       email: "Email"
       filter: "Filter"
+      edit: "Edit"
 
 
     edit:
@@ -17,12 +19,8 @@ en:
       close: "Close"
 
     new:
-      login: Login
-      sign-up: Sign-up
-      title: Register 
-      name-user: Username
+      first-name: First Name
+      last-name: Last Name
       email: Email
-      password: Password
-      confirm-password: Confirm your password
-      sign-in: Register
-      register-google: Register with Google
+      rol: Rol
+      sign-in: User Register

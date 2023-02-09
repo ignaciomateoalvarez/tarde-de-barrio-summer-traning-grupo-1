@@ -1,17 +1,18 @@
 <%= render "navbar/nav" %>
 <h1><%=t('.user-list')%></h1>
-
 <div class="index-container"> 
 <section class="nav-users-container">
   <%= render partial: "index_search_filter", locals: {filter: @presenter.filter} %>
-  <%= button_to "Nuevo Usuario"%>
+  <%= button_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
 </section>
 <table>
   <thead>
     <tr>
-      <th><%=t('.first-name')%></th>
-      <th><%=t('.last-name')%></th>
-      <th><%=t('.email')%></th>
+      <%=tag.th  t('.first_name'), class:'first_name'%>
+      <%=tag.th  t('.last_name'), class:'last_name'%>
+      <%=tag.th  t('.email'), class:'email'%>
+      <%=tag.th t('.rol'), class:'rol_name'%>
+      <%=tag.th t('.activate'), class:'active'%>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +21,7 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
-        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } %></td>
+        <td><%= button_to t('.edit'), edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } %></td>
       </tr>
     <% end %>
   </tbody>

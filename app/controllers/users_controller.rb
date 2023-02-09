@@ -11,9 +11,18 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params_register)
     if @user.save
-      redirect_to users_path, notice: t('notice')
+      redirect_to users_path, notice: t('.notice')
     else
-      redirect_to users_path, warning: t('warning')
+      redirect_to users_path, warning: t('.warning')
+    end
+  end
+
+  def new_user
+    @user = User.new(user_params)
+    if @user.save_with_validations(validate_password: false)
+      redirect_to users_path, notice: t('.notice')
+    else
+      redirect_to users_path, warning: t('.warning')
     end
   end
 

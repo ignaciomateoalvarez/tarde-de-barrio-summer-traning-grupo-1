@@ -9,4 +9,8 @@ es:
   users:
     create:
       notice: "Bienvenido!"
-      warning: "Inicio de Sesion fallido"
+      warning: "Inicio de Sesion Fallido"
+
+    new_user:
+      notice: "Usuario creado con exito"
+      warning: "Creacion de usuario fallido"
