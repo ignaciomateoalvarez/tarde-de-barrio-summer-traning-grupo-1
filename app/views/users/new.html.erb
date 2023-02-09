@@ -1,40 +1,27 @@
-<article class="container">
-  <div class="card">
-    <nav class="menu">
-      <%= link_to t('login') %>
-      <%= link_to t('.sign-up') %>
-    </nav>
-    <hr id='line'>
-    <div class="container-card">
-      <div class="imag-card">
-        <%= image_tag("Frame.svg", class: 'imag-size') %>
-      </div>
-      <div class="form-card">
-        <h1><%=t('.title')%></h1>
-        <%= form_with(model: @user) do |form| %>
-        <section class='center-form-content'>
-          <%= form.label :user_name ,t('.user-name'), {class: 'form-label'} %>
-          <%= form.text_field :user_name,value: params[:user_name] %>
-        </section>
-        <section class='center-form-content'>
-          <%= form.label :email ,t('.email'), {class: 'form-label'}%>
-          <%= form.email_field :email,value: params[:email] %>
-        </section>
-        <section class='center-form-content'>
-          <%= form.label :password ,t('.password'), {class: 'form-label'}%>
-          <%= form.password_field :password,value: params[:password] %>
-        </section>
-        <section  class='center-form-content'>
-          <%= form.label :confirm_password ,t('.confirm-password'), {class: 'form-label'}%>
-          <%= form.password_field :confirm_password,value: params[:confirm_password] %>
-        </div>
-        <div class= 'center-form-content'>
-          <%= form.submit :value => t('.sign-in') class:'signin-button' %>
-          <%= button_to t(.'register-google'), '/' , {class:'signin-button-google'} %>
-        </div>
-        <% end %>
-        </div>
-      <% end %>
-      </div>
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "modal", action: 
+      "turbo:submit-end->turbo-modal#submitEnd 
+      keyup@window->turbo-modal#closeWithKeyboard 
+      click@window->turbo-modal#closeBackground" } do %>
+    <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
+    <section class='center-form-content'>
+      <%= form.label :first_name ,t('.first-name'), {class: 'form-label'} %>
+      <%= form.text_field :first_name,value: params[:first_name] %>
+    </section>
+    <section class='center-form-content'>
+      <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
+      <%= form.text_field :last_name,value: params[:last_name] %>
+    </section>
+    <section class='center-form-content'>
+      <%= form.label :email ,t('.email'), {class: 'form-label'}%>
+      <%= form.email_field :email,value: params[:email] %>
+    </section>
+      <%= form.label :rol ,t('.rol'), {class: 'form-label'} %>
+      <%= form.select :rol, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
+    <div class= 'center-form-content'>
+      <%= form.submit :value => t('.sign-in'), class:'signin-button' %>
     </div>
-</article>
+    <% end %>
+    <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button" %>
+  <% end %>
+<% end %>

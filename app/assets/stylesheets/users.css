@@ -30,3 +30,18 @@
   color: white;
   width: 10rem;
 }
+
+table th, table td {
+  padding: 15px;
+  text-align: center;
+}
+
+.first_name, .last_name, .email, .rol_name, .active {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #007792;
+}
