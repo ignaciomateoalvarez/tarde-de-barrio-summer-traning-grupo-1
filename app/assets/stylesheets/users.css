@@ -1,9 +1,13 @@
 .navbar{
-  background-color: #0090AF;
+  font-size: 8px;
   color: white;
-  height: 3rem;
   display: flex;
-  
+  background-color: #0090af;
+  margin-bottom: 40px;
+  padding: 10px;
+  height: 48px;
+  align-items: center;
+  justify-content: space-between;
 }
 .nav-container{
   margin-left: 0.5rem;
@@ -13,35 +17,92 @@
   align-self: center;
   width: 100%;
 }
+.home-icon{
+  height: 20px;
+  width: 25px;
+  margin-right: 15px; 
+}
 .nav-users-container{
   display: flex;
+  text-align: center;
+  text-justify: center;
   justify-content: flex-end;
-  gap: 1rem;
+  padding: 5px 150px;
+  height: 45px;
 }
 .index-container{
+  min-height: 42em;
+	min-width: 62.5rem;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.875rem;
+}
+.filter{
+  width: 428px;
+  height: 40px;
+  background: #FAFAFA;
+  border: 1.29514px solid #CCCCCC;
+  border-radius: 7.06992px  0px   0px 7.06992px;  
+  margin-right: 5px;
+}
+.new-user {
+  display: flex;
+  height: 40px;
+  width: 150px;
+  border: solid;
+  border-color: #0090AF ;
+  background: #0090AF;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+}
+.button-filter {
+  display: flex;
+}
+
+.magnifying-glass {
+  margin-top: 0.5rem;
+	height: 1.875rem;
+	width: 1.25rem
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 150px 60px;
+}
+.table-th {
+  display: flex;
+  justify-content: space-between;
+  color: #0090af;
+  padding: 5px 30px;
+}
+.checkbox {
+  margin-right: 5px;
+}
+.name {
+  min-width: 30%;
+}
+.email {
+  min-width: 25%;
+}
+.user {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #dadada;
+  padding: 5px 22px;
+  height: 45px;
+}
+.user:hover {
+  border: 1px solid #0090af;
+}
+.pagination {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.button-users{
-  background-color: #0090AF;
-  border-radius: 0.2159rem;
-  color: white;
-  width: 10rem;
-}
-
-table th, table td {
-  padding: 15px;
-  text-align: center;
-}
-
-.first_name, .last_name, .email, .rol_name, .active {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: #007792;
+  color: black;
 }

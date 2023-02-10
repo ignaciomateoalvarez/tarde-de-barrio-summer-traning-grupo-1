@@ -44,26 +44,6 @@ a{
   height: 100%;
 }
 
-.form-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9375rem;
-  margin-bottom: 1.5625rem;
-  font-weight: 300;
-}
-
-.form-card > h1{
-  align-self: center;
-}
-.center-form-content {
-  display: flex;
-  flex-direction: column;
-  width: 21.875rem;
-}
-.form-label{
-  margin-top: 0.9375rem;
-}
-
 .signin-button{
   color: white;
   border-radius: 0.2159rem;

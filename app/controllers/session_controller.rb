@@ -5,7 +5,11 @@ class SessionController < ApplicationController
     if @user.present?
       if @user.active?
         if login(params[:email], params[:password], remember_me = params[:remember_me])
-          redirect_back_or_to(root_path, success: t('.success'))
+          if @user.administrador?
+            redirect_back_or_to(users_path, success: t('.success'))
+          else
+            redirect_back_or_to(root_path, success: t('.success'))
+          end
         else
           redirect_to(login_path, warning: t('.warning'))
         end
@@ -16,7 +20,6 @@ class SessionController < ApplicationController
       redirect_to(login_path, warning: "usuario incorrecto")
     end
   end
-
   def destroy
     logout
     redirect_to(login_path, notice: t('.notice'))

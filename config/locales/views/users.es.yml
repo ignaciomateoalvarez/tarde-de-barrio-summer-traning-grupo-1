@@ -1,15 +1,12 @@
 es:
   users:
     index:
-      user-list: "Lista de Usuarios" 
-      new-user: "Nuevo Usuario"
-      first-name: "Nombre" 
-      last-name: "Apellido"
-      email: "Email"
+      email: "EMAIL"
       filter: "Filtrar"
-      edit: "Editar"
-      active: "Activo"
-      role: "Rol"
+      role: "ROL"
+      username: "USUARIOS"
+      activate: "ACTIVAR"
+      new-user: "Nuevo Usuario"
 
     edit:
       title: "Editar Usuario" 
@@ -18,10 +15,14 @@ es:
       email: "Email"
       rol: "Rol"
       close: "Cerrar"
+      edit-user: "Editar Usuario"
 
     new:
+      title: "Nuevo Usuario" 
       first-name: Nombre
       last-name: Apellido
       email: Email
       rol: Rol
       sign-in: Registrar Usuario
+      new-user: "Nuevo Usuario"
+      close: "Cerrar"

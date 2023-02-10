@@ -45,4 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 3.125rem;
+  margin-left: 30rem;
 }

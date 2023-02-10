@@ -1,28 +1,29 @@
 en:
   users:
     index:
-      user-list: "Users List" 
-      new-user: "New User"
-      first-name: "First Name" 
-      last-name: "Last Name"
-      email: "Email"
+      email: "EMAIL"
       filter: "Filter"
-      edit: "Edit"
-      active: "Active"
-      role: "Role"
+      role: "ROLE"
+      username: "USERNAME"
+      activate: "ACTIVATE"
+      new-user: "New User"
 
 
     edit:
-      title: "Edit Users" 
+      title: "Edit User" 
       first-name: "First name" 
       last-name: "Last Name"
       email: "Email"
       rol: "Rol"
       close: "Close"
+      edit-user: "Edit User"
 
     new:
+      title: "New User" 
       first-name: First Name
       last-name: Last Name
       email: Email
       rol: Rol
       sign-in: User Register
+      new-user: "New User"
+      close: "Close"
