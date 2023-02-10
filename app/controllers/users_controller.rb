@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
   def index
+    authorize User
     @presenter = UserPresenter.new(params)
     @pagy, @records = pagy(@presenter.users)
   end
+
   def new
     @user = User.new
   end
@@ -26,14 +29,18 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    authorize User
+  end
 
   def update
+    authorize User
     @user.update(user_params)
     redirect_to users_path
   end
 
   def toggle_deactivate
+    authorize User
     @user = User.find(params[:user_id])
     @user.toggle!(:active)
     redirect_to users_path, notice: t('.notice')
@@ -50,6 +57,10 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).except(:rol).permit(:first_name, :last_name, :email)
+    params.require(:user).permit(:first_name, :last_name, :email, :role)
+  end
+
+  def authorize_user
+    authorize @user
   end
 end

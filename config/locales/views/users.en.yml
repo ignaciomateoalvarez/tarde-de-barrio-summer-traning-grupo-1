@@ -9,6 +9,7 @@ en:
       filter: "Filter"
       edit: "Edit"
       active: "Active"
+      role: "Role"
 
 
     edit:

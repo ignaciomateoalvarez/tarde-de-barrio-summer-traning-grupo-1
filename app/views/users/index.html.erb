@@ -29,6 +29,18 @@
           </div>
         <% end %>
         </td>
+        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } %></td>
+        <td><%= button_to "active", user_toggle_deactivate_path(user), method: :put %></td>
+        <td>
+        <!--
+        <%= form_with(url: user_toggle_deactivate_path(user), method: :put) do |form| %>
+          <div class="toggle-button" data-controller="users">
+            <%= form.check_box :active, data:{users_target:"checkbox", action:"users#changeActive"} ,id:user.id   %>
+            <label class="" for=<%=user.id%>><%= form.submit %></label>
+          </div>
+        <% end %>
+        </td>
+        -->
       </tr>
     <% end %>
   </tbody>

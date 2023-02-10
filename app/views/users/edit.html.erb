@@ -11,10 +11,10 @@
     <%= form.text_field :last_name,value: params[:last_name], value: @user.last_name %>
     <%= form.label :email,t('.email'), {class: 'form-label'} %>
     <%= form.email_field :email,disabled:true,value: params[:email], value: @user.email %>
-    <%= form.label :rol ,t('.rol'), {class: 'form-label'} %>
-    <%= form.select :rol, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
+    <%= form.label :role ,t('.rol'), {class: 'form-label'} %>
+    <%= form.select :role, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
     <%= form.submit %>
   <% end %>
-  <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button" %>
+  <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button"%>
   <% end %>
 <% end %>

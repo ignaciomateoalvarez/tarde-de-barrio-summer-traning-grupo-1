@@ -11,6 +11,12 @@ en:
     create:
       notice: "Welcome!"
       warning: "Failed to Login"
+
+    new_user:
+      notice: "User created successfully"
+      warning: "Failed to create new user"
     toggle_deactivate:
       notice: "Changed User State"    
 
+    index:
+      notice: "You don't have enough permissions"

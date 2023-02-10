@@ -10,7 +10,7 @@ require 'faker'
 #   end
   
 # end
-User.create(first_name: "Gianlucas", last_name: "Galati", email: "gianlucas@gmail.com",password:'123', active: true)
-User.create(first_name: "Nadia", last_name: "Beltran", email: "nadia@gmail.com",password:'123', active: false)
+User.create(first_name: "Gianlucas", last_name: "Galati", email: "gianlucas@gmail.com",password:'123', active: true, role: 0)
+User.create(first_name: "Nadia", last_name: "Beltran", email: "nadia@gmail.com",password:'123', active: true, role: 1)
 
 p "Creadas #{User.count} usuarios"
