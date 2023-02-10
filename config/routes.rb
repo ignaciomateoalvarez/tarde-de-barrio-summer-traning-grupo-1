@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get 'signup' => 'session#register', :as => 'signup'
   post 'signup' => 'users#create', :as => 'post_signup'
   post 'post_new_user',  to: 'users#new_user'
-  resources :users 
+
+  resources :users do
+    put 'toggle_deactivate', to: 'users#toggle_deactivate'
+  end
   resources :students
 end

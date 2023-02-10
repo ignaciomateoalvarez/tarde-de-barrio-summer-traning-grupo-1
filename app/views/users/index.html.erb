@@ -12,7 +12,7 @@
       <%=tag.th  t('.last_name'), class:'last_name'%>
       <%=tag.th  t('.email'), class:'email'%>
       <%=tag.th t('.rol'), class:'rol_name'%>
-      <%=tag.th t('.activate'), class:'active'%>
+      <%=tag.th t('.active'), class:'active'%>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +21,14 @@
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
-        <td><%= button_to t('.edit'), edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } %></td>
+        <td>
+        <%= form_with(url: user_toggle_deactivate_path(user), method: :put) do |form| %>
+          <div class="toggle-button" data-controller="toggle">
+            <%= form.check_box :active, checked: user.active, data:{toggle_target:"checkbox", action:"toggle#changeActive"} ,id:user.id   %>
+            <label for=<%=user.id%>><%= form.submit %></label>
+          </div>
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

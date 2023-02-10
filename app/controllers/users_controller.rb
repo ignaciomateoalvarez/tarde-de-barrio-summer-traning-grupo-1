@@ -33,6 +33,12 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
+  def toggle_deactivate
+    @user = User.find(params[:user_id])
+    @user.toggle!(:active)
+    redirect_to users_path, notice: t('.notice')
+  end
+
   private
 
   def set_user

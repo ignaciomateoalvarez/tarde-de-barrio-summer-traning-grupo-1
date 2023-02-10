@@ -3,6 +3,7 @@ es:
     create:
       success: "Inicio de Sesion Exitoso"
       warning: "Inicio de Sesion Fallido"
+      notice: "Inicio de Sesion Fallido - Usuario Desactivado"
     destroy:
       notice: "Usted cerro sesion!"
 
@@ -14,3 +15,5 @@ es:
     new_user:
       notice: "Usuario creado con exito"
       warning: "Creacion de usuario fallido"
+    toggle_deactivate:
+      notice: "Cambio de Estado del Usuario"
