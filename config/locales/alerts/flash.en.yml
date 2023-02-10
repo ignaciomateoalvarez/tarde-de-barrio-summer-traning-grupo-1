@@ -3,6 +3,7 @@ en:
     create:
       success: "Login Successful"
       warning: "Failed to Login"
+      notice: "Failed to Login - User is deactivated"
     destroy:
       notice: "Session Closed!"
 
@@ -10,3 +11,6 @@ en:
     create:
       notice: "Welcome!"
       warning: "Failed to Login"
+    toggle_deactivate:
+      notice: "Changed User State"    
+

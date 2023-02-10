@@ -1,0 +1,48 @@
+.toggle-button input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-button label {
+  cursor: pointer;
+  text-indent: -624.9375rem;
+  width: 4.6875rem;
+  height: 1.875rem;
+  background: grey;
+  display: block;
+  border-radius: 6.25rem;
+  position: relative;
+}
+
+.toggle-button label:after {
+  content: '';
+  position: absolute;
+  top: 0.125rem;
+  bottom: 0.125rem;
+  left: 0.1875rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background: #fff;
+  border-radius: 5.625rem;
+  transition: 0.3s;
+}
+
+.toggle-button input:checked + label {
+  background: #0090AF;
+}
+
+.toggle-button input:checked + label:after {
+  left: calc(100% - 0.3125rem);
+  transform: translateX(-100%);
+}
+
+.toggle-button label:active:after {
+  width: 3.125rem;
+}
+
+.toggle-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
