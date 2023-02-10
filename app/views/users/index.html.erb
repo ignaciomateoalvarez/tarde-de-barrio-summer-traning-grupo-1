@@ -1,26 +1,38 @@
 <%= render "navbar/nav" %>
-<h1><%=t('.user-list')%></h1>
 <div class="index-container"> 
 <section class="nav-users-container">
-  <%= render partial: "index_search_filter", locals: {filter: @presenter.filter} %>
-  <%= button_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
+  <div class='button-filter'>
+    <%= form_with(url: users_path, method: :get, scope: :user_filter) do |f| %> 
+    <%= f.text_field :full_name , class: "filter"%>
+    <div class="magnifying-glass">
+      <%= image_submit_tag("magnifying-glass-solid.svg")%>
+    </div>
+    <% end %>
+  </div>
+  <div class="new-user">
+    <%= link_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
+  </div>
 </section>
-<table>
+<table class='table-container'>
   <thead>
-    <tr>
-      <%=tag.th  t('.first_name'), class:'first_name'%>
-      <%=tag.th  t('.last_name'), class:'last_name'%>
-      <%=tag.th  t('.email'), class:'email'%>
-      <%=tag.th t('.rol'), class:'rol_name'%>
-      <%=tag.th t('.active'), class:'active'%>
+    <tr class='table-th'>
+      <th><%=t('.username')%></th>
+      <th><%=t('.email')%></th>
+      <th><%=t('.role')%></th>
+      <th><%=t('.activate')%></th>
     </tr>
   </thead>
   <tbody>
     <% @records.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.email %></td>
+      <tr class='user'>
+        <td class='checkbox'><%= check_box_tag "checkbox_name" %></td>
+        <td class='name'><%= user.first_name %> <%= user.last_name %></td>
+        <td class='email'><%= user.email %></td>
+        <td class="rol">
+          <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
+            <%= form.select :role, options_for_select(User.roles.keys, selected: user.role), {}, disabled: true %>
+          <% end %> 
+        </td>  
         <td>
         <%= form_with(url: user_toggle_deactivate_path(user), method: :put) do |form| %>
           <div class="toggle-button" data-controller="toggle">
@@ -29,20 +41,12 @@
           </div>
         <% end %>
         </td>
-        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } %></td>
-        <td><%= button_to "active", user_toggle_deactivate_path(user), method: :put %></td>
-        <td>
-        <!--
-        <%= form_with(url: user_toggle_deactivate_path(user), method: :put) do |form| %>
-          <div class="toggle-button" data-controller="users">
-            <%= form.check_box :active, data:{users_target:"checkbox", action:"users#changeActive"} ,id:user.id   %>
-            <label class="" for=<%=user.id%>><%= form.submit %></label>
-          </div>
-        <% end %>
-        </td>
-        -->
+        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' }%></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%== pagy_nav(@pagy) %>
+
+<div class='pagination'>
+  <%== pagy_nav(@pagy) %>
+</div>
