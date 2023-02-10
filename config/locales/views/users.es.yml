@@ -9,6 +9,7 @@ es:
       filter: "Filtrar"
       edit: "Editar"
       active: "Activo"
+      role: "Rol"
 
     edit:
       title: "Editar Usuario" 

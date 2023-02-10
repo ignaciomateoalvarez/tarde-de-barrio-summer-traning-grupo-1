@@ -7,10 +7,7 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }, unless: -> { validate_password == false }
   validates :password, confirmation: true, presence: true, if: -> { new_record? || changes[:crypted_password] }, unless: -> { validate_password == false }
 
-  attr_accessor :validate_password
-
-  def save_with_validations(validate_password: true)
-    self.validate_password = validate_password
-    save
-  end
+  enum role: [:administrador, :colaborador]
+  validates :role, presence: true
+  validates :role, inclusion: {in: ["administrador", "colaborador"]}
 end

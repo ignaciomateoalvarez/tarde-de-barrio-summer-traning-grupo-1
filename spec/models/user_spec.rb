@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:user) { build(:user) }
 
-
   describe 'Validations' do
     it { should validate_presence_of(:first_name) }
     it { should validate_presence_of(:last_name) }
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:password) }
+    it { should validate_presence_of(:role) }
   end
 
   describe 'first_name_format' do
@@ -31,5 +31,9 @@ RSpec.describe User, type: :model do
 
   describe 'Password Format' do
     it {should validate_length_of(:password).is_at_least(3).on(:create) }
+  end
+
+  describe 'Enum Type' do
+    it { should define_enum_for(:role).with_values([:administrador, :colaborador]) }
   end
 end

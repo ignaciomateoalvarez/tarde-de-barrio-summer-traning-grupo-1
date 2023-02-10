@@ -13,7 +13,7 @@ class SessionController < ApplicationController
         redirect_to(login_path, notice: t('.notice'))
       end
     else
-      redirect_to(login_path, warning: t('.warning'))
+      redirect_to(login_path, warning: "usuario incorrecto")
     end
   end
 
