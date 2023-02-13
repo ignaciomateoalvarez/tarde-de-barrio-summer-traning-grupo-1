@@ -6,7 +6,6 @@ RSpec.describe Student, type: :model do
   describe 'Validations' do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:lastname) }
-    it { should validate_presence_of(:go_to_school) }
     it { should validate_presence_of(:school_level) }
   end
 
@@ -22,10 +21,6 @@ RSpec.describe Student, type: :model do
     it { should allow_value('Perez Gonzales').for(:lastname) }
     it { should_not allow_value('Acuña Fulanito12').for(:lastname) }
     it { should_not allow_value('Gomez!').for(:lastname) }
-  end
-
-  describe 'Enum TypeA' do
-    it { should define_enum_for(:go_to_school).with_values(%i[yes no]) }
   end
 
   describe 'Enum Type' do

@@ -7,6 +7,6 @@ FactoryBot.define do
     birth { Faker::Date.birthday }
     address { Faker::Address.street_address }
     school_level {'primary'}
-    go_to_school {'yes'}
+    goes_to_school {'false'}
   end
 end

@@ -7,6 +7,7 @@ en:
       username: "USERNAME"
       activate: "ACTIVATE"
       new-user: "New User"
+      user: "Users"
 
 
     edit:
@@ -27,3 +28,12 @@ en:
       sign-in: User Register
       new-user: "New User"
       close: "Close"
+
+    student:
+      name: "Name"
+      lastname: "Lastname"
+      age: "Age"
+      address: "Address"
+      level: "Level of study"
+      study: "Study?"
+      students: "Students"

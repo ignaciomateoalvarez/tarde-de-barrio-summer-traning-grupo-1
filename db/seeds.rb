@@ -15,5 +15,5 @@ User.create(first_name: "Nadia", last_name: "Beltran", email: "nadia@gmail.com",
 
 p "Creadas #{User.count} usuarios"
 
-Student.create(name: 'Charly', lastname: 'Anabellia', age: 28, birth: '05/04/1994', address: 'Calle 135', school_level: 2, go_to_school: 0)
-Student.create(name: 'Camila', lastname: 'Tisera', age: 24, birth: '31/12/1998', address: 'Calle 12', school_level: 1, go_to_school: 1)
+Student.create(name: 'Charly', lastname: 'Anabellia', birth: '05/04/1994', address: 'Calle 135', school_level: 2, goes_to_school: false)
+Student.create(name: 'Camila', lastname: 'Tisera', birth: '31/12/1998', address: 'Calle 12', school_level: 1, goes_to_school: true)
