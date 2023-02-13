@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class='student'>
+      <h1> ESTUDIANTES </h1>
+    </div>
+  </div>
+</nav>
+<table class='table-container'>
+  <tr class='table-th'>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+    <th>Domicilio</th>
+    <th>Nivel de estudio</th>
+    <th>Estudia?</th>
+  </tr>
+  <% @student.each do |student| %>
+  <tr class='user'>
+    <td class='name'><%= student.name %></td>
+    <td class='name'><%= student.lastname %></td>
+    <td class='name'><%= @age - student.birth.year %></td>
+    <td class='name'><%= student.address %></td>
+    <td class='name'><%= student.school_level %></td>
+    <td class='name'><%= student.go_to_school %></td>
+  </tr>
+  <%end%>
+</table>

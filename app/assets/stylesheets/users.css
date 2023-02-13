@@ -86,17 +86,20 @@
   margin-right: 5px;
 }
 .name {
-  min-width: 30%;
+  min-width: 18%;
+  
 }
 .email {
-  min-width: 25%;
+  min-width: 30%;
 }
+
 .user {
   display: flex;
   border-radius: 5px;
   border: 1px solid #dadada;
   padding: 5px 22px;
   height: 45px;
+  align-items: center;
 }
 .user:hover {
   border: 1px solid #0090af;
