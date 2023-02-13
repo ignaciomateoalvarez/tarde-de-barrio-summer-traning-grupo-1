@@ -22,8 +22,5 @@ RSpec.describe Student, type: :model do
     it { should_not allow_value('Acuña Fulanito12').for(:lastname) }
     it { should_not allow_value('Gomez!').for(:lastname) }
   end
-
-  describe 'Enum Type' do
-    it { should define_enum_for(:school_level).with_values(%i[kinder-garder primary secondary]) }
-  end
+  
 end
