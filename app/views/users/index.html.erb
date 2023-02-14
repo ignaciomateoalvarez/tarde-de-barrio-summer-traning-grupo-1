@@ -20,6 +20,7 @@
       <th><%=t('.email')%></th>
       <th><%=t('.role')%></th>
       <th><%=t('.activate')%></th>
+      <th><%=t('.edit-user')%></th>
     </tr>
   </thead>
   <tbody>
@@ -28,9 +29,9 @@
         <td class='checkbox'><%= check_box_tag "checkbox_name" %></td>
         <td class='name'><%= user.first_name %> <%= user.last_name %></td>
         <td class='email'><%= user.email %></td>
-        <td class="rol">
+        <td >
           <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
-            <%= form.select :role, options_for_select(User.roles.keys, selected: user.role), {}, disabled: true %>
+            <%= form.select :role, options_for_select(User.roles.keys, selected: user.role), {},class:"rol", disabled: true %>
           <% end %> 
         </td>  
         <td>

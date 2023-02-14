@@ -15,6 +15,7 @@ class User < ApplicationRecord
   end
 
   enum role: [:administrador, :colaborador]
+  
   validates :role, presence: true
   validates :role, inclusion: {in: ["administrador", "colaborador"]}
 end
