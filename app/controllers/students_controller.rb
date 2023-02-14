@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
+
     def index
-      @students = Student.all
+      @pagy, @students = pagy(Student.all.decorate)
     end
 
 end

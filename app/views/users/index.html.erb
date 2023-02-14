@@ -20,12 +20,13 @@
       <th><%=t('.email')%></th>
       <th><%=t('.role')%></th>
       <th><%=t('.activate')%></th>
-      <th><%=t('.edit-user')%></th>
+      <th></th>
+      
     </tr>
   </thead>
   <tbody>
     <% @records.each do |user| %>
-      <tr class='user'>
+      <tr class='users-td'>
         <td class='checkbox'><%= check_box_tag "checkbox_name" %></td>
         <td class='name'><%= user.first_name %> <%= user.last_name %></td>
         <td class='email'><%= user.email %></td>
@@ -42,7 +43,10 @@
           </div>
         <% end %>
         </td>
-        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' }%></td>
+         <td><%= button_to edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } do%>
+                    <%= image_tag( "pen-solid.svg", class: 'pen-icon') %>
+                    </div> 
+            <% end %></td>
       </tr>
     <% end %>
   </tbody>
