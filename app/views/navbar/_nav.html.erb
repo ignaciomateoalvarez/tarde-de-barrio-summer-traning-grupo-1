@@ -1,15 +1,15 @@
 <nav class="navbar">
   <%= image_tag( "bars-solid.svg", class: 'menu-icon') %> 
-  <%= link_to '/' do  %>
-    <%= image_tag("house-solid.svg", class: 'home-icon')%>
-  <% end %>
-  <%= link_to t('.student'), students_path, class: "link student" %> 
-  <%= button_to t('.log-out'), logout_path ,method: :delete %>
+  <div class= "nav-link">
+    <%= link_to '/' do  %>
+      <%= image_tag("house-solid.svg", class: 'home-icon ')%>
+    <% end %>
+    <%= link_to t('.student'), students_path, class: "link-student" %> 
+    <%= link_to t('.users'), users_path, class: "link-student" %> 
+  </div>
+
+  <%= button_to t('.log-out'), logout_path ,method: :delete, class: "myButton" %>
+  
+
 </nav> 
 
-<div class="menu">
-  <li class='menu-item'><%= t('.hi') %><%= current_user.first_name %> <%=t('.admin')%></li>
-  <li class='menu-item'><%= link_to t('.profile')%></li>
-  <li class='menu-item'><%= link_to t('.role'), users_path %></li>
-  </ul>
-</div>

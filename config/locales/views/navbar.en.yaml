@@ -2,7 +2,7 @@ es:
   navbar:
     nav:
       profile: Profile
-      role: rol
+      users: Users
       hi: Hi
       admin: (admin)
       student: Student
