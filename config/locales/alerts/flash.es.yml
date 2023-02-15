@@ -1,22 +1,26 @@
 es:
   session:
     create:
-      success: "Inicio de Sesion Exitoso"
-      warning: "Inicio de Sesion Fallido"
-      notice: "Inicio de Sesion Fallido - Usuario Desactivado"
+      success: Inicio de Sesion Exitoso
+      warning: Inicio de Sesion Fallido
+      notice: Inicio de Sesion Fallido - Usuario Desactivado
     destroy:
-      notice: "Usted cerro sesion!"
+      notice: Usted cerro sesion!
 
   users:
     create:
-      notice: "Bienvenido!"
-      warning: "Inicio de Sesion Fallido"
+      notice: Bienvenido!
+      warning: Inicio de Sesion Fallido
 
     new_user:
-      notice: "Usuario creado con exito"
-      warning: "Creacion de usuario fallido"
+      notice: Usuario creado con exito
+      warning: Creacion de usuario fallido
     toggle_deactivate:
-      notice: "Cambio de Estado del Usuario"
-      warning: "Inicio de Sesion fallido"
+      notice: Cambio de Estado del Usuario
+      warning: Inicio de Sesion fallido
     index:
-      notice: "No tenes suficientes permisos"
+      notice: No tenes suficientes permisos
+  students:
+    create:
+      notice: Estudiante creado con exito!
+      warning: Error al crear Estudiante

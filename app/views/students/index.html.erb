@@ -1,27 +1,46 @@
 <%= render "navbar/nav" %>
+<div class="index-container"> 
+<section class="nav-users-container">
+  <div class='button-filter'>
+    <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
+    <%= f.text_field :full_name , class: "filter"%>
+    <div class="magnifying-glass">
+      <%= image_submit_tag("magnifying-glass-solid.svg")%>
+    </div>
+    <% end %>
+  </div>
+  <div class="new-user">
+    <%= link_to t('.new-user'), new_student_path(), method: :get, data: { turbo_frame: 'modal' } %>
+  </div>
+</section>
 <table class='table-container'>
-  <tr class='table-th'>
-    <th><%=t('.students')%></th>
-    <th><%=t('.age')%></th>
-    <th><%=t('.level')%></th>
-    <th><%=t('.study')%></th>
-    <th></th>
-  </tr>
-  
-  
-  <% @presenter.decorated_students.each do |student| %>
-  <tr class="user-tr">
-    <td ><%= student.full_name%></td>
-    <td class='name'><%= student.calculate_age %></td>
-    <td class='name'><%= student.school_level %></td>
-    <td class='name'><%= student.status_school %></td>
-    <td class='name'><%= image_tag( "pen-solid.svg", class: 'pen-icon') %></td>
-    <td ><%= image_tag( "trash-can-solid.svg", class: 'trash-icon') %></td>
-  </tr>
-  <%end%>
+  <thead>
+    <tr class='table-th'>
+      <th><%=t('.students')%></th>
+      <th><%=t('.age')%></th>
+      <th><%=t('.school_level')%></th>
+      <th><%=t('.study')%></th>
+      
+    </tr>
+  </thead>
+  <tbody>
 
+
+    <% @presenter.decorated_students.each do |student| %>
+      <tr class='users-td'>
+        <td class='name'><%= student.full_name%></td>
+        <td class='name'><%= student.calculate_age %></td>
+        <td class='checkbox'><%= student.school_level %></td>
+        <td class='name'><%= student.status_school %></td>
+
+         
+        
+         
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
 <div class='pagination'>
   <%== pagy_nav(@pagy) %>
 </div>
-

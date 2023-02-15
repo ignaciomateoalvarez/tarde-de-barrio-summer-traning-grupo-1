@@ -1,22 +1,26 @@
 en:
   session:
     create:
-      success: "Login Successful"
-      warning: "Failed to Login"
-      notice: "Failed to Login - User is deactivated"
+      success: Login Successful
+      warning: Failed to Login
+      notice: Failed to Login - User is deactivated
     destroy:
-      notice: "Session Closed!"
+      notice: Session Closed!
 
   users:
     create:
-      notice: "Welcome!"
-      warning: "Failed to Login"
+      notice: Welcome!
+      warning: Failed to Login
 
     new_user:
-      notice: "User created successfully"
-      warning: "Failed to create new user"
+      notice: User created successfully
+      warning: Failed to create new user
     toggle_deactivate:
-      notice: "Changed User State"    
+      notice: Changed User State    
 
     index:
-      notice: "You don't have enough permissions"
+      notice: You don't have enough permissions
+  students:
+    create:
+      notice: New Student created successfully
+      warning: Failed to create new student

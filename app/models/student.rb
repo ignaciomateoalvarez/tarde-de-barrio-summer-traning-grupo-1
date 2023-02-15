@@ -11,5 +11,5 @@ class Student < ApplicationRecord
     Time.now.year - birth.year
   end
 
-  enum school_level: { Inicial: 0, Primario: 1, Secundario: 2 }
+  enum school_level: { kinder_garder: 0, primary: 1, secondary: 2 }
 end
