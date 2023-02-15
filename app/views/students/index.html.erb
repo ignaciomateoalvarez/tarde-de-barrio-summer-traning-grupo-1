@@ -11,10 +11,10 @@
   
   <% @students.each do |student| %>
   <tr class="user-tr">
-    <td ><%= student.full_name%></td>
+    <td ><%= student.decorate.full_name%></td>
     <td class='name'><%= student.calculate_age %></td>
     <td class='name'><%= student.school_level %></td>
-    <td class='name'><%= student.status_school %></td>
+    <td class='name'><%= student.decorate.status_school %></td>
     <td class='name'><%= image_tag( "pen-solid.svg", class: 'pen-icon') %></td>
     <td ><%= image_tag( "trash-can-solid.svg", class: 'trash-icon') %></td>
   </tr>

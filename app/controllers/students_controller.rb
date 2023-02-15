@@ -1,7 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @presenter = StudentPresenter.new(params)
-    @pagy, @students = @presenter.paginate
+    @pagy, @students = pagy(Student.all)
   end
 
   def show
