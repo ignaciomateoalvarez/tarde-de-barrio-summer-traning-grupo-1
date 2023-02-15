@@ -1,16 +1,16 @@
 class StudentDecorator < Draper::Decorator
   delegate_all
+  include Draper::LazyHelpers
 
   def status_school
     if student.goes_to_school
-      'si'
+      t('.yes')
     else
-      'no'
+      t('.no')
     end
   end
-  
+
   def full_name
     "#{student.name} #{student.lastname}"
   end
-
 end

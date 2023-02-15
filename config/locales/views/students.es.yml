@@ -1,7 +1,10 @@
 es:
   students:
     index:
-      students: ESTUDIANTES
-      age: EDAD
-      level: ESCOLARIDAD ALCANZADA
-      study: ESCOLARIZADO
+      students: Estudiantes
+      age: Edad
+      school_level: Escolaridad Alcanzada
+      study: Escolarizado
+      yes: Si
+      no: No
+

@@ -1,8 +1,8 @@
 es:
   navbar:
     nav:
-      profile: "Mi perfil"
-      role: "roles"
+      profile: Mi perfil
+      role: roles
       hi: Hola
       admin: (admin)
       student: Estudiantes
