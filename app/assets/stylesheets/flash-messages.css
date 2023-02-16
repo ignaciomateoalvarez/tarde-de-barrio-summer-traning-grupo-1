@@ -1,9 +1,8 @@
-.flash-message{
-  color: black;
+.flash-message {
   position: absolute;
   top: 1rem;
   margin: auto;
-  background-color: white;
+  background-color: rgb(13, 232, 13);
   padding: 0.5rem;
   border-radius: 0.625rem;
   width: fit-content;
@@ -11,8 +10,15 @@
   right: 0; 
   margin-left: auto; 
   margin-right: auto;
+  border: 0.125rem solid black;
+  color: white;
 }
-.login-warning{
+
+.link-student:hover {
+  color: black
+}
+
+.login-warning {
   color: red;
   position: absolute;
   top: 1rem;
@@ -26,7 +32,7 @@
   margin-right: auto;
 
 }
-.login-success{
+.login-success {
   color: green;
   position: absolute;
   top: 1rem;

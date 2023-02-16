@@ -1,34 +1,35 @@
 <%= render "navbar/nav" %>
 <div class="index-container"> 
-<section class="nav-users-container">
-  <div class='button-filter'>
+<section class="user-nav-users-container">
+  <div class='user-button-filter'>
     <%= form_with(url: users_path, method: :get, scope: :user_filter) do |f| %> 
     <%= f.text_field :full_name , class: "filter"%>
-    <div class="magnifying-glass">
+    <div class="user-magnifying-glass">
       <%= image_submit_tag("magnifying-glass-solid.svg")%>
     </div>
     <% end %>
   </div>
-  <div class="new-user">
+  <div class="user-new-user">
     <%= link_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
   </div>
 </section>
-<table class='table-container'>
+<table class='user-table-container'>
   <thead>
-    <tr class='table-th'>
+    <tr class='user-table-th'>
       <th><%=t('.username')%></th>
       <th><%=t('.email')%></th>
       <th><%=t('.role')%></th>
       <th><%=t('.activate')%></th>
-      <th><%=t('.edit-user')%></th>
+      <th></th>
+      
     </tr>
   </thead>
   <tbody>
     <% @records.each do |user| %>
-      <tr class='user'>
-        <td class='checkbox'><%= check_box_tag "checkbox_name" %></td>
-        <td class='name'><%= user.first_name %> <%= user.last_name %></td>
-        <td class='email'><%= user.email %></td>
+      <tr class='users-td'>
+        <td class='user-checkbox'><%= check_box_tag "checkbox_name" %></td>
+        <td class='user-name'><%= user.first_name %> <%= user.last_name %></td>
+        <td class='user-email'><%= user.email %></td>
         <td >
           <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
             <%= form.select :role, options_for_select(User.roles.keys, selected: user.role), {},class:"rol", disabled: true %>
@@ -42,12 +43,14 @@
           </div>
         <% end %>
         </td>
-        <td><%= button_to "Editar", edit_user_path(user), method: :get, data: { turbo_frame: 'modal' }%></td>
+         <td><%= button_to edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } do%>
+                    <%= image_tag( "pen-solid.svg", class: 'user-pen-icon') %>
+            <% end %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<div class='pagination'>
+<div class='user-pagination'>
   <%== pagy_nav(@pagy) %>
 </div>

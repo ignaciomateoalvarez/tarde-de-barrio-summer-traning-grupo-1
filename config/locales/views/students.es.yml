@@ -1,0 +1,11 @@
+es:
+  students:
+    index:
+      students: Estudiantes
+      age: Edad
+      school_level: Escolaridad Alcanzada
+      study: Escolarizado
+      yes: Si
+      no: No
+      new_student: Nuevo estudiante
+

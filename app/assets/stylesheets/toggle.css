@@ -1,4 +1,4 @@
-.toggle-button input[type=checkbox]{
+.toggle-button input[type=checkbox] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -41,7 +41,7 @@
   width: 3.125rem;
 }
 
-.toggle-button{
+.toggle-button {
   display: flex;
   justify-content: center;
   align-items: center;

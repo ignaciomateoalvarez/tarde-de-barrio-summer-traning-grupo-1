@@ -1,0 +1,11 @@
+es:
+  navbar:
+    nav:
+      profile: Mi perfil
+      users: Usuarios
+      hi: Hola
+      admin: admin
+      student: Estudiantes
+      log-out: cerrar sesion
+
+     

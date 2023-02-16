@@ -1,0 +1,10 @@
+es:
+  students:
+    index:
+      students: Students
+      age: Age
+      school_level: School level
+      study: Schooled
+      yes: Yes
+      no: No
+      new_student: New student

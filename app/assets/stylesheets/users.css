@@ -1,110 +1,169 @@
-.navbar{
-  font-size: 8px;
+.navbar {
+  font-size: 1.25rem;
   color: white;
   display: flex;
-  background-color: #0090af;
-  margin-bottom: 40px;
-  padding: 10px;
-  height: 48px;
+  margin-bottom: 2.5rem;
+  padding: 0.625rem 1.25rem;
+  height: 3rem;
   align-items: center;
+  background-color: #0090af;
   justify-content: space-between;
 }
-.nav-container{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+
+.user-magnifying-glass {
+  height: 70%;
+  width: 2rem;
+  margin: 0.313rem 0rem;
+}
+
+.nav-link {
+  width: 40%;
+  text-align: center;
+}
+
+.myButton {
+	
+	background-color:#0090AF;
+	border-radius:0.375rem;
+	border:0.063rem solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:0.938rem;
+	font-weight:bold;
+	padding:0.75rem 1.5rem;
+	text-decoration:none;
+	text-shadow:0rem -0.063rem 0rem #5b6178;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+.myButton:active {
+	position:relative;
+	top:0.063rem;
+}
+
+.menu {
   display: flex;
-  justify-content: space-around;
-  align-self: center;
-  width: 100%;
+  width: 16.875rem;
+  height: 5rem;
+  left: 0rem;
+  top: 3rem;
+  background: #F1F3F3;
+  align-items: center;
 }
-.home-icon{
-  height: 20px;
-  width: 25px;
-  margin-right: 15px; 
+.menu-icon {
+  height: 1.25rem;
+  width: 1.563rem;
 }
-.nav-users-container{
+.user-pen-icon { 
+  height: 1.25rem;
+  width: 1.5625rem;
+  background: white;
+}
+.trash-icon {
+  height: 1.25rem;
+  width: 1.5625rem;
+  background: white;
+}
+.home-icon {
+  height: 1.25rem;
+  width: 1.5625rem;
+  margin-right: 0.9375rem; 
+}
+.user-nav-users-container {
   display: flex;
   text-align: center;
   text-justify: center;
   justify-content: flex-end;
-  padding: 5px 150px;
-  height: 45px;
+  padding: 0.3125rem 9.375rem;
+  height: 2.8125rem;
 }
-.index-container{
+.index-container {
   min-height: 42em;
-	min-width: 62.5rem;
-	width: 100%;
-	height: 100%;
-	background-color: white;
-	display: flex;
-	flex-direction: column;
-	font-size: 0.875rem;
-}
-.filter{
-  width: 428px;
-  height: 40px;
-  background: #FAFAFA;
-  border: 1.29514px solid #CCCCCC;
-  border-radius: 7.06992px  0px   0px 7.06992px;  
-  margin-right: 5px;
-}
-.new-user {
+  min-width: 62.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: white;
   display: flex;
-  height: 40px;
-  width: 150px;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+.filter {
+  width: 100% ;
+  height: 90%;
+  background: #FAFAFA;
+  border: 0.0809rem solid #CCCCCC;
+  border-radius: 0.4419rem;  
+  margin-right: 0.3125rem;
+}
+.user-new-user {
+  display: flex;
+  height: 90%;
+  width: 9.375rem;
   border: solid;
   border-color: #0090AF ;
   background: #0090AF;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   color: #FFFFFF;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0rem 0.625rem;
 }
-.button-filter {
+.user-button-filter {
   display: flex;
+  width: 30%;
 }
 
-.magnifying-glass {
-  margin-top: 0.5rem;
-	height: 1.875rem;
-	width: 1.25rem
+.user-button-filter form{
+  width: 100%;
 }
 
-.table-container {
+
+
+.user-table-container {
   display: flex;
   flex-direction: column;
-  margin: 15px 150px 60px;
+  margin: 0.9375rem 9.375rem 3.75rem;
+  height: 70%;
+  width: 70%;
+  border: 0.1875rem solid #CCCCCC;
+  background-color: #FAFAFA;
 }
-.table-th {
-  display: flex;
-  justify-content: space-between;
+.user-table-th {
   color: #0090af;
-  padding: 5px 30px;
+  padding: 0.3125rem 1.875rem;
+  border-bottom: 0.1875rem solid #CCCCCC;
 }
-.checkbox {
-  margin-right: 5px;
+.user-checkbox {
+  margin-right: 0.3125rem;
 }
-.name {
-  min-width: 18%;
+.user-name {
+  text-align: center;
+  min-width: 15%;
   
 }
-.email {
-  min-width: 30%;
+.user-email {
+  min-width: 35%;
 }
 
-.user {
-  display: flex;
-  border-radius: 5px;
-  border: 1px solid #dadada;
-  padding: 5px 22px;
-  height: 45px;
+.users-tr {
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid black;
+  padding: 0.3125rem 1.375rem;
+  height: 2.8125rem;
   align-items: center;
 }
+
 .user:hover {
-  border: 1px solid #0090af;
+  border: 0.0625rem solid #0090af;
 }
-.pagination {
+.user-pagination {
   display: flex;
   justify-content: center;
   color: black;

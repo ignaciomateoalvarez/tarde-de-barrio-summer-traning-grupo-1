@@ -1,27 +1,39 @@
-<nav class="navbar">
-  <div class="nav-container">
-    <div class='student'>
-    <h1><%=t('.students')%></h1>
-    </div>
+<%= render "navbar/nav" %>
+<div class="index-container"> 
+<section class="student-nav-container">
+  <div class='student-button-filter'>
+    <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
+    <%= f.text_field :full_name , class: "filter"%>
+    <% end %>
   </div>
-</nav>
-<table class='table-container'>
-  <tr class='table-th'>
-    <th><%=t('.name')%></th>
-    <th><%=t('.lastname')%></th>
-    <th><%=t('.age')%></th>
-    <th><%=t('.address')%></th>
-    <th><%=t('.level')%></th>
-    <th><%=t('.study')%></th>
-  </tr>
-  <% @students.each do |student| %>
-  <tr class='user'>
-    <td class='name'><%= student.name %></td>
-    <td class='name'><%= student.lastname %></td>
-    <td class='name'><%= student.calculate_age %></td>
-    <td class='name'><%= student.address %></td>
-    <td class='name'><%= student.school_level %></td>
-    <td class='name'><%= student.goes_to_school %></td>
-  </tr>
-  <%end%>
+  <div class="student-magnifying-glass">
+    <%= image_submit_tag("magnifying-glass-solid.svg")%>
+  </div>
+  <div class="student-new-student">
+    <%= link_to t('.new-student'), new_student_path(), method: :get, data: { turbo_frame: 'modal' } %>
+  </div>
+</section>
+<div>
+<table class='student-table-container'>
+    <tr class='student-th'>
+      <th><%=t('.students')%></th>
+      <th><%=t('.age')%></th>
+      <th><%=t('.school_level')%></th>
+      <th><%=t('.study')%></th>    
+      <th></th>
+      <th></th>
+    </tr>
+    <% @presenter.decorated_students.each do |student| %>
+      <tr class='student-td'>
+        <td><%= student.full_name%></td>
+        <td><%= student.calculate_age %></td>
+        <td><%= student.school_level %></td>
+        <td><%= student.status_school %></td>
+        <td> <%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %></td>
+      </tr>
+    <% end %>
 </table>
+</div>
+<div class='student-pagination'>
+  <%== pagy_nav(@pagy) %>
+</div>

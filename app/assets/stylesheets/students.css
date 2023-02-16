@@ -1,0 +1,90 @@
+.student-magnifying-glass{
+    height: 70%;
+    width: 2rem;
+    margin: 0.3125rem 0rem;
+}
+.student-magnifying-glass input {
+
+    height: 90%;
+}
+
+.student-new-student {
+    display: flex;
+    height: 90%;
+    width: 9.375rem;
+    border: solid;
+    border-color: #0090AF ;
+    background: #0090AF;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0rem 0.625rem;
+}
+
+.student-table-container {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.student-pen-icon { 
+    height: 1.25rem;
+    width: 1.5625rem;
+    background: white;
+  }
+
+.student-pagination {
+    padding: 3.125rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.student-nav-container {
+    display: flex;
+    text-align: center;
+    text-justify: center;
+    justify-content: flex-end;
+    padding: 0.3125rem 9.375rem;
+    height: 2.8125rem;
+    margin: 1.25rem;
+}
+
+.student-button-filter form{
+    width: 100%;
+}
+  
+.student-button-filter {
+    display: flex;
+    width: 30%;
+}
+
+.student-th {
+    
+    font-size: 2rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    text-transform: uppercase;
+    color: #007792;
+}
+
+.student-td {
+
+    font-size: 2rem;
+    border: 0.0625rem solid #DADADA;
+    border-radius: 0.5rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #474747;
+
+}

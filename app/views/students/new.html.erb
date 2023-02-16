@@ -1,0 +1,42 @@
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "container",action: 
+    "turbo:submit-end->turbo-modal#submitEnd 
+    keyup@window->turbo-modal#closeWithKeyboard 
+    click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
+  <div class='modal' data-turbo-modal-target= "modal">
+      <div class='modal-nav'>
+        <h1><%=t('.title')%></h1>
+      </div>
+      <%= form_with(scope: :student, url: students_path, method: :post) do |form| %>
+      <section class='center-form-content'>
+        <%= form.label :name ,t('.first-name'), {class: 'form-label'} %>
+        <%= form.text_field :name,value: params[:name] %>
+      </section>
+      <section class='center-form-content'>
+        <%= form.label :lastname ,t('.last-name'), {class: 'form-label'} %>
+        <%= form.text_field :lastname,value: params[:lastname] %>
+      </section>
+      <section class='center-form-content'>
+        <%= form.label :birth ,"fecha", {class: 'form-label'}%>
+        <%= form.date_field :birth,value: params[:birth] %>
+      </section>
+      <section class='center-form-content'>
+        <%= form.label :address ,t('.address'), {class: 'form-label'}%>
+        <%= form.text_field :address,value: params[:address] %>
+      </section>
+        <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
+        <%= form.select :school_level, Student.school_levels.keys, class: 'input-form' %>
+      <section class='center-form-content'>
+        <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
+        <%= form.radio_button :goes_to_school, true %>
+        <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>
+        <%= form.radio_button :goes_to_school, false %>
+      </section>
+      <div class= 'center-form-content'>
+        <%= form.submit :value => "Crear estudiante" %>
+      </div>
+      <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button" %>
+      <% end %>
+    </div>
+ <% end %>
+<% end %>

@@ -1,38 +1,38 @@
 es:
   users:
     index:
-      email: "EMAIL"
-      filter: "Filtrar"
-      role: "ROL"
-      username: "USUARIOS"
-      activate: "ACTIVAR"
-      new-user: "Nuevo Usuario"
-      user: "Usuarios"
+      email: EMAIL
+      filter: Filtrar
+      role: ROL
+      username: USUARIOS
+      activate: ACTIVAR
+      new-user: Nuevo Usuario
+      user: Usuarios
 
     edit:
-      title: "Editar Usuario" 
-      first-name: "Nombre" 
-      last-name: "Apellido"
-      email: "Email"
-      rol: "Rol"
-      close: "Cerrar"
-      edit-user: "Editar Usuario"
+      title: Editar Usuario 
+      first-name: Nombre 
+      last-name: Apellido
+      email: Email
+      rol: Rol
+      close: Cerrar
+      edit-user: Editar Usuario
 
     new:
-      title: "Nuevo Usuario" 
+      title: Nuevo Usuario 
       first-name: Nombre
       last-name: Apellido
       email: Email
       rol: Rol
       sign-in: Registrar Usuario
-      new-user: "Nuevo Usuario"
-      close: "Cerrar"
+      new-user: Nuevo Usuario
+      close: Cerrar
 
     student:
-      name: "Nombre"
-      lastname: "Apellido"
-      age: "Edad"
-      address: "Domicilio"
-      level: "Nivel de estudio"
-      study: "Estudia?"
-      students: "Estudiantes"
+      name: Nombre
+      lastname: Apellido
+      age: Edad
+      address: Domicilio
+      level: Nivel de estudio
+      study: Estudia?
+      students: Estudiantes
