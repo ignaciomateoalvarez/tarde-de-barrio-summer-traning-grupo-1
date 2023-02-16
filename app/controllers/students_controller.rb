@@ -5,8 +5,10 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = StudentPresenter.new(params).student
+      @student = Student.find(params[:id])
+    #@student = StudentPresenter.new(params).student
   end
+
 
   def create
     @student = Student.new(student_params)
@@ -22,8 +24,8 @@ class StudentsController < ApplicationController
   def edit; end
 
   private
-
+  
   def student_params
-    params.require(:student).permit(:name, :lastname, :birth, :address, :school_level, :goes_to_school)
+    params.require(:student).permit(:id, :name, :lastname, :birth, :address, :school_level, :goes_to_school)
   end
 end

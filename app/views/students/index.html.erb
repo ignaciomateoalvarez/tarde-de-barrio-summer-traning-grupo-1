@@ -25,11 +25,12 @@
     </tr>
     <% @presenter.decorated_students.each do |student| %>
       <tr class='student-td'>
-        <td><%= student.full_name%></td>
+
+        <td><%= link_to 'info', student_path(student.id) %><%= student.full_name%></td>
         <td><%= student.calculate_age %></td>
         <td><%= student.school_level %></td>
         <td><%= student.status_school %></td>
-        <td> <%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %></td>
+        <td><%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %></td>
       </tr>
     <% end %>
 </table>

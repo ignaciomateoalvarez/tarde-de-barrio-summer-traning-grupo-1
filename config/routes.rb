@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :users do
     put 'toggle_deactivate', to: 'users#toggle_deactivate'
   end
-  resources :students
+  resources :students do 
+  end
 end
