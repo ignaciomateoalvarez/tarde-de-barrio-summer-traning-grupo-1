@@ -4,19 +4,38 @@
       <%= image_tag("chevron-right-solid.svg", class:"student-chevron-right ") %>
   <%= @student.name %></p>
 </section>
-<div class="student-contenedor">
-<section>
-    <h1 class="student-h1"><%= @student.name %></h1>
-    <h2 class="student-h2">Datos del estudiante</h2>
-    <h3 class="student-h3">Fecha de nacimiento</h3>
-    <p class="student-p"><%= @student.birth %><p>
-    <h3 class="student-h3">Domicilio</h3>
-    <p class="student-p"><%= @student.address %><p>
-    <h3 class="student-h3">Grado de Escolaridad</h3>
-    <p class="student-p"><%= @student.school_level %><p>
-    <h3 class="student-h3">Escolarizado</h3>
-    <p class="student-p"><%= @student.goes_to_school%><p>
-</section>
-</div>
-    
-   
+<div class="student-page">
+   <div class="student-contenedor">
+   <section>
+       <h1 class="student-h1"><%= @student.name %></h1>
+       <h2 class="student-h2">Datos del estudiante</h2>
+       <h3 class="student-h3">Fecha de nacimiento</h3>
+       <p class="student-p"><%= @student.birth %><p>
+       <h3 class="student-h3">Domicilio</h3>
+       <p class="student-p"><%= @student.address %><p>
+       <h3 class="student-h3">Grado de Escolaridad</h3>
+       <p class="student-p"><%= @student.school_level %><p>
+       <h3 class="student-h3">Escolarizado</h3>
+       <p class="student-p"><%= @student.goes_to_school%><p>
+   </section>
+   </div>
+   <div class="comentarios">
+      <h1 class=comentario-h1>Comentarios</h1>
+      <div class="comentario-item1">
+      </div>
+      <div>
+      <%= image_tag("image-solid.svg", class:"student-chevron-right ") %>
+      <%= image_tag("face-laugh-beam-regular.svg", class:"student-chevron-right ") %>
+      </div>
+      <h1 class=comentario-h1>Hoy</h1>
+      <div class="comentario-item2">
+         <%= image_tag("thumbs-up-regular.svg", class:"student-chevron-right ") %>
+         <%= image_tag("chevron-up-solid.svg", class:"student-chevron-right ") %>
+      </div>
+      <h1 class=comentario-h1>Sabado 19 de noviembre</h1>
+      <div class="comentario-item3">
+         <%= image_tag("thumbs-up-regular.svg", class:"icon-s") %>
+         <%= image_tag("chevron-up-solid.svg", class:"icon-s") %>
+      </div>
+   </div> 
+ </div>  

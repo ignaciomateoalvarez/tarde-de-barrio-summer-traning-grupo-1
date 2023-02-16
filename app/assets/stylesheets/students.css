@@ -64,7 +64,6 @@
 }
 
 .student-th {
-  font-size: 2rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -110,7 +109,6 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
-
   color: #474747;
 }
 
@@ -121,7 +119,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-
   color: #0090af;
 }
 
@@ -130,9 +127,8 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
-
   color: #474747;
 }
 
@@ -143,14 +139,55 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
-
-
   color: #474747;
 }
+.student-page{
+  display: flex;
 
+}
 .student-contenedor {
-    width: 30%;
-    height: 100%;
+    width: 25%;
     display: flex;
     border-right: 1px solid #DADADA;
+}
+.comentarios{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+}
+
+.comentario-item1{
+  width: 70%;
+  height: 30%;
+  background: #F1F3F4;
+  border-radius: 8px;
+}
+
+.comentario-item2{
+  width: 70%;
+  height: 30%;
+  border: 1px solid #DADADA;
+  border-radius: 8px;
+  
+}
+
+.comentario-item3{
+  width: 70%;
+  height: 30%;
+  border: 1px solid #DADADA;
+  border-radius: 8px;
+  justify-items: center;
+}
+
+.icon-s{
+  height: 1rem;
+  width: 1rem;
+}
+
+.comentario-h1{
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+color: #000000;
 }
