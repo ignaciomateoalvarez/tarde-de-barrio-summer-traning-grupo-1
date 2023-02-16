@@ -4,29 +4,25 @@
   <div class='user-button-filter'>
     <%= form_with(url: users_path, method: :get, scope: :user_filter) do |f| %> 
     <%= f.text_field :full_name , class: "filter"%>
-    <div class="user-magnifying-glass">
-      <%= image_submit_tag("magnifying-glass-solid.svg")%>
-    </div>
     <% end %>
   </div>
+  <div class="user-magnifying-glass">
+      <%= image_submit_tag("magnifying-glass-solid.svg")%>
+    </div>
   <div class="user-new-user">
     <%= link_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
   </div>
 </section>
 <table class='user-table-container'>
-  <thead>
     <tr class='user-table-th'>
       <th><%=t('.username')%></th>
       <th><%=t('.email')%></th>
       <th><%=t('.role')%></th>
       <th><%=t('.activate')%></th>
-      <th></th>
-      
+      <th></th>    
     </tr>
-  </thead>
-  <tbody>
     <% @records.each do |user| %>
-      <tr class='users-td'>
+      <tr class='user-table-td'>
         <td class='user-checkbox'><%= check_box_tag "checkbox_name" %></td>
         <td class='user-name'><%= user.first_name %> <%= user.last_name %></td>
         <td class='user-email'><%= user.email %></td>
@@ -48,9 +44,8 @@
             <% end %></td>
       </tr>
     <% end %>
-  </tbody>
 </table>
-
 <div class='user-pagination'>
   <%== pagy_nav(@pagy) %>
+</div>
 </div>

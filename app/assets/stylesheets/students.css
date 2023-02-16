@@ -25,10 +25,10 @@
 }
 
 .student-table-container {
-  width: 100%;
-  height: 100%;
-  text-align: left;
+  width: 95%;
+  height: 65%;
   border-collapse: collapse;
+  margin: 1.25rem;
 }
 
 .student-pen-icon {
@@ -74,6 +74,7 @@
 }
 
 .student-td {
+  text-align: center;
   font-size: 2rem;
   border: 0.0625rem solid #dadada;
   border-radius: 0.5rem;
@@ -87,13 +88,13 @@
 /*Estilos vista estudiante*/
 
 .student-fullname {
-  margin: 20px 0px 0px 20px;
+  margin: 1.25rem 0rem 0rem 1.25rem;
   width: 100%;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 19px;
+  font-size: 1.25rem;
+  line-height: 1.1875rem;
   color: #474747;
 }
 
@@ -103,42 +104,42 @@
 }
 
 .student-h1 {
-  margin: 20px 0px 0px 20px;
+  margin: 1.25rem 0rem 0rem 1.25rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
   color: #474747;
 }
 
 .student-h2 {
-  margin: 20px 0px 0px 20px;
+  margin: 1.25rem 0rem 0rem 1.25rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #0090af;
 }
 
 .student-h3 {
-  margin: 20px 0px 0px 20px;
+  margin: 1.25rem 0rem 0rem 1.25rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1rem;
   color: #474747;
 }
 
 .student-p {
-  margin: 20px 0px 0px 20px;
+  margin: 1.25rem 0rem 0rem 1.25rem;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #474747;
 }
 .student-page{
@@ -148,7 +149,7 @@
 .student-contenedor {
     width: 25%;
     display: flex;
-    border-right: 1px solid #DADADA;
+    border-right: 0.0625rem solid #DADADA;
 }
 .comentarios{
   display: flex;
@@ -161,22 +162,22 @@
   width: 70%;
   height: 30%;
   background: #F1F3F4;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .comentario-item2{
   width: 70%;
   height: 30%;
-  border: 1px solid #DADADA;
-  border-radius: 8px;
+  border: 0.0625rem solid #DADADA;
+  border-radius: 0.5rem;
   
 }
 
 .comentario-item3{
   width: 70%;
   height: 30%;
-  border: 1px solid #DADADA;
-  border-radius: 8px;
+  border: 0.0625rem solid #DADADA;
+  border-radius: 0.5rem;
   justify-items: center;
 }
 
@@ -187,7 +188,7 @@
 
 .comentario-h1{
 font-weight: 500;
-font-size: 16px;
-line-height: 19px;
+font-size: 1rem;
+line-height: 1.1875rem;
 color: #000000;
 }

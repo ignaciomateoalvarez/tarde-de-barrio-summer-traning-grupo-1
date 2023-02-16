@@ -8,4 +8,9 @@ es:
       yes: Si
       no: No
       new_student: Nuevo estudiante
+      data: Datos del estudiante
+      birthdate: Fecha de nacimiento
+      comments: Comentarios
+      today: Hoy
+      createStudent: Crear estudiante
 

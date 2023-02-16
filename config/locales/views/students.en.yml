@@ -8,3 +8,8 @@ es:
       yes: Yes
       no: No
       new_student: New student
+      data: Student data
+      birthdate: Birthdate
+      comments: Comments
+      today: Today
+      createStudent: Create student

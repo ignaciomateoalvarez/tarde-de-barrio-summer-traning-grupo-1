@@ -1,6 +1,13 @@
 .modal-nav {
   background-color: #0090af;
+  padding: 1rem;
   color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.625rem;
+  line-height: 1.4375rem;
+  text-align: center;
 }
 
 .modal-container {
@@ -17,4 +24,8 @@
 .modal {
   background-color: white;
   width: fit-content;
+}
+
+.modal-buttom {
+  margin: 0rem 3.125rem 0rem 3.125rem;
 }
