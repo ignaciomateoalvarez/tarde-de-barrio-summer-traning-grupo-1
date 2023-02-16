@@ -16,6 +16,7 @@
 <div>
 <table class='student-table-container'>
     <tr class='student-th'>
+      <th></th>
       <th><%=t('.students')%></th>
       <th><%=t('.age')%></th>
       <th><%=t('.school_level')%></th>
@@ -25,8 +26,8 @@
     </tr>
     <% @presenter.decorated_students.each do |student| %>
       <tr class='student-td'>
-
-        <td><%= link_to 'info', student_path(student.id) %><%= student.full_name%></td>
+        <td><%= link_to 'info', student_path(student.id) %></td>
+        <td><%= student.full_name%></td>
         <td><%= student.calculate_age %></td>
         <td><%= student.school_level %></td>
         <td><%= student.status_school %></td>

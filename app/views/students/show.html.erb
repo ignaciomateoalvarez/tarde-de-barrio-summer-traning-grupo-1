@@ -1,5 +1,22 @@
 <%= render "navbar/nav" %>
-<%= @student.name %>
-
+<section class="student-fullname">
+   <p>Estudiante
+      <%= image_tag("chevron-right-solid.svg", class:"student-chevron-right ") %>
+  <%= @student.name %></p>
+</section>
+<div class="student-contenedor">
+<section>
+    <h1 class="student-h1"><%= @student.name %></h1>
+    <h2 class="student-h2">Datos del estudiante</h2>
+    <h3 class="student-h3">Fecha de nacimiento</h3>
+    <p class="student-p"><%= @student.birth %><p>
+    <h3 class="student-h3">Domicilio</h3>
+    <p class="student-p"><%= @student.address %><p>
+    <h3 class="student-h3">Grado de Escolaridad</h3>
+    <p class="student-p"><%= @student.school_level %><p>
+    <h3 class="student-h3">Escolarizado</h3>
+    <p class="student-p"><%= @student.goes_to_school%><p>
+</section>
+</div>
     
    
