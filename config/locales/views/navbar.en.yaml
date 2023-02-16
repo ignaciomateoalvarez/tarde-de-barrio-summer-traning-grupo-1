@@ -4,6 +4,6 @@ es:
       profile: Profile
       users: Users
       hi: Hi
-      admin: (admin)
+      admin: admin
       student: Student
       log-out: log out
