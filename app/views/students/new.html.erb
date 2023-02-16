@@ -26,21 +26,12 @@
       </section>
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
         <%= form.select :school_level, Student.school_levels.keys, class: 'input-form' %>
-
-
       <section class='center-form-content'>
         <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
         <%= form.radio_button :goes_to_school, true %>
         <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>
         <%= form.radio_button :goes_to_school, false %>
-
-
-
       </section>
-
-
-
-
       <div class= 'center-form-content'>
         <%= form.submit :value => "Crear estudiante" %>
       </div>

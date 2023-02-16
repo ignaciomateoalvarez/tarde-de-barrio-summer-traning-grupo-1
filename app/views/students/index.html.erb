@@ -1,10 +1,9 @@
 <%= render "navbar/nav" %>
 <div class="index-container"> 
-<section class="student-nav-users-container">
+<section class="student-nav-container">
   <div class='student-button-filter'>
     <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
     <%= f.text_field :full_name , class: "filter"%>
-    
     <% end %>
   </div>
   <div class="student-magnifying-glass">

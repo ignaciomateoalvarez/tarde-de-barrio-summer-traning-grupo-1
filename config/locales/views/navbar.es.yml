@@ -4,7 +4,7 @@ es:
       profile: Mi perfil
       users: Usuarios
       hi: Hola
-      admin: (admin)
+      admin: admin
       student: Estudiantes
       log-out: cerrar sesion
 
