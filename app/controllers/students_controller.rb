@@ -19,10 +19,12 @@ class StudentsController < ApplicationController
     end
   end
   def edit
+    authorize Student
     @student = Student.find(params[:id])
   end
 
   def update
+    authorize Student
     @student = Student.find(params[:id])
 
     if @student.update(student_params)
