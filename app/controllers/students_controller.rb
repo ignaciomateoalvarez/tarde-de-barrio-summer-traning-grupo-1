@@ -1,12 +1,12 @@
 class StudentsController < ApplicationController
+  before_action :set_student, only: [:show, :edit, :update]
+
   def index
     @pagy, @students = pagy(Student.all)
     @presenter = StudentPresenter.new(params, @students)
   end
 
-  def show
-    @student = Student.find(params[:id])
-    # @student = StudentPresenter.new(params).student
+  def show;
   end
 
   def create
@@ -19,14 +19,11 @@ class StudentsController < ApplicationController
     end
   end
   def edit
-    authorize Student
-    @student = Student.find(params[:id])
+    authorize @student
   end
 
   def update
-    authorize Student
-    @student = Student.find(params[:id])
-
+    authorize @student
     if @student.update(student_params)
       redirect_to students_path
     else
@@ -40,5 +37,9 @@ class StudentsController < ApplicationController
 
   def student_params
     params.require(:student).permit(:name, :lastname, :birth, :address, :school_level, :goes_to_school)
+  end
+
+  def set_student
+    @student = Student.find(params[:id])
   end
 end

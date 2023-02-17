@@ -1,5 +1,5 @@
 class StudentPolicy
-  attr_reader :user,:record
+  attr_reader :user, :record
 
   def initialize(user, record)
     @user = user
@@ -7,7 +7,7 @@ class StudentPolicy
   end
 
   def update?
-    user.administrador? || @user.id==@record.user_id
+    @user.administrador? || (@user == @record.user)
   end
 
   def edit?
