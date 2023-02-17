@@ -17,14 +17,25 @@ class StudentsController < ApplicationController
       redirect_to students_path, warning: t('.warning')
     end
   end
+  def edit
+    @student = Student.find(params[:id])
+  end
+
+  def update
+    @student = Student.find(params[:id])
+
+    if @student.update(student_params)
+      redirect_to students_path
+    else
+      redirect_to students_path
+    end
+  end
 
   def new_student; end
-
-  def edit; end
 
   private
 
   def student_params
-    params.require(:student).permit(:id, :name, :lastname, :birth, :address, :school_level, :goes_to_school)
+    params.require(:student).permit(:name, :lastname, :birth, :address, :school_level, :goes_to_school)
   end
 end

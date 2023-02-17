@@ -10,7 +10,7 @@
     <%= form_with(scope: :user,method: :put, url: user_path) do |form| %>
       <section class='center-form-content'>
       <%= form.label :first_name ,t('.first-name'), {class: 'form-label'}%>
-      <%= form.text_field :first_name,value: params[:first_name],value: @user.first_name%>
+      <%= form.text_field :first_name,value: params[:first_name], value: @user.first_name%>
       </section>
       <section class='center-form-content'>
       <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
