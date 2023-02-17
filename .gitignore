@@ -22,6 +22,7 @@ public/files
 .idea/
 config/initializers/app_config.rb
 passenger-standalone.json
+.byebug_history
 
 # Ignore application configuration
 /config/application.yml
