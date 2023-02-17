@@ -28,9 +28,10 @@
         <td><%= student.calculate_age %></td>
         <td><%= student.school_level %></td>
         <td><%= student.status_school %></td>
-        <td><%= button_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
+        <td><%= button_to edit_student_path(student), class:'prueba', method: :get, data: { turbo_frame: 'modal' } do%>
             <%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %>
-            <% end %></td>
+            <% end %>
+        </td>
       </tr>
     <% end %>
 </table>

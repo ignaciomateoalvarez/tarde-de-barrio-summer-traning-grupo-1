@@ -7,6 +7,8 @@ class Student < ApplicationRecord
   validates :school_level, presence: true
   validates :goes_to_school, inclusion: { in: [true, false] }
 
+  belongs_to :user
+
   def calculate_age
     Time.now.year - birth.year
   end
