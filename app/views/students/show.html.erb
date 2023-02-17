@@ -1,8 +1,8 @@
 <%= render "navbar/nav" %>
 <section class="student-fullname">
-   <p><%=t('.students')%>
+   <p><%=t('.students')%></p>
       <%=image_tag("chevron-right-solid.svg", class:"student-chevron-right ") %>
-  <%= @student.name %></p>
+  <p class="student-name"><%= @student.name %></p>
 </section>
 <div class="student-page">
    <div class="student-contenedor">
@@ -11,7 +11,7 @@
        <h2 class="student-h2"><%=t('.data')%></h2>
        <h3 class="student-h3"><%=t('.birthdate')%></h3>
        <p class="student-p"><%= @student.birth %><p>
-       <h3 class="student-h3"><%=t('.addres')%></h3>
+       <h3 class="student-h3"><%=t('.address')%></h3>
        <p class="student-p"><%= @student.address %><p>
        <h3 class="student-h3"><%=t('.school_level')%></h3>
        <p class="student-p"><%= @student.school_level %><p>
@@ -23,19 +23,6 @@
       <h1 class=comentario-h1><%=t('.comments')%></h1>
       <div class="comentario-item1">
       </div>
-      <div>
-      <%= image_tag("image-solid.svg", class:"student-chevron-right ") %>
-      <%= image_tag("face-laugh-beam-regular.svg", class:"student-chevron-right ") %>
-      </div>
-      <h1 class=comentario-h1><%=t('.today')%></h1>
-      <div class="comentario-item2">
-         <%= image_tag("thumbs-up-regular.svg", class:"student-chevron-right ") %>
-         <%= image_tag("chevron-up-solid.svg", class:"student-chevron-right ") %>
-      </div>
-      <h1 class=comentario-h1>Sabado 19 de noviembre</h1>
-      <div class="comentario-item3">
-         <%= image_tag("thumbs-up-regular.svg", class:"icon-s") %>
-         <%= image_tag("chevron-up-solid.svg", class:"icon-s") %>
-      </div>
+   </div>
    </div> 
- </div>  
+</div>  

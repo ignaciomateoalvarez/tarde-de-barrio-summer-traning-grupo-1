@@ -6,11 +6,15 @@ es:
       school_level: Escolaridad Alcanzada
       study: Escolarizado
       yes: Si
-      no: No
+      no: N
       new_student: Nuevo estudiante
-      data: Datos del estudiante
-      birthdate: Fecha de nacimiento
-      comments: Comentarios
-      today: Hoy
       createStudent: Crear estudiante
 
+    show:
+      students: Estudiantes
+      data: Datos del estudiante
+      birthdate: Fecha de nacimiento
+      address: Domicilio
+      school_level: Grado de escolaridad
+      study: Escolarizado
+      comments: Comentarios

@@ -1,17 +1,16 @@
 .flash-message {
   position: absolute;
-  top: 1rem;
+  top: 7rem;
   margin: auto;
-  background-color: rgb(13, 232, 13);
+  background-color: white;
   padding: 0.5rem;
   border-radius: 0.625rem;
   width: fit-content;
   left: 0; 
   right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
-  border: 0.125rem solid black;
-  color: white;
+  margin-left: 310px; 
+  border: 0.125rem solid green;
+  color: green;
 }
 
 .link-student:hover {
@@ -21,21 +20,21 @@
 .login-warning {
   color: red;
   position: absolute;
-  top: 1rem;
+  top: 7rem;
   background-color: white;
   padding: 0.5rem;
   border-radius: 0.625rem;
   width: fit-content;
   left: 0; 
   right: 0; 
-  margin-left: auto; 
+  margin-left: 290px; 
   margin-right: auto;
 
 }
 .login-success {
   color: green;
   position: absolute;
-  top: 1rem;
+  top: 7rem;
   margin: auto;
   background-color: white;
   padding: 0.5rem;
@@ -43,6 +42,6 @@
   width: fit-content;
   left: 0; 
   right: 0; 
-  margin-left: auto; 
+  margin-left: 290px; 
   margin-right: auto;
 }
