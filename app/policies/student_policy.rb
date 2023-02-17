@@ -7,10 +7,15 @@ class StudentPolicy
   end
 
   def update?
-    @user.administrador? || (@user == @record.user)
+    student_created_by_me?
   end
 
   def edit?
     update?
+  end
+
+  private
+  def student_created_by_me?
+    @user.administrador? || (@user.colaborador? && @user == @record.user)
   end
 end

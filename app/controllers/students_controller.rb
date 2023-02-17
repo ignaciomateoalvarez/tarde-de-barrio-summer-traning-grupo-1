@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
     if @student.save
       redirect_to students_path, notice: t('.notice')
     else
-      redirect_to students_path, warning: t('.warning')
+      redirect_to new_student_path, warning: t('.warning')
     end
   end
   def edit

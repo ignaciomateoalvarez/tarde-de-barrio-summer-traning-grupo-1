@@ -6,7 +6,7 @@ es:
       school_level: Escolaridad Alcanzada
       study: Escolarizado
       yes: Si
-      no: N
+      no: No
       new_student: Nuevo estudiante
       createStudent: Crear estudiante
 
