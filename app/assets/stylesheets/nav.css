@@ -19,6 +19,7 @@
 .nav-link {
   width: 40%;
   text-align: center;
+  
 }
 .myButton-estudiante{
 	font-family: 'Roboto';
@@ -30,6 +31,7 @@
 }
 
 .myButton-logout{
+
 width: 148px;
 height: 36px;
 background: #FFFFFF;
@@ -44,6 +46,11 @@ display: flex;
 align-items: center;
 text-align: center;
 color: #343A40;
+}
+.logout-boton{
+	border-style: none;
+	background: #FFFFFF;
+	margin-left: 20px;
 }
 
 

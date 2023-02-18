@@ -10,6 +10,7 @@
       <%= image_submit_tag("magnifying-glass-solid.svg")%>
     </div>
     <div class="student-new-student">
+      <%= image_submit_tag("Add user.svg")%>
       <%= link_to t('.new-student'), new_student_path(), method: :get, data: { turbo_frame: 'modal' } %>
     </div>
   </section>
@@ -30,8 +31,8 @@
               <div><td class="student-level"><%= student.school_level %></td></div>
               <div><td class="student-status"><%= student.status_school %></td></div>
                       <% if policy(student).edit? %>
-              <div><td><%= button_to edit_student_path(student), class:'prueba', method: :get, data: { turbo_frame: 'modal' } do%>
-                  <%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %>
+              <div><td><%= button_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
+                  <%= image_tag( "pen.svg", class: 'student-pen-icon') %>
                         <% end %>
                   </td> </div>
                       <% end %>

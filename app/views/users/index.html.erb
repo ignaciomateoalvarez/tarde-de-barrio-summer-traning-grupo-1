@@ -10,6 +10,7 @@
       <%= image_submit_tag("magnifying-glass-solid.svg")%>
     </div>
   <div class="user-new-user">
+    <%= image_submit_tag("Add user.svg")%>
     <%= link_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
   </div>
 </section>
@@ -40,7 +41,7 @@
         <% end %>
         </td>
          <td><%= button_to edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } do%>
-                    <%= image_tag( "pen-solid.svg", class: 'user-pen-icon') %>
+                    <%= image_tag( "Vector.png", class: 'user-pen-icon') %>
             <% end %></td>
       </tr>
     <% end %>

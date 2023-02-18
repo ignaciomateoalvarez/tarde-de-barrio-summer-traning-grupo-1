@@ -21,14 +21,14 @@
 }
 
 .modal-title {
-height: 69px;
-background: #0090AF;
-border-radius: 8px 8px 0px 0px;
-font-family: 'Roboto';
-font-size: 20px;
-text-align: center;
-color: #FFFFFF;
-justify-content: center;
+  height: 69px;
+  background: #0090AF;
+  border-radius: 8px 8px 0px 0px;
+  font-family: 'Roboto';
+  font-size: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  justify-content: center;
 }
 
 .modal-center-form {

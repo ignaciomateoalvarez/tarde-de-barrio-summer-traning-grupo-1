@@ -1,28 +1,30 @@
 <%= render "navbar/nav" %>
-<section class="student-fullname">
-   <p><%=t('.students')%></p>
-      <%=image_tag("chevron-right-solid.svg", class:"student-chevron-right ") %>
-  <p class="student-name"><%= @student.name %></p>
-</section>
-<div class="student-page">
-   <div class="student-contenedor">
-   <section>
-       <h1 class="student-h1"><%= @student.name %></h1>
-       <h2 class="student-h2"><%=t('.data')%></h2>
-       <h3 class="student-h3"><%=t('.birthdate')%></h3>
-       <p class="student-p"><%= @student.birth %><p>
-       <h3 class="student-h3"><%=t('.address')%></h3>
-       <p class="student-p"><%= @student.address %><p>
-       <h3 class="student-h3"><%=t('.school_level')%></h3>
-       <p class="student-p"><%= @student.school_level %><p>
-       <h3 class="student-h3"><%=t('.study')%></h3>
-       <p class="student-p"><%= @student.goes_to_school%><p>
+<div class="show-container-student">
+   <section class="student-fullname">
+      <p><%=t('.students')%></p>
+         <%=image_tag("Vector-flecha.svg", class:"student-chevron-right ") %>
+     <p class="student-name"><%= @student.name %></p>
    </section>
-   </div>
-   <div class="comentarios">
-      <h1 class=comentario-h1><%=t('.comments')%></h1>
-      <div class="comentario-item1">
+   <div class="student-page">
+      <div class="student-contenedor">
+      <section>
+          <h1 class="student-h1"><%= @student.name %></h1>
+          <h2 class="student-h2"><%=t('.data')%></h2>
+          <h3 class="student-h3"><%=t('.birthdate')%></h3>
+          <p class="student-p"><%= @student.birth %><p>
+          <h3 class="student-h3"><%=t('.address')%></h3>
+          <p class="student-p"><%= @student.address %><p>
+          <h3 class="student-h3"><%=t('.school_level')%></h3>
+          <p class="student-p"><%= @student.school_level %><p>
+          <h3 class="student-h3"><%=t('.study')%></h3>
+          <p class="student-p"><%= @student.goes_to_school%><p>
+      </section>
       </div>
-   </div>
-   </div> 
-</div>  
+      <div class="comentarios">
+         <h1 class=comentario-h1><%=t('.comments')%></h1>
+         <div class="comentario-item1">
+         </div>
+      </div>
+      </div> 
+   </div>  
+</div>

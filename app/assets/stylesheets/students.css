@@ -28,6 +28,7 @@
 .student-pen-icon {
   height: 1.25rem;
   width: 1.5625rem;
+  border-color: white;
   background: white;
 }
 
@@ -60,18 +61,15 @@
 .student-table-container {
   display: flex;
   justify-content: center;
-
-
 }
+
 .student-th {
   display: flex;
- justify-content: flex-start
+  justify-content: flex-start
   color: #0090af;
   padding: 0.3125rem;
   text-transform: uppercase;
   color: #007792;
-
-
 }
 
 .student-td {
@@ -89,24 +87,25 @@
 }
 .student-name-index{
   min-width: 200px;
-
 }
 .student-age{
   min-width: 150px;
-
 }
 .student-level{
   min-width: 150px;
-
 }
 
 .student-status{
   min-width: 600px;
 }
 /*Estilos vista estudiante*/
+.show-container-student{
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
 
 .student-fullname {
-  margin: 1.25rem 2rem 2rem 1.25rem;
   width: 100%;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -117,6 +116,8 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  margin-bottom: 10px;
+  margin-top: 25px;
 }
 .student-name {
   font-style: normal;
