@@ -11,12 +11,11 @@ require 'faker'
   
 # end
 
-User.create(first_name: "Gianlucas", last_name: "Galati", email: "gianlucas@gmail.com",password:'123', active: true, role: 0)
-User.create(first_name: "Carla", last_name: "Ibel", email: "carla@gmail.com",password:'123', active: true, role: 1)
-User.create(first_name: "Juan", last_name: "Bottassi", email: "juan@gmail.com",password:'123', active: true, role: 1)
-User.create(first_name: "Juli", last_name: "mentora", email: "juli@gmail.com",password:'123', active: true, role: 0)
-User.create(first_name: "Fere", last_name: "dementor", email: "fere@gmail.com",password:'123', active: true, role: 0)
-User.create(first_name: "Marce", last_name: "dementor", email: "m@gmail.com",password:'123', active: true, role: 1)
+User.create(first_name: "Charly", last_name: "Alumne", email: "charly@gmail.com",password:'123', active: true, role: 0)
+User.create(first_name: "Juan", last_name: "Bottassi", email: "juan@gmail.com",password:'123', active: true, role: 0)
+User.create(first_name: "Juli", last_name: "mentora", email: "juli@gmail.com",password:'123', active: true, role: 1)
+User.create(first_name: "Fere", last_name: "dementor", email: "fere@gmail.com",password:'123', active: true, role: 1)
+User.create(first_name: "Cami", last_name: "alumne", email: "cami@gmail.com",password:'123', active: true, role: 0)
 30.times do
   User.create(
     first_name: Faker::Name.first_name,

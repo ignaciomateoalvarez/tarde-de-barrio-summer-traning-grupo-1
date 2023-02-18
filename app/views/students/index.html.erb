@@ -1,43 +1,46 @@
 <%= render "navbar/nav" %>
 <div class="index-container"> 
-<section class="student-nav-container">
-  <div class='student-button-filter'>
-    <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
-    <%= f.text_field :full_name , class: "filter"%>
-    <% end %>
-  </div>
-  <div class="student-magnifying-glass">
-    <%= image_submit_tag("magnifying-glass-solid.svg")%>
-  </div>
-  <div class="student-new-student">
-    <%= link_to t('.new-student'), new_student_path(), method: :get, data: { turbo_frame: 'modal' } %>
-  </div>
-</section>
-<table class='student-table-container'>
-    <tr class='student-th'>
-      <th><%=t('.students')%></th>
-      <th><%=t('.age')%></th>
-      <th><%=t('.school_level')%></th>
-      <th><%=t('.study')%></th>    
-      <th></th>
-      <th></th>
-    </tr>
-    <% @presenter.decorated_students.each do |student| %>
-      <tr class='student-td'>
-        <td><%= link_to student.full_name, student_path(student.id)%></td>
-        <td><%= student.calculate_age %></td>
-        <td><%= student.school_level %></td>
-        <td><%= student.status_school %></td>
-        <% if policy(student).edit? %>
-        <td><%= button_to edit_student_path(student), class:'prueba', method: :get, data: { turbo_frame: 'modal' } do%>
-            <%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %>
-            <% end %>
+  <section class="student-nav-container">
+    <div class='student-button-filter'>
+      <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
+      <%= f.text_field :full_name , class: "filter"%>
+      <% end %>
+    </div>
+    <div class="student-magnifying-glass">
+      <%= image_submit_tag("magnifying-glass-solid.svg")%>
+    </div>
+    <div class="student-new-student">
+      <%= link_to t('.new-student'), new_student_path(), method: :get, data: { turbo_frame: 'modal' } %>
+    </div>
+  </section>
+   <div class='student-table-container'>
+    <table >
+        <tr class='student-th'>
+          <div><th class="student-name-index"><%=t('.students')%></th></div>
+          <div><th class="student-age"><%=t('.age')%></th></div>
+          <div><th class="student-level"><%=t('.school_level')%></th></div>
+          <div><th class="student-status"><%=t('.study')%></th></div>
+          <th></th>
+        </tr>
+        <td colspan="2">
+        <% @presenter.decorated_students.each do |student| %>
+          <tr class='student-td'>
+              <div><td class="student-name-index"><%= link_to student.full_name, student_path(student.id)%></td></div>
+              <div><td class="student-age"><%= student.calculate_age %></td></div>
+              <div><td class="student-level"><%= student.school_level %></td></div>
+              <div><td class="student-status"><%= student.status_school %></td></div>
+                      <% if policy(student).edit? %>
+              <div><td><%= button_to edit_student_path(student), class:'prueba', method: :get, data: { turbo_frame: 'modal' } do%>
+                  <%= image_tag( "pen-solid.svg", class: 'student-pen-icon') %>
+                        <% end %>
+                  </td> </div>
+                      <% end %>
+          </tr>
+          <% end %>
         </td>
-        <% end %>
-      </tr>
-    <% end %>
-</table>
-<div class='student-pagination'>
-  <%== pagy_nav(@pagy) %>
-</div>
+    </table>
+  </div>
+  <div class='student-pagination'>
+    <%== pagy_nav(@pagy) %>
+  </div>
 </div>

@@ -1,12 +1,17 @@
 <nav class="navbar">
+  <div>
   <%= image_tag( "bars-solid.svg", class: 'menu-icon') %> 
-  <div class= "nav-link">
-    <%= link_to '/' do  %>
-    <%= image_tag("house-solid.svg", class: 'home-icon ')%>
-    <% end %>
-    <%= link_to t('.student'), students_path, class: "link-student", class: "myButton"  %> 
-    <%= link_to t('.users'), users_path, class: "link-student", class: "myButton"  %> 
   </div>
-  <%= button_to t('.log-out'), logout_path ,method: :delete, class: "myButton" %>
+
+  <div class= "nav-link">
+  <%= link_to '/' do  %>
+  <%= image_tag("house-solid.svg", class: 'home-icon ')%>
+  <% end %>
+  <%= link_to t('.student'), students_path, class: "link-student", class: "myButton-estudiante"  %>   
+  </div>
+
+  <div>
+   <%= button_to t('.log-out'), logout_path ,method: :delete, class: "myButton-logout" %>
+  </div>
 </nav> 
 

@@ -1,0 +1,20 @@
+.home-container{
+	height: 100%;
+	width: 100%;
+	background: white;
+}
+.slide-menu{
+	width: 270px;
+	height: 977px;
+	left: 0px;
+	top: 48px;
+	background: #F1F3F3;
+}
+
+.hi-user{
+border: 1px solid #0090AF;
+font-family: 'Roboto';
+font-size: 18px;
+line-height: 21px;
+color: #0090AF;
+}

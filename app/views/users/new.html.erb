@@ -5,7 +5,7 @@
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
   <div class='modal' data-turbo-modal-target= "modal">
       <div class='modal-nav'>
-        <h1><%=t('.new-user')%></h1>
+        <h1 class="modal-tittle"><%=t('.new-user')%></h1>
       </div>
       <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
       <section class='center-form-content'>

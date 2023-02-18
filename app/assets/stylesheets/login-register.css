@@ -1,27 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap%27");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background: #0090AF; 
-}
-
-.card {
-  width: 60rem;
-  height: 40rem;
+/*Estilos para login y register*/
+.login-register-card {
   display: flex;
   flex-direction: column;
   padding-top: 1.25rem;
   background: #FFFFFF;
   border-radius: 0.5rem;
+  height: 520px;
+  width: 820px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 277px;
+  margin-top: 50px;
 }
 
-.menu-card {
+.login-register-menu-card {
   font-size: 1.125rem;
   line-height: 1.8125rem;
   display: flex;
@@ -30,9 +22,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-left: 30px;
   background: white;
-  font-family: Roboto, sans-serif;
+ height:10px ;
+}
+
+.login-register-container-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; 
+  min-height: 450px;
 }
 
 a {
@@ -40,17 +38,11 @@ a {
   color: inherit;
 }
 #line {
-  width: 50rem;
+  width: 90%;
   margin-top: 0.625rem;
   margin-left: auto;
   margin-right: auto;
-  
-}
-.container-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
+  border: 0.5px solid #BEC2C4;
 }
 
 .signin-button {
@@ -62,6 +54,13 @@ a {
   padding: 0.625rem;
   background: #0090af;
   border-radius: 0.2159rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .signin-button-google {
@@ -78,37 +77,53 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
 }
 
 .signin-button, .signin-button-google {
   align-self: center;
+  width: 257px;
 }
 
 .recover-password {
   line-height: 1.8125rem;
   color: #0090AF;
-  margin-top: 0.625rem;
+  margin-top: 0.3rem;
   align-self: center;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 29px;
+  color: #0090AF;
 }
 
 .remember-me {
   display: flex;
   border-radius: 0.1079rem;
   margin-top: 0.625rem;
-  gap: 0.625rem;
+  gap: 0.2rem;
 }
 
 .remember-me-label {
   margin-top: 0.625rem;
-  gap: 0.625rem;
-
+  gap: 0.2rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12.0879px;
+  line-height: 16px;
+  color: #000000;
 }
 .form-card {
   display: flex;
   flex-direction: column;
-  gap: 0.9375rem;
   margin-bottom: 1.5625rem;
-  font-weight: 300;
 }
 
 .form-card > h1 {
@@ -118,11 +133,28 @@ a {
   display: flex;
   flex-direction: column;
   width: 21.875rem;
-  padding: 0.75rem;
+  padding: 0.25rem;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 0.8125rem;
   line-height: 0.9375rem;
   color: #000000;
+
+}
+h1{
+  font-family: Roboto;
+  font-weight: 0.75rem;
+  color: #000000;
+}
+.login-register-form-label{
+  height: 25px;
+  background: #FAFAFA;
+  border: 1.29514px solid #CCCCCC;
+  border-radius: 5px;
+}
+.logo-imagen{
+  width: 300px;
+  height: 300px;
+  margin-right: 25px;
 }

@@ -1,3 +1,4 @@
+/*Estilos vista index estudiante*/
 .student-magnifying-glass {
   height: 70%;
   width: 2rem;
@@ -22,13 +23,6 @@
   text-align: center;
   justify-content: center;
   margin: 0rem 0.625rem;
-}
-
-.student-table-container {
-  width: 95%;
-  height: 65%;
-  border-collapse: collapse;
-  margin: 1.25rem;
 }
 
 .student-pen-icon {
@@ -62,29 +56,53 @@
   display: flex;
   width: 30%;
 }
+/*Estilos de la lista de estudiantes completa*/
+.student-table-container {
+  display: flex;
+  justify-content: center;
 
+
+}
 .student-th {
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.1875rem;
+  display: flex;
+ justify-content: flex-start
+  color: #0090af;
+  padding: 0.3125rem;
   text-transform: uppercase;
   color: #007792;
+
+
 }
 
 .student-td {
-  text-align: center;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 0.3125rem;
   border: 0.0625rem solid #dadada;
-  border-radius: 0.5rem;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #474747;
+  padding: 1.5rem;
+  height: 0.5rem;
 }
 
+.student-td:hover {
+  border: 0.0625rem solid #0090af;
+}
+.student-name-index{
+  min-width: 200px;
+
+}
+.student-age{
+  min-width: 150px;
+
+}
+.student-level{
+  min-width: 150px;
+
+}
+
+.student-status{
+  min-width: 600px;
+}
 /*Estilos vista estudiante*/
 
 .student-fullname {
