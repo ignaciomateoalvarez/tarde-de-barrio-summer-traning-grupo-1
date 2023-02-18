@@ -21,6 +21,7 @@
   text-align: center;
   
 }
+
 .myButton-estudiante{
 	font-family: 'Roboto';
 	font-style: normal;
@@ -29,30 +30,43 @@
 	line-height: 19px;
 	color: #FFFFFF;
 }
+.name-user-current{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 13.8148px;
+	line-height: 29px;
+	color: #FFFFFF;
+	position:relative ;
+	top: 20px;
+}
 
 .myButton-logout{
-
-width: 148px;
-height: 36px;
-background: #FFFFFF;
-box-shadow: 2px 2px 10px rgba(0, 76, 92, 0.2);
-border-radius: 4px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 300;
-font-size: 13.8px;
-line-height: 29px;
-display: flex;
-align-items: center;
-text-align: center;
-color: #343A40;
+	width: 148px;
+	height: 36px;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 10px rgba(0, 76, 92, 0.2);
+	border-radius: 4px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13.8px;
+	line-height: 29px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #343A40;
+	position:relative ;
+	top: 25px;
+}
+.myButton-logout:hover{
+	 border: 0.0625rem solid #0090af;
 }
 .logout-boton{
 	border-style: none;
 	background: #FFFFFF;
 	margin-left: 20px;
 }
-
 
 .home-icon {
   height: 1.25rem;

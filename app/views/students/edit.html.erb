@@ -5,29 +5,41 @@
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
   <div class='modal' data-turbo-modal-target= "modal">
       <div class='modal-nav'>
-        <h1><%=t('.edit-student')%></h1>
+        <h1 class="modal-title><%=t('.edit-student')%></h1>
       </div>
       <%= form_with(scope: :student, url: student_path, method: :put) do |form| %>
-      <section class='center-form-content'>
+      <section class='modal-center-form'>
+         <div class="modal-item" >
         <%= form.label :name ,t('.first-name'), {class: 'form-label'} %>
-        <%= form.text_field :name,value: params[:name],value: @student.name %>
+        <%= form.text_field :name,value: params[:name],class: 'modal-form-label',value: @student.name %>
+        </div>
+        <div class="modal-item" >
         <%= form.label :lastname ,t('.last-name'), {class: 'form-label'} %>
-        <%= form.text_field :lastname,value: params[:lastname],value: @student.lastname%>
-        <%= form.label :birth ,"fecha", {class: 'form-label'}%>
-        <%= form.date_field :birth,value: params[:birth],value: @student.birth %>
+        <%= form.text_field :lastname,value: params[:lastname],class: 'modal-form-label',value: @student.lastname%>
+        </div>
+        <div class="modal-item">
+        <%= form.label :birth ,t('.birth'), {class: 'form-label'}%>
+        <%= form.date_field :birth,value: params[:birth],class: 'modal-form-label',value: @student.birth %>
+        </div>
+        <div class="modal-item">
         <%= form.label :address ,t('.address'), {class: 'form-label'}%>
-        <%= form.text_field :address,value: params[:address],value: @student.address %>
+        <%= form.text_field :address,value: params[:address],class: 'modal-form-label',value: @student.address %>   
+        </div>
+        <div class="modal-item">
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
-        <%= form.select :school_level, Student.school_levels.keys, class: 'input-form',value: @student.school_level %>
+        <%= form.select :school_level, Student.school_levels.keys, class: 'modal-form-label',value: @student.school_level %>
+           </div>
+         <p class="form-label"><%=t('.goes_to_school')%></p>
+        <div class="modal-item radio-button-form">
         <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
         <%= form.radio_button :goes_to_school, true,value: @student.goes_to_school %>
         <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>
         <%= form.radio_button :goes_to_school, false ,value: @student.goes_to_school%>
-      <div class= "modal-buttom">
-        <%= form.submit :value => "Guardar cambios", class:"modal-new-user" %>
-      <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button", class:"modal-new-user"  %>
-      <% end %>
-      </div>
+        </div>
+        <div >
+        <%= form.submit :value => t('.boton'), class:"modal-new-user" %>
+        <% end %>
+        </div>
       </section>
     </div>
  <% end %>

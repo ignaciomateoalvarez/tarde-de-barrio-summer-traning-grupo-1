@@ -27,12 +27,3 @@ es:
       sign-in: Registrar Usuario
       new-user: Nuevo Usuario
       close: Cerrar
-
-    student:
-      name: Nombre
-      lastname: Apellido
-      age: Edad
-      address: Domicilio
-      level: Nivel de estudio
-      study: Estudia?
-      students: Estudiantes

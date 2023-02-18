@@ -27,7 +27,7 @@
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
         <%= form.select :school_level, Student.school_levels.keys, class: 'input-form' ,class: 'modal-form-label'%>
         </div>
-        <p class="form-label">t('.goes_to_school')</p>
+        <p class="form-label"><%=t('.goes_to_school')%></p>
         <div class="modal-item radio-button-form">
 
         <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
