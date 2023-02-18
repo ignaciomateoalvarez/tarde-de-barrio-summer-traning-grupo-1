@@ -11,19 +11,19 @@
       <section class='modal-center-form'>
          <div class="modal-item" >
         <%= form.label :name ,t('.first-name'), {class: 'form-label'} %>
-        <%= form.text_field :name,value: params[:name],class: 'modal-form-label',value: @student.name %>
+        <%= form.text_field :name, class: 'modal-form-label',value: @student.name %>
         </div>
         <div class="modal-item" >
         <%= form.label :lastname ,t('.last-name'), {class: 'form-label'} %>
-        <%= form.text_field :lastname,value: params[:lastname],class: 'modal-form-label',value: @student.lastname%>
+        <%= form.text_field :lastname, class: 'modal-form-label',value: @student.lastname%>
         </div>
         <div class="modal-item">
         <%= form.label :birth ,t('.birth'), {class: 'form-label'}%>
-        <%= form.date_field :birth,value: params[:birth],class: 'modal-form-label',value: @student.birth %>
+        <%= form.date_field :birth, class: 'modal-form-label',value: @student.birth %>
         </div>
         <div class="modal-item">
         <%= form.label :address ,t('.address'), {class: 'form-label'}%>
-        <%= form.text_field :address,value: params[:address],class: 'modal-form-label',value: @student.address %>   
+        <%= form.text_field :address, class: 'modal-form-label',value: @student.address %>   
         </div>
         <div class="modal-item">
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>

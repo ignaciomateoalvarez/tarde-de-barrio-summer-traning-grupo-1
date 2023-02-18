@@ -10,8 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(student_params)
-    @student.user = current_user
+    @student = Student.new(student_params.merge({ user: current_user }))
     if @student.save
       redirect_to students_path, notice: t('.notice')
     else
@@ -31,7 +30,7 @@ class StudentsController < ApplicationController
     end
   end
 
-  def new_student; end
+  def new; end
 
   private
 

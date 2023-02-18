@@ -11,7 +11,7 @@
     </div>
     <div class="student-new-student">
       <%= image_submit_tag("Add user.svg")%>
-      <%= link_to t('.new_student'), new_student_path(), method: :get, data: { turbo_frame: 'modal' } %>
+      <%= link_to t('.new_student'), new_student_path, method: :get, data: { turbo_frame: 'modal' } %>
     </div>
   </section>
    <div class='student-table-container'>

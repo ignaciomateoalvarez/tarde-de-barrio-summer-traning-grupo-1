@@ -10,11 +10,11 @@
       <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
       <section class='center-form-content'>
         <%= form.label :first_name ,t('.first-name'), {class: 'form-label'} %>
-        <%= form.text_field :first_name,value: params[:first_name] %>
+        <%= form.text_field :first_name%>
         <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
-        <%= form.text_field :last_name,value: params[:last_name] %>
+        <%= form.text_field :last_name%>
         <%= form.label :email ,t('.email'), {class: 'form-label'}%>
-        <%= form.email_field :email,value: params[:email] %>
+        <%= form.email_field :email%>
         <%= form.label :role ,t('.rol'), {class: 'form-label'} %>
         <%= form.select :role, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
         <div class="modal-buttom">
