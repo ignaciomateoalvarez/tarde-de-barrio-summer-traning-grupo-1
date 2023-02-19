@@ -39,16 +39,6 @@
   height: 2.8125rem;
   margin: 1.25rem;
 }
-.index-container {
-  min-height: 42em;
-  min-width: 62.5rem;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 0.875rem;
-}
 .filter {
   width: 100% ;
   height: 90%;
@@ -81,8 +71,6 @@
 .user-button-filter form{
   width: 100%;
 }
-
-
 
 .user-table-container {
   width: 95%;

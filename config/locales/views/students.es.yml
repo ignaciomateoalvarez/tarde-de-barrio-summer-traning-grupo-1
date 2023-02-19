@@ -9,6 +9,8 @@ es:
       level: Escolaridad alcanzada
       goes_to_school: ¿Va a la escuela?
       boton: Guardar cambios
+      yes: Si
+      no: No
 
     index:
       students: Estudiantes
@@ -29,6 +31,8 @@ es:
       level: Escolaridad alcanzada
       goes_to_school: ¿Va a la escuela?
       create_student: Registrar estudiante
+      yes: Si
+      no: No
 
     show:
       students: Estudiantes

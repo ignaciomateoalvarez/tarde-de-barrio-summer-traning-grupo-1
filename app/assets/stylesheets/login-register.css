@@ -1,16 +1,22 @@
 /*Estilos para login y register*/
+.login-register-container{
+  background-color: #0090AF;
+  align-items: center;
+  justify-content: center;
+  min-height: 800px;
+  min-width: 1400px;
+  display: flex;
+}
+
 .login-register-card {
   display: flex;
   flex-direction: column;
   padding-top: 1.25rem;
   background: #FFFFFF;
   border-radius: 0.5rem;
-  height: 520px;
-  width: 820px;
-  justify-content: center;
-  align-items: center;
-  margin-left: 277px;
-  margin-top: 50px;
+  min-height: 520px;
+  min-width: 820px;
+
 }
 
 .login-register-menu-card {
@@ -23,7 +29,7 @@
   align-items: center;
   text-align: center;
   background: white;
- height:10px ;
+  height:10px ;
 }
 
 .login-register-container-card {

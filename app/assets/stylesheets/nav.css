@@ -1,14 +1,6 @@
 /*Estilos para el nav superior del index de usuarios y estudiantes*/
 .navbar {
-	font-size: 0.5rem;
-	color: white;
-	display: flex;
-	margin-bottom: 0.3rem;
-	padding: 0.625rem 1.25rem;
-	height: 3rem;
-	align-items: center;
-	background-color: #0090af;
-	justify-content: space-between;
+/*esta en el css de application*/
 }
 
 .menu-icon {
@@ -19,7 +11,6 @@
 .nav-link {
   width: 40%;
   text-align: center;
-  
 }
 
 .myButton-estudiante{
@@ -59,9 +50,11 @@
 	position:relative ;
 	top: 25px;
 }
+
 .myButton-logout:hover{
 	 border: 0.0625rem solid #0090af;
 }
+
 .logout-boton{
 	border-style: none;
 	background: #FFFFFF;
@@ -71,12 +64,13 @@
 .home-icon {
   height: 1.25rem;
   width: 1.5625rem;
-
 }
+
 .home-icon:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 	background-color:#019ad2;
 }
+
 .home-icon:active {
 	top:0.063rem;
 }

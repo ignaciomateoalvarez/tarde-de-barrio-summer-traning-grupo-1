@@ -4,7 +4,7 @@
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
   <div class='modal' data-turbo-modal-target= "modal">
-    <h1 class="modal-title "><%=t('.new-student')%></h1>
+    <div class="modal-title"><h1 class="modal-title-h1"><%=t('.new-student')%></h1></div>
     <%= form_with(scope: :student, url: students_path, method: :post) do |form| %>
       <section class='modal-center-form'>
         <div class="modal-item">
@@ -25,11 +25,10 @@
         </div>
         <div class="modal-item">
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
-        <%= form.select :school_level, Student.school_levels.keys, class: 'input-form' ,class: 'modal-form-label'%>
+        <%= form.select :school_level, Student.school_levels.keys, class: 'input-form-modal'%>
         </div>
         <p class="form-label"><%=t('.goes_to_school')%></p>
         <div class="modal-item radio-button-form">
-
         <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
         <%= form.radio_button :goes_to_school, true %>
         <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>

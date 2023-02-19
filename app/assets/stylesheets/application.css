@@ -13,13 +13,18 @@
   box-sizing: border-box;
   font-family: Roboto;
 }
-body {
-  font-family: Roboto, sans-serif;
-  background-color: #0090af;
-  box-sizing: border-box;
-  min-height: 55rem;
-  min-width: 80rem;
+
+.index-container {
+  background-color: white;
 }
-
-
+.navbar {
+  font-size: 0.5rem;
+  color: white;
+  display: flex;
+  min-width:1350px ;
+  align-items: center;
+  background-color: #0090af;
+  justify-content: space-between;
+  
+}
 
