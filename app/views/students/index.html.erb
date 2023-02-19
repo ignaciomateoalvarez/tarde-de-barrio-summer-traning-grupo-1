@@ -1,5 +1,5 @@
 <%= render "navbar/nav" %>
-<div class="index-container"> 
+<div class="index-container" id='modal-background'> 
   <section class="student-nav-container">
     <div class='student-button-filter'>
       <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 

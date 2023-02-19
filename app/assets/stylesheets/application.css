@@ -6,21 +6,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
-/*Estilos*/
+/*Estilos de la base del proyecto, vistas principales*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto;
+
 }
 body{
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  background: white;
+  width: 100%;
+  height: 100%;
 }
 
-.index-container {
-  background-color: white;
-}
 .navbar {
   font-size: 0.5rem;
   color: white;
@@ -28,6 +29,28 @@ body{
   align-items: center;
   background-color: #0090af;
   justify-content: space-between;
-  
+  height: 1.80rem;
 }
+
+.index-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 100%;
+  height:100vh;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
 

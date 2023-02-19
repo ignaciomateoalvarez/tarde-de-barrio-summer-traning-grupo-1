@@ -4,21 +4,28 @@
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
   <div class='modal' data-turbo-modal-target= "modal">
-      <div class='modal-nav'>
-        <h1 class="modal-title-h1"><%=t('.edit-student')%></h1>
+ <div class="modal-title"><h1 class="modal-title-h1"><%=t('.edit-student')%></h1></div>
       <%= form_with(scope: :student, url: student_path, method: :put) do |form| %>
       <section class='modal-center-form'>
         <div class= "modal-item">
         <%= form.label :name ,t('.first-name'), {class: 'form-label'} %>
         <%= form.text_field :name, class: 'modal-form-label',value: @student.name %>
+        </div>
+         <div class="modal-item">
         <%= form.label :lastname ,t('.last-name'), {class: 'form-label'} %>
         <%= form.text_field :lastname, class: 'modal-form-label',value: @student.lastname%>
+        </div>
+         <div class="modal-item">
         <%= form.label :birth ,t('.birth'), {class: 'form-label'}%>
         <%= form.date_field :birth, class: 'modal-form-label',value: @student.birth %>
+        </div>
+         <div class="modal-item">
         <%= form.label :address ,t('.address'), {class: 'form-label'}%>
         <%= form.text_field :address, class: 'modal-form-label',value: @student.address %>   
+        </div>
+         <div class="modal-item">
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
-        <%= form.select :school_level, Student.school_levels.keys, class: 'modal-form-label',value: @student.school_level %>
+        <%= form.select :school_level, Student.school_levels.keys, class: 'input-form-modal',value: @student.school_level %>
         <p class="form-label"><%=t('.goes_to_school')%></p>
         <div class="modal-item radio-button-form">
         <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
