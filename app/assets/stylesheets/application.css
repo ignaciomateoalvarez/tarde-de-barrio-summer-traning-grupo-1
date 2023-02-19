@@ -13,6 +13,10 @@
   box-sizing: border-box;
   font-family: Roboto;
 }
+body{
+  margin: 0;
+  padding: 0;
+}
 
 .index-container {
   background-color: white;
@@ -21,7 +25,6 @@
   font-size: 0.5rem;
   color: white;
   display: flex;
-  min-width:1350px ;
   align-items: center;
   background-color: #0090af;
   justify-content: space-between;

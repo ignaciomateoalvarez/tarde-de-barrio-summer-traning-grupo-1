@@ -14,35 +14,34 @@
       <%= link_to t('.new_student'), new_student_path, method: :get, data: { turbo_frame: 'modal' } %>
     </div>
   </section>
-   <div class='student-table-container'>
-    <table >
+  <div class='student-table-container'>
+    <table>
         <tr class='student-th'>
-          <div><th class="student-name-index-th"><%=t('.students')%></th></div>
-          <div><th class="student-age-th"><%=t('.age')%></th></div>
-          <div><th class="student-level-th"><%=t('.school_level')%></th></div>
-          <div><th class="student-status-th"><%=t('.study')%></th></div>
+          <th class="student-name-index-th"><%=t('.students')%></th>
+          <th class="student-age-th"><%=t('.age')%></th>
+          <th class="student-level-th"><%=t('.school_level')%></th>
+          <th class="student-status-th"><%=t('.study')%></th>
+          <th></th>
           <th></th>
         </tr>
         <td colspan="2">
         <% @presenter.decorated_students.each do |student| %>
           <tr class='student-td'>
-              <div><td class="student-name-index"><%= link_to student.full_name, student_path(student.id)%></td></div>
-              <div><td class="student-age"><%= student.calculate_age %></td></div>
-              <div><td class="student-level"><%= student.school_level %></td></div>
-              <div><td class="student-status"><%= student.status_school %></td></div>  
-              <div><td><%= image_tag( "trash-2.svg", class: 'student-trash-icon') %></td></div>
-              <div ><% if policy(student).edit? %>
+              <td class="student-name-index"><%= link_to student.full_name, student_path(student.id)%></td>
+              <td class="student-age"><%= student.calculate_age %></td>
+              <td class="student-level"><%= student.school_level %></td>
+              <td class="student-status"><%= student.status_school %></td> 
+              <td><%= image_tag( "trash-2.svg", class: 'student-trash-icon') %></td>
+              <% if policy(student).edit? %>
                     <td><%= link_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
                         <%= image_tag( "pen.svg", class: 'student-pen-icon') %>
-                        <% end %></td></div>  
-                        <% end %>
-              
+                        <% end %></td>
+                        <% end %>         
           </tr>
           <% end %>
-        </td>
     </table>
-  </div>
   <div class='student-pagination'>
     <%== pagy_nav(@pagy) %>
+  </div>
   </div>
 </div>
