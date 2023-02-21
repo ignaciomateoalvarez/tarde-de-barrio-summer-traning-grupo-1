@@ -25,7 +25,9 @@
         </div>
         <div class="modal-item">
         <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
-        <%= form.select :school_level, Student.school_levels.keys, class: 'input-form-modal'%>
+        </div>
+        <div class= 'input-form-modal-edit'>
+        <%= form.select :school_level, Student.school_levels.keys%>
         </div>
         <p class="form-label"><%=t('.goes_to_school')%></p>
         <div class="modal-item radio-button-form">
@@ -34,11 +36,10 @@
         <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>
         <%= form.radio_button :goes_to_school, false %>
         </div>
+        <div>
+          <%= form.submit :value => t('.create_student'), class:"modal-new-student" %>
+        <% end %>
         </div>
-      <div>
-        <%= form.submit :value => t('.create_student'), class:"modal-new-user" %>
-      <% end %>
-      </div>
       </section>
     </div>
  <% end %>

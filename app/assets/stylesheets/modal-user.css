@@ -1,15 +1,3 @@
-.modal-container {
-/*Esta en application.css */
-}
-
-.modal {
-  background-color: white;
-  width: fit-content;
-  border-radius: 8px;
-  margin: 0px;
-  padding: 0px;
-}
-
 .modal-title {
   height: 69px;
   background: #0090AF;
@@ -26,44 +14,53 @@
   top: 25px;
 }
 
-.modal-center-form {
+.modal-center-form-user {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  width: 400px;
-  height:500px;
+  width: 380px;
+  height:380px;
   left: 452px;
   top: 109px;
   background: #FFFFFF;
   box-shadow: -7px 7px 30px rgba(0, 76, 92, 0.2);
-  border-radius: 8px;  
+  border-radius: 8px;
 }
 
-.modal-item {
+.modal-item-user{
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-.modal-form-label{
+.modal-new-user {
+  width: 14.5625rem;
+  height: 2.5rem;
+  background: #0090af;
+  border-radius: 0.2159rem;
+  color: rgb(254, 254, 254);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  border: none;
+  margin: 30px;
+  font-weight: bold;
+}
+
+.modal-new-user:hover {
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+  transition: all 0.2s ease;
+}
+
+.modal-form-label-user{
   height: 30px;
   width: 300px;
   left: 675px;
-  top: 132px;
+  top: 300px;
   background: #FAFAFA;
   border: 1.29514px solid #CCCCCC;
   border-radius: 7.06992px;
-  text-align: left;
-}
-
-.radio-button-form{
-  display: flex;
-  flex-direction: row;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 13px;
 }
 
 .form-label{
@@ -73,10 +70,9 @@
   font-size: 13px;
   line-height: 15px;
   color: #000000;
-  text-align: left;
 }
 
-.input-form-modal-edit select{
+.input-form-modal-edit-user select{
   height: 30px;
   width: 300px;
   left: 675px;

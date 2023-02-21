@@ -1,14 +1,1 @@
 <%= render "navbar/nav" %>
-<div class="index-container">
-	<div class="slide-menu">
-		<div class="slide-menu-item-saludo" >
-			<li ><h1 class="slide-menu-item-saludo-h1"><%=t('.hi')%> <%= current_user.first_name %> </h1></li>
-		</div>
-		<div class="slide-menu-item">
-			<li><%=t('.profile')%></li>
-		</div>
-		<div class="slide-menu-item">
-			<li><%= link_to t('.users'), users_path, class: "link-student", class: "myButton"  %> </li>
-		</div>
-	</div>
-</div>

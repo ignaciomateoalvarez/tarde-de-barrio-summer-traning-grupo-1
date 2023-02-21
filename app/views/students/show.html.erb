@@ -2,13 +2,13 @@
 <div class="show-container-student">
    <section class="student-fullname">
       <p><%=t('.students')%></p>
-         <%=image_tag("Vector-flecha.svg", class:"student-chevron-right ") %>
-     <p class="student-name"><%= @student.name %></p>
+      <%=image_tag("Vector-flecha.svg", class:"student-chevron-right ") %>
+      <p class="student-name"><%= @student.decorate.full_name %></p>
    </section>
    <div class="student-page">
       <div class="student-contenedor">
       <section>
-          <h1 class="student-h1"><%= @student.name %></h1>
+          <h1 class="student-h1"><%= @student.decorate.full_name %></h1>
           <h2 class="student-h2"><%=t('.data')%></h2>
           <h3 class="student-h3"><%=t('.birthdate')%></h3>
           <p class="student-p"><%= @student.birth %><p>
@@ -25,6 +25,5 @@
          <div class="comentario-item1">
          </div>
       </div>
-      </div> 
-   </div>  
+   </div> 
 </div>

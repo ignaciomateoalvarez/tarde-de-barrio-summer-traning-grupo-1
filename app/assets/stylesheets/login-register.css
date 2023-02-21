@@ -1,11 +1,13 @@
 /*Estilos para login y register*/
 .login-register-container{
   background-color: #0090AF;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 800px;
-  min-width: 1400px;
-  display: flex;
+  min-height: 600px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .login-register-card {
@@ -16,7 +18,8 @@
   border-radius: 0.5rem;
   min-height: 520px;
   min-width: 820px;
-
+  margin-top: 130px;
+  margin-bottom: 250px;
 }
 
 .login-register-menu-card {
@@ -30,6 +33,26 @@
   text-align: center;
   background: white;
   height:10px ;
+}
+
+.link {
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+  color: #0090af;
+  background: white;
+  height:10px ;
+}
+
+.link:visited {
+  color: black;
+}
+
+.link-active {
+  font-size: 1.125rem;
+  height:30px ;
+  color: #0090af !important;
+  border-bottom: 0.13rem solid #0090af;
+  padding-bottom: 0.5rem;
 }
 
 .login-register-container-card {
@@ -135,6 +158,7 @@ a {
 .form-card > h1 {
   align-self: center;
 }
+
 .center-form-content {
   display: flex;
   flex-direction: column;
@@ -146,19 +170,21 @@ a {
   font-size: 0.8125rem;
   line-height: 0.9375rem;
   color: #000000;
-
 }
+
 h1{
   font-family: Roboto;
   font-weight: 0.75rem;
   color: #000000;
 }
+
 .login-register-form-label{
   height: 25px;
   background: #FAFAFA;
   border: 1.29514px solid #CCCCCC;
   border-radius: 5px;
 }
+
 .logo-imagen{
   width: 300px;
   height: 300px;

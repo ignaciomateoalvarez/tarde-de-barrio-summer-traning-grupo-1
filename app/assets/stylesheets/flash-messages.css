@@ -1,14 +1,12 @@
 .flash-message {
   position: absolute;
-  top: 7rem;
-  margin: auto;
+  top: 6.5rem;
+  left: 500px;
+  right: 0; 
   background-color: white;
   padding: 0.5rem;
   border-radius: 0.625rem;
   width: fit-content;
-  left: 0; 
-  right: 0; 
-  margin-left: 310px; 
   border: 0.125rem solid green;
   color: green;
 }
@@ -20,14 +18,14 @@
 .login-warning {
   color: red;
   position: absolute;
-  top: 7rem;
+  top: 3rem;
   background-color: white;
   padding: 0.5rem;
   border-radius: 0.625rem;
   width: fit-content;
   left: 0; 
   right: 0; 
-  margin-left: 290px; 
+  margin-left: 100px; 
   margin-right: auto;
 }
 

@@ -3,26 +3,33 @@
     "turbo:submit-end->turbo-modal#submitEnd 
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
-  <div class='modal' data-turbo-modal-target= "modal">
-      <div class='modal-nav'>
-        <h1 class="modal-tittle"><%=t('.new-user')%></h1>
-      </div>
-      <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
-      <section class='center-form-content'>
-        <%= form.label :first_name ,t('.first-name'), {class: 'form-label'} %>
-        <%= form.text_field :first_name%>
-        <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
-        <%= form.text_field :last_name%>
-        <%= form.label :email ,t('.email'), {class: 'form-label'}%>
-        <%= form.email_field :email%>
-        <%= form.label :role ,t('.rol'), {class: 'form-label'} %>
-        <%= form.select :role, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
-        <div class="modal-buttom">
-        <%= form.submit :value => t('.new-user'), class:"modal-new-user" %>
-      <%= button_tag t('.close'), class:"modal-close-user", data: { action: "turbo-modal#hideModal" }, type: "button" %>
-      <% end %>
-      </div>
-      </section>
+    <div class='modal' data-turbo-modal-target= "modal">
+      <div class="modal-title"><h1 class="modal-title-h1"><%=t('.new-user')%></h1></div>
+        <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
+        <section class='modal-center-form-user'>
+          <div class= "modal-item-user">
+            <%= form.label :first_name ,t('.first-name'), {class: 'form-label'} %>
+            <%= form.text_field :first_name,class: 'modal-form-label-user'%>
+          </div>
+          <div class="modal-item-user">
+            <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
+            <%= form.text_field :last_name,class: 'modal-form-label-user'%>
+          </div>
+          <div class="modal-item-user">
+            <%= form.label :email ,t('.email'), {class: 'form-label'}%>
+            <%= form.email_field :email,class: 'modal-form-label-user'%>
+          </div>
+          <div class="modal-item-user">
+            <%= form.label :role ,t('.rol'), {class: 'form-label'} %>
+          </div>
+          <div class="input-form-modal-edit-user">
+            <%= form.select :role, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
+          </div>
+          <div>
+          <%= form.submit :value => t('.new-user'), class:"modal-new-user" %>
+          </div>
+          <% end %>
+        </section>
     </div>
- <% end %>
+  <% end %>
 <% end %>

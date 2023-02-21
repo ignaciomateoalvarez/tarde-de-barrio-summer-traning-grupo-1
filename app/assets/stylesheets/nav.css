@@ -8,19 +8,44 @@
   width: 1.563rem;
 }
 
+.boton-menu{
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin-right: 30px;
+}
+
 .nav-link {
   width: 40%;
   text-align: center;
 }
 
-.myButton-estudiante{
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 19px;
-	color: #FFFFFF;
+.link-menu-student{
+  font-size: 1.125rem;
+  line-height: 1.8125rem;
+  color: white;
+  height:10px ;
+  cursor: pointer;
+  font-weight: 600;
+  padding-bottom: 0.15rem;
+  margin-left: 30px;
 }
+
+.link-menu-studente:visited {
+  color: black;
+}
+
+.link-menu-student-active {
+	font-size: 1.125rem;
+  color: white !important;;
+  height:10px ;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 0.13rem solid white;
+  padding-bottom: 0.15rem;
+  margin-left: 30px;
+}
+
 .name-user-current{
 	font-family: 'Roboto';
 	font-style: normal;
@@ -41,36 +66,95 @@
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 300;
-	font-size: 13.8px;
+	font-size: 14px;
 	line-height: 29px;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	color: #343A40;
-	position:relative ;
-	top: 25px;
+	position:relative;
+	transform: translate(0px, -5rem);	
 }
 
 .myButton-logout:hover{
 	 border: 0.0625rem solid #0090af;
+	 
+}
+.boton-logout{
+	background: none;
+	border: none;
+ 	font-size: 16px;
+  line-height: 1.8125rem;
+  color: white;
+  height:10px ;
+  width: 100px;
+  cursor: pointer;
+  margin-left:5px;
+  font-weight: 600;
+  text-align: right;
 }
 
 .logout-boton{
 	border-style: none;
 	background: #FFFFFF;
 	margin-left: 20px;
+	cursor: pointer;
+	font-size: 14px;
 }
 
 .home-icon {
-  height: 1.25rem;
+  height: 1.5rem;
   width: 1.5625rem;
+  margin-bottom: -2px;
 }
 
 .home-icon:hover {
-	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-	background-color:#019ad2;
+	border-bottom: 2px solid white;
 }
 
 .home-icon:active {
 	top:0.063rem;
+}
+
+/*menu desplegable*/
+
+.slide-menu{
+	width: 270px;
+	height: 977px;
+	background: #F1F3F3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	transform: translate(-977px,0px);
+	margin-top: 2rem;
+}
+
+.slide-menu-item-saludo{
+	display: flex;
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #0090AF;
+	align-items: center;
+}
+
+.slide-menu-item-saludo-h1{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: #0090AF;
+	align-self: flex-start;
+	margin-left: 50px;
+}
+
+.slide-menu-item{
+	margin-top:8px;
+	align-self: flex-start;
+	margin-left: 50px;
+}
+
+li {
+	list-style: none;
 }

@@ -1,8 +1,6 @@
 /*Estilos vista estudiante*/
 .show-container-student{
-  background: white;
-  display: flex;
-  flex-direction: column;
+/*en application.css*/
 }
 
 .student-fullname {
@@ -18,7 +16,9 @@
   align-items: center;
   margin-bottom: 10px;
   margin-top: 25px;
+  margin-left: 1rem;
 }
+
 .student-name {
   font-style: normal;
   font-weight: 2rem;
@@ -26,7 +26,6 @@
   line-height: 19px;
   color: #0090AF;
   margin-left: 1rem;
-
 }
 
 .student-chevron-right {
@@ -35,7 +34,7 @@
 }
 
 .student-h1 {
-  margin: 1.25rem 3rem 0rem 1.25rem;
+  margin: 1.25rem 4rem 1rem 1.25rem;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 2rem;
@@ -45,11 +44,11 @@
 }
 
 .student-h2 {
-  margin: 1.25rem 0rem 0rem 1.25rem;
+  margin: 1.25rem 2rem 0rem 1.25rem;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 1.5rem;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.1875rem;
   color: #0090af;
 }
@@ -71,21 +70,21 @@
   line-height: 1.1875rem;
   color: #474747;
 }
-.student-page{
+.student-page {
   display: flex;
-
 }
+
 .student-contenedor {
     width: 20%;
     display: flex;
     border-right: 0.0625rem solid #DADADA;
 }
+
 .comentarios{
   display: flex;
   flex-direction: column;
   width: 80%;
   align-items: center;
-
 }
 
 .comentario-item1{
@@ -98,10 +97,11 @@
 
 .comentario-h1{
 font-weight: 500;
-font-size: 1rem;
+font-size: 14px;
 line-height: 1.1875rem;
 color: #000000;
 }
+
 .emoji{
  align-items: flex-start;
 }

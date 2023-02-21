@@ -16,6 +16,7 @@ es:
       register-nav: Registro
       title: Registro
       name-user: Nombre de usuario
+      last-user: Apellido
       email: Email
       password: Contraseña
       confirm-password: Confirmar contraseña

@@ -8,7 +8,7 @@ class SessionController < ApplicationController
           if @user.administrador?
             redirect_back_or_to(users_path, success: t('.success'))
           else
-            redirect_back_or_to(root_path, success: t('.success'))
+            redirect_back_or_to(students_path, success: t('.success'))
           end
         else
           redirect_to(login_path, warning: t('.warning'))

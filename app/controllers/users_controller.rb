@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params_register)
     if @user.save
+      auto_login(@user)
       redirect_to users_path, notice: t('.notice')
     else
       redirect_to users_path, warning: t('.warning')

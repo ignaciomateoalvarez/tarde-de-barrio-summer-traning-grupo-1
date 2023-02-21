@@ -1,6 +1,7 @@
 es:
   navbar:
     nav:
+      hi: Hola
       student: Estudiantes
       log-out: Cerrar sesión
 

@@ -1,19 +1,35 @@
 <nav class="navbar">
-  <div>
-  <%= image_tag( "menu.svg", class: 'menu-icon') %> 
+  <div data-controller="logout">
+    <button class="boton-menu" data-action="click->logout#openMenu keyup@window->logout#closeWithKeyboardMenu click@window->logout#closeBackgroundMenu" id="boton-menu">
+      <%= image_tag( "menu.svg", class: 'menu-icon') %> 
+    </button>
   </div>
-
   <div class= "nav-link">
-  <%= link_to '/' do  %>
-  <%= image_tag("home.svg", class: 'home-icon ')%>
-  <% end %>
-  <%= link_to t('.student'), students_path, class: "link-student", class: "myButton-estudiante"  %>   
+    <%= link_to '/' do  %>
+    <%= image_tag("home.svg", class: 'home-icon ')%>
+    <% end %>
+    <%= link_to t('.student'), students_path, class: "link-menu-student #{current_page?(students_url) ? 'link-menu-student-active' : ''}" %>   
   </div>
-  <div >
-  <div ><h1 class="name-user-current" ><%= current_user.first_name %></h1></div>
-  <div class= "myButton-logout">
-   <%= button_to t('.log-out'), logout_path ,method: :delete, class: 'logout-boton ' %>   
-   <%= image_tag("log-out.svg", class: 'home-icon ')%>
-  </div></div>
-</nav> 
-
+  <div class="name-user-current" data-controller="logout">
+    <button class="boton-logout" data-action="click->logout#open keyup@window->logout#closeWithKeyboard click@window->logout#closeBackground" id="boton-user"><%=current_user.first_name %>
+    </button>
+    <div class= "myButton-logout" id="boton" data-logout-target="boton">
+     <%= button_to t('.log-out'), logout_path ,method: :delete, class: 'logout-boton '%>
+     <%= image_tag("log-out.svg", class: 'home-icon ')%>
+    </div>
+  </div>
+</nav>
+<div class="slide-menu" id="menu" data-logout-target="menu">
+  <div class="slide-menu-item-saludo" >
+    <li><h1 class="slide-menu-item-saludo-h1"><%=t('.hi')%> <%= current_user.first_name %></h1>
+    </li>
+  </div>
+  <div class="slide-menu-item">
+    <li><%=t('.profile')%>
+    </li>
+  </div>
+  <div class="slide-menu-item">
+    <li><%= link_to t('.users'), users_path, class: "link-student", class: "myButton"  %> 
+    </li>
+  </div>
+</div>

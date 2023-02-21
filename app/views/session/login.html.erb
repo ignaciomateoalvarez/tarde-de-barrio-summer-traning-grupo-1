@@ -1,7 +1,7 @@
 <article class="login-register-container">
   <div class="login-register-card">
     <nav class="login-register-menu-card">
-      <%= link_to t('.login'), 'login' %>
+      <%= link_to t('.login'), 'login', class: "link #{current_page?(get_login_url) ? 'link-active' : ''}" %>
       <%= link_to t('.register-nav') , 'signup' %>
     </nav>
     <hr id='line'>
@@ -31,7 +31,7 @@
           </section>
         </section>
         <% end %>
-        </div>
       </div>
     </div>
+  </div>
 </article>
