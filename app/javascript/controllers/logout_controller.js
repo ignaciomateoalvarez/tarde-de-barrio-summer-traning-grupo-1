@@ -5,6 +5,7 @@ export default class extends Controller {
 //eventos asociados al boton de logout
   open() {
     document.getElementById("boton").style.transform = "translate(0,1px)";
+    document.getElementById("boton").style.transitionDuration = "1s";
   } 
 
   close() {
@@ -27,6 +28,7 @@ export default class extends Controller {
 //eventos asociados al boton menu
   openMenu(){
     document.getElementById("menu").style.transform = "translate(0px,0px)";
+    document.getElementById("menu").style.transitionDuration = "1s";
   }
   
   closeMenu() {

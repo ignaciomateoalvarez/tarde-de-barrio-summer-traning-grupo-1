@@ -1,7 +1,7 @@
 /*Estilos vista index usuario*/
-.index-container-student-user {
- /*esta en application.css*/
-}
+
+/* la clase index-container-student-user esta en application.css*/
+
 /* filtro tanto de estudiantes como usuarios */
 .student-magnifying-glass {
   height: 1.5rem;

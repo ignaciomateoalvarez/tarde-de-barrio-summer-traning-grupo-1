@@ -10,7 +10,6 @@ export default class extends Controller {
  
   hideModal() {
     this.element.parentElement.removeAttribute("src")
-    //this.modalTarget.remove()
     this.containerTarget.remove()
     document.getElementById("modal-background").style = "opacity: 1";
     document.body.style.backgroundColor = 'white';
