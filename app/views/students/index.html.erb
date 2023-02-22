@@ -42,8 +42,8 @@
             </tr>
             <% end %>
       </table>
-    <div class='student-pagination'>
-      <%== pagy_nav(@pagy) %>
+    <div class='pagination'>
+      <%=render partial: 'users/pagination', locals: { pagy: @pagy } %>
     </div>
     </div>
 </div>
