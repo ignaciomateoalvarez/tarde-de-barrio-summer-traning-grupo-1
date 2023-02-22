@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  skip_before_action :require_login, only: [:create]
 
   def index
     authorize User
@@ -15,9 +16,9 @@ class UsersController < ApplicationController
     @user = User.new(params_register)
     if @user.save
       auto_login(@user)
-      redirect_to users_path, notice: t('.notice')
+      redirect_to students_path, notice: t('.notice')
     else
-      redirect_to users_path, warning: t('.warning')
+      redirect_to root_path, warning: t('.warning')
     end
   end
 
