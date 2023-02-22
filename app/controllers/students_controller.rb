@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update]
+  before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   def index
     @pagy, @students = pagy(Student.all)
@@ -17,6 +17,7 @@ class StudentsController < ApplicationController
       redirect_to new_student_path, warning: t('.warning')
     end
   end
+
   def edit
     authorize @student
   end
@@ -31,6 +32,14 @@ class StudentsController < ApplicationController
   end
 
   def new; end
+
+  def destroy
+    if @student.destroy
+      redirect_to(students_path, warning: "Estudiante eliminado")
+    else
+      redirect_to(students_path, warning: "Estudiante NO eliminado")
+    end
+  end
 
   private
 
