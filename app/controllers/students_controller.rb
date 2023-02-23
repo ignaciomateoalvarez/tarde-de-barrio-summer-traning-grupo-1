@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_student, only: [:show, :edit, :update, :destroy, :delete_modal]
 
   def index
     @pagy, @students = pagy(Student.all)
@@ -39,6 +39,9 @@ class StudentsController < ApplicationController
     else
       redirect_to(students_path, warning: "Estudiante NO eliminado")
     end
+  end
+
+  def delete_modal;
   end
 
   private

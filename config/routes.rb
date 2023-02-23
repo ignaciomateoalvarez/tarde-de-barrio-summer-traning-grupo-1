@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root 'home#index'
+  root 'session#login'
 
   delete 'logout' => 'session#destroy', :as => 'logout'
   get 'login' => 'session#login', :as => 'get_login'
@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   resources :users do
     put 'toggle_deactivate', to: 'users#toggle_deactivate'
   end
-  resources :students
+  resources :students do
+    get 'delete_modal', to: 'students#delete_modal', on: :member
+  end
 end

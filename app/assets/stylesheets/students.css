@@ -108,3 +108,53 @@
   box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
   transition: all 0.2s ease;
 }
+
+.title-student-delete{
+  margin-top: 40px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #474747;
+}
+
+.modal-container-delete{
+  position: absolute;
+  top: 0px; left: 0px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button-modal-delete{
+  width: 6rem;
+  height: 2.5rem;
+  background: #0090af;
+  border-radius: 0.2159rem;
+  color: rgb(254, 254, 254);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  border: none;
+  font-weight: bold;
+}
+
+.section-modal-delete{
+  box-sizing: border-box;
+  position: absolute;
+  height: 100px;
+  left: 800px;
+  top: 140px;
+  background: #DADADA;
+  border: 1px solid #DADADA;
+  box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.button-student-delete{
+  margin-left: 110px;
+}
