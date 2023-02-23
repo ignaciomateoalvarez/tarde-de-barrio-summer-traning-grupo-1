@@ -19,10 +19,24 @@
         <h3 class="student--card-label"><%=t('.study')%></h3>
         <p class="student--card-data"><%= @student.goes_to_school%><p>
       </section>
-    </div>
-    <div class="comments">
-     <h1 class=comments-tittle><%=t('.comments')%></h1>
-     <div class="comments-text"></div>
-    </div>
-  </div> 
+      </div>
+      <div class="comentarios">
+         <div>
+           <h1 class=comentario-h1><%=t('.comments')%></h1>
+           <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post) do |form| %>
+             <%= form.text_area :body, class:"conteiner-comment" %>
+             <%= form.submit 'Publicar', class:'button-comment' %>
+            <% end %>
+         </div>
+         <div class='conteiner-text-comment'>
+           <% @student.comments.each do |comment| %>
+            <div class="text-comment-each">
+              <%= current_user.first_name %>
+              <%= comment.created_at %>
+            </div>
+            <p class='text-comment'><%= comment.body %></p>
+           <% end %>
+         </div>
+      </div>
+   </div> 
 </div>
