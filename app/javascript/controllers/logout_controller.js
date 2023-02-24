@@ -1,15 +1,20 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["boton","menu"]
+  static targets = ["boton","menu", "botonMenu", "botonUser"]
 //eventos asociados al boton de logout
+  connect(){
+    console.log(this.botonTarget)
+    console.log(this.menuTarget)
+  }
+
   open() {
-    document.getElementById("boton").style.transform = "translate(0,1px)";
-    document.getElementById("boton").style.transitionDuration = "1s";
+    this.botonTarget.style.transform = "translate(0,1px)";
+    this.botonTarget.style.transitionDuration = "1s";
   } 
 
   close() {
-   document.getElementById("boton").style.transform = "translate(0,-80px)";
+   this.botonTarget.style.transform = "translate(0,-80px)";
   } 
 
   closeWithKeyboard(e) {
@@ -19,20 +24,20 @@ export default class extends Controller {
   }
  
  closeBackground(e) {
-  if (e && document.getElementById('boton-user').contains(e.target)) {
-    } else {
+  if (e && this.botonUserTarget.contains(e.target)) {
+    return
+    } 
       this.close() 
     }
-  }
 
 //eventos asociados al boton menu
   openMenu(){
-    document.getElementById("menu").style.transform = "translate(0px,0px)";
-    document.getElementById("menu").style.transitionDuration = "1s";
+    this.menuTarget.style.transform = "translate(0px,0px)";
+    this.menuTarget.style.transitionDuration = "1s";
   }
   
   closeMenu() {
-    document.getElementById("menu").style.transform = "translate(-977px,0px)";
+    this.menuTarget.style.transform = "translate(-977px,0px)";
   } 
   
   closeWithKeyboardMenu(e) {
@@ -42,9 +47,10 @@ export default class extends Controller {
   }
   
   closeBackgroundMenu(e) {
-  if (e && document.getElementById('boton-menu').contains(e.target)) {
-    } else {
-      this.closeMenu() 
+  if (e && this.botonMenuTarget.contains(e.target)) {
+    return
     }
+      this.closeMenu() 
+    
   } 
 }

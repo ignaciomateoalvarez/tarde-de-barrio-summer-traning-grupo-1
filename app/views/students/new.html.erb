@@ -4,43 +4,43 @@
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
   <div class='modal' data-turbo-modal-target= "modal">
-    <div class="modal-title"><h1 class="modal-title-h1"><%=t('.new-student')%></h1></div>
-    <%= form_with(scope: :student, url: students_path, method: :post) do |form| %>
-      <section class='modal-center-form'>
-        <div class="modal-item">
-        <%= form.label :name ,t('.first-name'), {class: 'form-label'} %>
-        <%= form.text_field :name, class: 'modal-form-label'%>
-         </div>
-         <div class="modal-item">
-        <%= form.label :lastname ,t('.last-name'), {class: 'form-label'} %>
-        <%= form.text_field :lastname, class: 'modal-form-label' %>
-        </div>
-        <div class="modal-item">
-        <%= form.label :birth ,t('.date'), {class: 'form-label'}%>
-        <%= form.date_field :birth, class: 'modal-form-label'%>
-        </div>
-        <div class="modal-item">
-        <%= form.label :address ,t('.address'), {class: 'form-label'}%>
-        <%= form.text_field :address, class: 'modal-form-label' %>
-        </div>
-        <div class="modal-item">
-        <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
-        </div>
-        <div class= 'input-form-modal-edit'>
-        <%= form.select :school_level, Student.school_levels.keys%>
-        </div>
-        <p class="form-label"><%=t('.goes_to_school')%></p>
-        <div class="modal-item radio-button-form">
-        <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
-        <%= form.radio_button :goes_to_school, true %>
-        <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>
-        <%= form.radio_button :goes_to_school, false %>
-        </div>
-        <div>
-          <%= form.submit :value => t('.create_student'), class:"modal-new-student" %>
-        <% end %>
-        </div>
-      </section>
+    <div class="modal-title"><h1 class="modal-title-h1"><%=t('.new_student')%></h1></div>
+      <%= form_with(scope: :student, url: students_path, method: :post) do |form| %>
+        <section class='modal-center-form'>
+          <div class="modal-item">
+            <%= form.label :name ,t('.name'), {class: 'form-label'} %>
+            <%= form.text_field :name, class: 'modal-form-label'%>
+          </div>
+          <div class="modal-item">
+            <%= form.label :lastname ,t('.last_name'), {class: 'form-label'} %>
+            <%= form.text_field :lastname, class: 'modal-form-label' %>
+          </div>
+          <div class="modal-item">
+            <%= form.label :birth ,t('.date'), {class: 'form-label'}%>
+            <%= form.date_field :birth, class: 'modal-form-label'%>
+          </div>
+          <div class="modal-item">
+            <%= form.label :address ,t('.address'), {class: 'form-label'}%>
+            <%= form.text_field :address, class: 'modal-form-label' %>
+          </div>
+          <div class="modal-item">
+            <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
+          </div>
+          <div class= 'input-form-modal-edit'>
+            <%= form.select :school_level, Student.school_levels.keys%>
+          </div>
+          <p class="form-label"><%=t('.goes_to_school')%></p>
+          <div class="modal-item radio-button-form">
+            <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
+            <%= form.radio_button :goes_to_school, true %>
+            <%= form.label :goes_to_school, t('.no'), class: 'radio-button-form' %>
+            <%= form.radio_button :goes_to_school, false %>
+          </div>
+          <div>
+            <%= form.submit value: t('.create_student'), class:"modal-new-student" %>
+          </div>
+        </section>
+      <% end %>
     </div>
- <% end %>
+  <% end %>
 <% end %>

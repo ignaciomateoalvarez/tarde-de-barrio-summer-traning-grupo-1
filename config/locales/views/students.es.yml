@@ -1,14 +1,14 @@
 es:
   students:
     edit:
-      edit-student: Modificar estudiante
-      first-name: Nombre
-      last-name: Apellido
-      birth: Fecha de nacimiento
+      edit_student: Modificar estudiante
+      name: Nombre
+      last_name: Apellido
+      date: Fecha de nacimiento
       address: Domicilio
       level: Escolaridad alcanzada
       goes_to_school: ¿Va a la escuela?
-      boton: Guardar cambios
+      submit: Guardar cambios
       yes: Si
       no: No
 
@@ -23,9 +23,9 @@ es:
       createStudent: Crear estudiante
 
     new:
-      new-student: Nuevo estudiante
-      first-name: Nombre
-      last-name: Apellido
+      new_student: Nuevo estudiante
+      name: Nombre
+      last_name: Apellido
       date: Fecha de nacimiento
       address: Domicilio
       level: Escolaridad alcanzada
@@ -37,7 +37,7 @@ es:
     show:
       students: Estudiantes
       data: Datos del estudiante
-      birthdate: Fecha de nacimiento
+      date: Fecha de nacimiento
       address: Domicilio
       school_level: Grado de escolaridad
       study: Escolarizado

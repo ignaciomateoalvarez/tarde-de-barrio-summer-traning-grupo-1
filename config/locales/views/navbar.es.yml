@@ -3,6 +3,6 @@ es:
     nav:
       hi: Hola
       student: Estudiantes
-      log-out: Cerrar sesión
+      log_out: Cerrar sesión
       profile: Mi perfil
-      users: Roles
+      roles: Roles

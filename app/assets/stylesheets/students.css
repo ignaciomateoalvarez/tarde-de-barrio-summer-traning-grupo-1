@@ -1,13 +1,8 @@
-/*Estilos vista index estudiante*/
-
-/* los estilos del filtro estan en users.css ya que son similares */
-
-/*Estilos de la lista de estudiantes completa*/
 .student-table-container {
-  height:630px;
   background: white;
   margin: 0px;
   padding: 0px;
+
   
 }
 
@@ -26,7 +21,7 @@
   justify-content: start;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #dadada;
-  padding: 1.5rem;
+  padding: 1.40rem;
   height: 0.1rem;
 }
 

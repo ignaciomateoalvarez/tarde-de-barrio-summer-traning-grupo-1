@@ -4,15 +4,16 @@
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" }, class:'modal-container' do %>
     <div class='modal' data-turbo-modal-target= "modal">
-      <div class="modal-title"><h1 class="modal-title-h1"><%=t('.new-user')%></h1></div>
-        <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
+      <div class="modal-title"><h1 class="modal-title-h1"><%=t('.new_user')%></h1>
+      </div>
+      <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
         <section class='modal-center-form-user'>
           <div class= "modal-item-user">
-            <%= form.label :first_name ,t('.first-name'), {class: 'form-label'} %>
+            <%= form.label :first_name ,t('.name'), {class: 'form-label'} %>
             <%= form.text_field :first_name,class: 'modal-form-label-user'%>
           </div>
           <div class="modal-item-user">
-            <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
+            <%= form.label :last_name ,t('.last_name'), {class: 'form-label'} %>
             <%= form.text_field :last_name,class: 'modal-form-label-user'%>
           </div>
           <div class="modal-item-user">
@@ -26,10 +27,10 @@
             <%= form.select :role, options_for_select([["administrador", "administrador"], ["colaborador", "colaborador"]]) %>
           </div>
           <div>
-          <%= form.submit :value => t('.new-user'), class:"modal-new-user" %>
+          <%= form.submit :value => t('.new_user'), class:"modal-new-user" %>
           </div>
-          <% end %>
-        </section>
+        </section> 
+      <% end %>
     </div>
   <% end %>
 <% end %>

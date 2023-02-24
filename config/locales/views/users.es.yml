@@ -6,24 +6,24 @@ es:
       role: ROL
       username: USUARIOS
       activate: ACTIVAR
-      new-user: Nuevo Usuario
+      new_user: Nuevo Usuario
       user: Usuarios
 
     edit:
       title: Editar Usuario 
-      first-name: Nombre 
-      last-name: Apellido
+      name: Nombre 
+      last_name: Apellido
       email: Email
       rol: Rol
       close: Cerrar
-      edit-user: Editar Usuario
+      edit_user: Editar Usuario
 
     new:
       title: Nuevo Usuario 
-      first-name: Nombre
-      last-name: Apellido
+      name: Nombre
+      last_name: Apellido
       email: Email
       rol: Rol
-      sign-in: Registrar Usuario
-      new-user: Nuevo Usuario
+      sign_in: Registrar Usuario
+      new_user: Nuevo Usuario
       close: Cerrar

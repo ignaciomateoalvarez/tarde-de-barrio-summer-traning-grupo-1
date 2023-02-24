@@ -3,16 +3,13 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["modal","container"]
   connect() {
-    document.getElementById("modal-background").style = "opacity: 0.3";
     document.getElementById("modal-background").style.pointerEvents = "none";
-    document.body.style.backgroundColor = 'black';
   }
  
   hideModal() {
     this.element.parentElement.removeAttribute("src")
+    document.getElementById("modal-background").style.pointerEvents = "auto";
     this.containerTarget.remove()
-    document.getElementById("modal-background").style = "opacity: 1";
-    document.body.style.backgroundColor = 'white';
   }
 
   submitEnd(e) {

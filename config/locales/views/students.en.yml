@@ -1,15 +1,44 @@
-es:
+en:
   students:
+    edit:
+      edit_student: Modify student
+      name: Name
+      last_name: Last name
+      date: Birthdate
+      address: Address
+      level: School level
+      goes_to_school: Goes to school
+      submit: Save changes
+      yes: Yes
+      no: No
+
     index:
       students: Students
       age: Age
       school_level: School level
-      study: Schooled
-      yes: Yes
+      goes_to_school: Goes to school
+      yes: Si
       no: No
       new_student: New student
-      data: Student data
-      birthdate: Birthdate
-      comments: Comments
-      today: Today
       createStudent: Create student
+
+    new:
+      new_student: New student
+      name: Name
+      last_name: Last name
+      date: Birthdate
+      address: Address
+      level: School level
+      goes_to_school: Goes to school
+      create_student: Create student
+      yes: Yes
+      no: No
+
+    show:
+      students: Students
+      data: student data
+      date: Birthdate
+      address: Address
+      school_level: School level
+      goes_to_school: Goes to school
+      comments: Comments

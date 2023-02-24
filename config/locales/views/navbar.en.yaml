@@ -1,9 +1,0 @@
-es:
-  navbar:
-    nav:
-      profile: Profile
-      users: Users
-      hi: Hi
-      admin: admin
-      student: Student
-      log-out: log out

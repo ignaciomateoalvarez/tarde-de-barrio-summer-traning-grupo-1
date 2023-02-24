@@ -3,51 +3,49 @@
     <section class="user-nav-container">
       <div class='user-button-filter'>
         <%= form_with(url: users_path, method: :get, scope: :user_filter) do |f| %> 
-        <%= f.text_field :full_name , class: "filter"%>
-        <div>
-        <%= image_submit_tag("magnifying-glass-solid.svg", class:"student-magnifying-glass")%>
-        </div>
+          <%= f.text_field :full_name , class: "filter"%>
+          <div><%= image_submit_tag("magnifying-glass-solid.svg", class:"student-magnifying-glass")%></div>
         <% end %>
       </div>
-      <div class="user-new-user">
+      <%= link_to  new_user_path(), method: :get, data: { turbo_frame: 'modal' }, class: "user-new-user" do %>
         <%= image_submit_tag("Add user.svg")%>
-        <%= link_to t('.new-user'), new_user_path(), method: :get, data: { turbo_frame: 'modal' } %>
-      </div>
-    </section>
-  <div class='user-table-container'>
-    <table>
-      <tr class='user-th'>
-        <th class="user-name-index-th"><%=t('.username')%></th>
-        <th class="user-mail-th"><%=t('.email')%></th>
-        <th class="user-rol-th"><%=t('.role')%></th>
-        <th class="user-status-th"><%=t('.activate')%></th>
-        <th></th>    
-      </tr>
-      <% @records.each do |user| %>
-        <tr class='user-td'>
-          <td class='user-checkbox'><%= check_box_tag "checkbox_name" %></td>
-          <td class="user-name-index"><%= user.first_name %> <%= user.last_name %></td>
-          <td class="user-mail"><%= user.email %></td>
-          <td class="user-rol">
-            <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
-              <%= form.select :role, options_for_select(User.roles.keys, selected: user.role), {},class:"rol", disabled: true %>
-            <% end %> 
-          </td>  
-          <td class="user-status">
-            <%= form_with(url: user_toggle_deactivate_path(user), method: :put) do |form| %>
-              <div class="toggle-button" data-controller="toggle">
-                <%= form.check_box :active, checked: user.active, data:{toggle_target:"checkbox", action:"toggle#changeActive"} ,id:user.id   %>
-                <label for=<%=user.id%>><%= form.submit %></label>
-              </div>
-            <% end %>
-          </td>
-          <td><%= link_to edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } do%>
-            <%= image_tag( "pen.svg", class: 'user-pen-icon') %>
-          <% end %>
-          </td>
-        </tr>
+        <%= t('.new_user')%>
       <% end %>
-    </table>
+    </section>
+    <div class='user-table-container'>
+      <table>
+        <tr class='user-th'>
+          <th class="user-name-index-th"><%=t('.username')%></th>
+          <th class="user-mail-th"><%=t('.email')%></th>
+          <th class="user-rol-th"><%=t('.role')%></th>
+          <th class="user-status-th"><%=t('.activate')%></th>
+          <th></th>    
+        </tr>
+        <% @records.each do |user| %>
+          <tr class='user-td'>
+            <td class='user-checkbox'><%= check_box_tag "checkbox_name" %></td>
+            <td class="user-name-index"><%= user.first_name %> <%= user.last_name %></td>
+            <td class="user-mail"><%= user.email %></td>
+            <td class="user-rol">
+              <%= form_with(scope: :user, url: post_new_user_path, method: :post) do |form| %>
+                <%= form.select :role, options_for_select(User.roles.keys, selected: user.role), {},class:"rol", disabled: true %>
+              <% end %> 
+            </td>  
+            <td class="user-status">
+              <%= form_with(url: user_toggle_deactivate_path(user), method: :put) do |form| %>
+                <div class="toggle-button" data-controller="toggle">
+                  <%= form.check_box :active, checked: user.active, data:{toggle_target:"checkbox", action:"toggle#changeActive"} ,id:user.id   %>
+                  <label for=<%=user.id%>><%= form.submit %></label>
+                </div>
+              <% end %>
+            </td>
+            <td><%= link_to edit_user_path(user), method: :get, data: { turbo_frame: 'modal' } do%>
+              <%= image_tag( "pen.svg", class: 'user-pen-icon') %>
+            <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
     <div class='pagination'>
       <%=render partial: 'pagination', locals: { pagy: @pagy } %>
     </div>

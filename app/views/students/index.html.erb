@@ -1,49 +1,46 @@
 <%= render "navbar/nav" %>
 <div class="index-container-student-user" id='modal-background'> 
-    <section class="user-nav-container">
-      <div class='user-button-filter'>
-        <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
+  <section class="user-nav-container">
+    <div class='user-button-filter'>
+      <%= form_with(url: students_path, method: :get, scope: :user_filter) do |f| %> 
         <%= f.text_field :full_name , class: "filter"%>
-         <div>
-      <%= image_submit_tag("magnifying-glass-solid.svg", class:"student-magnifying-glass")%>
-        </div>
-        <% end %>
-      </div>
-      <div class="user-new-user">
-        <%= image_submit_tag("Add user.svg")%>
-        <%= link_to t('.new_student'), new_student_path, method: :get, data: { turbo_frame: 'modal' } %>
-      </div>
-    </section>
-    <div class='student-table-container'>
-      <table>
-          <tr class='student-th'>
-            <th class="student-name-index-th"><%=t('.students')%></th>
-            <th class="student-age-th"><%=t('.age')%></th>
-            <th class="student-level-th"><%=t('.school_level')%></th>
-            <th class="student-status-th"><%=t('.study')%></th>
-            <th></th>
-            <th></th>
-          </tr>
-          <td colspan="2">
-          <% @presenter.decorated_students.each do |student| %>
-            <tr class='student-td'>
-                <td class="student-name-index"><%= link_to student.full_name, student_path(student.id)%></td>
-                <td class="student-age"><%= student.calculate_age %></td>
-                <td class="student-level"><%= student.school_level %></td>
-                <td class="student-status"><%= student.status_school %></td> 
-                <td><%= image_tag( "trash-2.svg", class: 'student-trash-icon') %></td>
-                <td class="columna-vacia"></td>  
-                <% if policy(student).edit? %>
-                      <td><%= link_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
-                          <%= image_tag( "pen.svg", class: 'student-pen-icon') %>
-                          <% end %></td>
-                          <% end %> 
-               
-            </tr>
-            <% end %>
-      </table>
+        <div><%= image_submit_tag("magnifying-glass-solid.svg", class:"student-magnifying-glass")%></div>
+      <% end %>
+    </div>
+    <%= link_to new_student_path, method: :get, data: { turbo_frame: 'modal' }, class: "user-new-user" do %>
+      <%= image_submit_tag("Add user.svg")%>
+      <%= t('.new_student')%>
+    <% end %>
+  </section>
+  <div class='student-table-container'>
+    <table>
+      <tr class='student-th'>
+        <th class="student-name-index-th"><%=t('.students')%></th>
+        <th class="student-age-th"><%=t('.age')%></th>
+        <th class="student-level-th"><%=t('.school_level')%></th>
+        <th class="student-status-th"><%=t('.study')%></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <td colspan="2">
+      <% @presenter.decorated_students.each do |student| %>
+        <tr class='student-td'>
+            <td class="student-name-index"><%= link_to student.full_name, student_path(student.id)%></td>
+            <td class="student-age"><%= student.calculate_age %></td>
+            <td class="student-level"><%= student.school_level %></td>
+            <td class="student-status"><%= student.status_school %></td> 
+            <td><%= image_tag( "trash-2.svg", class: 'student-trash-icon') %></td>
+            <td class="columna-vacia"></td>  
+            <% if policy(student).edit? %>
+              <td><%= link_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
+                <%= image_tag( "pen.svg", class: 'student-pen-icon') %>
+              <% end %></td>
+            <% end %> 
+        </tr>
+      <% end %>
+    </table>
     <div class='pagination'>
       <%=render partial: 'users/pagination', locals: { pagy: @pagy } %>
     </div>
-    </div>
+  </div>
 </div>

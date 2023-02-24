@@ -1,13 +1,9 @@
-/*Estilos para login y register*/
 .login-register-container{
   background-color: #0090AF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 600px;
-  margin: 0px;
-  padding: 0px;
 }
 
 .login-register-card {

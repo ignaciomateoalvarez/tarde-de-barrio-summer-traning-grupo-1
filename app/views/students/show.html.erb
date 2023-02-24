@@ -1,29 +1,28 @@
 <%= render "navbar/nav" %>
-<div class="show-container-student">
-   <section class="student-fullname">
-      <p><%=t('.students')%></p>
-      <%=image_tag("Vector-flecha.svg", class:"student-chevron-right ") %>
-      <p class="student-name"><%= @student.decorate.full_name %></p>
-   </section>
-   <div class="student-page">
-      <div class="student-contenedor">
+<div class="student--container">
+  <section class="student--container-tittle">
+    <p><%=t('.students')%></p>
+    <%=image_tag("Vector-flecha.svg", class:"student-chevron-right ") %>
+    <p class="student--container-name"><%= @student.decorate.full_name %></p>
+  </section>
+  <div class="student-card">
+    <div class="student-card-section">
       <section>
-          <h1 class="student-h1"><%= @student.decorate.full_name %></h1>
-          <h2 class="student-h2"><%=t('.data')%></h2>
-          <h3 class="student-h3"><%=t('.birthdate')%></h3>
-          <p class="student-p"><%= @student.birth %><p>
-          <h3 class="student-h3"><%=t('.address')%></h3>
-          <p class="student-p"><%= @student.address %><p>
-          <h3 class="student-h3"><%=t('.school_level')%></h3>
-          <p class="student-p"><%= @student.school_level %><p>
-          <h3 class="student-h3"><%=t('.study')%></h3>
-          <p class="student-p"><%= @student.goes_to_school%><p>
+        <h1 class="student--card-name"><%= @student.decorate.full_name %></h1>
+        <h2 class="student--card-subtittle"><%=t('.data')%></h2>
+        <h3 class="student--card-label"><%=t('.date')%></h3>
+        <p class="student--card-data"><%= @student.birth %><p>
+        <h3 class="student--card-label"><%=t('.address')%></h3>
+        <p class="student--card-data"><%= @student.address %><p>
+        <h3 class="student--card-label"><%=t('.school_level')%></h3>
+        <p class="student--card-data"><%= @student.school_level %><p>
+        <h3 class="student--card-label"><%=t('.study')%></h3>
+        <p class="student--card-data"><%= @student.goes_to_school%><p>
       </section>
-      </div>
-      <div class="comentarios">
-         <h1 class=comentario-h1><%=t('.comments')%></h1>
-         <div class="comentario-item1">
-         </div>
-      </div>
-   </div> 
+    </div>
+    <div class="comments">
+     <h1 class=comments-tittle><%=t('.comments')%></h1>
+     <div class="comments-text"></div>
+    </div>
+  </div> 
 </div>
