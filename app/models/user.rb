@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   attr_accessor :validate_password
 
+  has_many :students
+
   def save_with_validations(validate_password: true)
     self.validate_password = validate_password
     save

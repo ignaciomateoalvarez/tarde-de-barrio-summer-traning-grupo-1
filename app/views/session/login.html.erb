@@ -1,37 +1,37 @@
-<article class="container">
-  <div class="card">
-    <nav class="menu">
-      <%= link_to t('.login'), 'login' %>
-      <%= link_to t('.register-nav') , 'signup' %>
+<article class="login-register-container">
+  <div class="login-register-card">
+    <nav class="login-register-menu-card">
+      <%= link_to t('.login'), 'login', class: "link #{current_page?(get_login_url) ? 'link-active' : ''}" %>
+      <%= link_to t('.register_nav') , 'signup' %>
     </nav>
     <hr id='line'>
-    <div class="container-card">
-      <%= image_tag("Frame.svg") %>
+    <div class="login-register-container-card">
+      <%= image_tag("Frame.png", class: 'logo-imagen') %>
       <div class="form-card">
-        <h1><%=t('.title')%></h1>
+        <h1 class="login-register-tittle"><%=t('.title_form')%></h1>
         <%= form_with url:login_path, method: :post do |form| %>
         <section class='center-form-content'>
           <%= form.label :email ,t('.email'), {class: 'form-label'}%>
-          <%= form.email_field :email,value: params[:email] %>
+          <%= form.email_field :email, class: 'login-register-form-label'  %>
         </section>
         <section class='center-form-content'>
           <%= form.label :password ,t('.password'), {class: 'form-label'}%>
-          <%= form.password_field :password,value: params[:password] %>
+          <%= form.password_field :password, class: 'login-register-form-label' %>
         </section>
         <section class='remember-me'>
           <%= form.check_box :remember_me, class: 'remember-me' %>
-          <%= form.label :remember_me, t('.remember-me'),  class: 'remember-me-label' %>
+          <%= form.label :remember_me, t('.remember_me'),  class: 'remember-me-label' %>
         </section>
         <section class= 'center-form-content'>
-          <%= form.submit :value => t('.sign-in'),class:'signin-button' %>
-          <%= link_to t('.recover-password'), '/#' , class: 'recover-password' %>
+          <%= form.submit :value => t('.sign_in'),class:'signin-button' %>
+          <%= link_to t('.recover_password'), '/#' , class: 'recover-password' %>
           <section class='signin-button-google'>
             <%= image_tag("google.svg")%>
             <%= link_to t('.google-login'), '/' %>
           </section>
         </section>
         <% end %>
-        </div>
       </div>
     </div>
+  </div>
 </article>

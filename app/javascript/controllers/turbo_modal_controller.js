@@ -2,12 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static targets = ["modal","container"]
-
+  connect() {
+    document.getElementById("modal-background").style.pointerEvents = "none";
+  }
  
   hideModal() {
     this.element.parentElement.removeAttribute("src")
-  
-    //this.modalTarget.remove()
+    document.getElementById("modal-background").style.pointerEvents = "auto";
     this.containerTarget.remove()
   }
 
@@ -24,7 +25,6 @@ export default class extends Controller {
   }
 
   closeBackground(e) {
-    debugger;
     if (e && this.modalTarget.contains(e.target)) {
       return
     }

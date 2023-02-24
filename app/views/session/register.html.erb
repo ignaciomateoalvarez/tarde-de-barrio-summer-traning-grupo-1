@@ -1,44 +1,44 @@
-<article class="container">
-  <div class="card">
-    <nav class="menu">
+<article class="login-register-container">
+  <div class="login-register-card">
+    <nav class="login-register-menu-card">
       <%= link_to t('.login'), 'login' %>
-      <%= link_to t('.register-nav') , 'signup' %>
+      <%= link_to t('.register_nav') , 'signup' , class: "link #{current_page?(post_signup_url) ? 'link-active' : ''}" %>
     </nav>
-    <hr id='line'>
-    <div class="container-card">
-      <%= image_tag("Frame.svg")%>
+    <hr id='line'>  
+    <div class="login-register-container-card">
+       <%= image_tag("Frame.png", class: 'logo-imagen') %>
       <div class="form-card">
-        <h1><%=t('.title')%></h1>
-        <%= form_with(scope: :user, method: :post, url: post_signup_path) do |form| %>
-        <section class='center-form-content'>
-          <%= form.label :first_name ,t('.name-user'), {class: 'form-label'} %>
-          <%= form.text_field :first_name,value: params[:first_name] %>
-        </section>
-        <section class='center-form-content'>
-          <%= form.label :last_name,t('.name-user'), {class: 'form-label'} %>
-          <%= form.text_field :last_name,value: params[:last_name] %>
-        </section>
-        <section class='center-form-content'>
-          <%= form.label :email ,t('.email'), {class: 'form-label'}%>
-          <%= form.email_field :email,value: params[:email] %>
-        </section>
-        <section class='center-form-content'>
-          <%= form.label :password ,t('.password'), {class: 'form-label'}%>
-          <%= form.password_field :password,value: params[:password] %>
-        </section>
-        <section class='center-form-content'>
-          <%= form.label :password_confirmation, t('.confirm-password'), {class: 'form-label'}%>
-          <%= form.password_field :password_confirmation, value: params[:password_confirmation] %>
-        </section>
-        <section class= 'center-form-content'>
-          <%= form.submit :value => t('.register-button'), class:'signin-button' %>
-          <section class='signin-button-google'>
-            <%= image_tag("google.svg")%>
-            <%= link_to t('.google-login'), '/' %>
-          </section>
-        </section>
-        <% end %>
-        </div>
+        <h1 class="login-register-tittle"><%=t('.title_form')%></h1>
+          <%= form_with(scope: :user, method: :post, url: post_signup_path) do |form| %>
+            <section class='center-form-content'>
+              <%= form.label :first_name ,t('.name'), {class: 'form-label'} %>
+              <%= form.text_field :first_name,class: 'login-register-form-label' %>
+            </section>
+            <section class='center-form-content'>
+              <%= form.label :last_name,t('.last_name'), {class: 'form-label'} %>
+              <%= form.text_field :last_name, class: 'login-register-form-label'  %>
+            </section>
+            <section class='center-form-content'>
+              <%= form.label :email ,t('.email'), {class: 'form-label'}%>
+              <%= form.email_field :email, class: 'login-register-form-label'  %>
+            </section>
+            <section class='center-form-content'>
+              <%= form.label :password ,t('.password'), {class: 'form-label'}%>
+              <%= form.password_field :password, class: 'login-register-form-label'  %>
+            </section>
+            <section class='center-form-content'>
+              <%= form.label :password_confirmation, t('.confirm_password'), {class: 'form-label'}%>
+              <%= form.password_field :password_confirmation, class: 'login-register-form-label'  %>
+            </section>
+            <section class= 'center-form-content'>
+              <%= form.submit value: t('.register_button'), class:'signin-button' %>
+              <section class='signin-button-google'>
+                <%= image_tag("google.svg")%>
+                <%= link_to t('.google_login'), '/' %>
+              </section>
+            </section>
+          <% end %>
       </div>
     </div>
+  </div>
 </article>

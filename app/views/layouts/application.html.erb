@@ -9,8 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
-  <body>
+<body>
     <% flash.each do |type, msg| %>
       <% case type when "warning" %>
       <div class="login-warning">
@@ -28,5 +27,5 @@
       <% end %>
       <%= turbo_frame_tag "modal" %>
     <%= yield %>
-  </body>
+</body>
 </html>

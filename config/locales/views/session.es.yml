@@ -2,33 +2,34 @@ es:
   session:
     login:
       login: Sesión
-      register-nav: Registro
-      title: Ingresar a mi cuenta
+      register_nav: Registro
+      title_form: Ingresar a mi cuenta
       email: Email
       password: Contraseña
-      remember-me: Recordarme
-      sign-in: Ingresar
-      recover-password: Olvidé mi contraseña
-      google-login: Ingresar con Google
+      remember_me: Recordarme
+      sign_in: Ingresar
+      recover_password: Olvidé mi contraseña
+      google_login: Ingresar con Google
 
     register:
       login: Sesión
-      register-nav: Registro
-      title: Registro
-      name-user: Nombre de usuario
+      register_nav: Registro
+      title_form: Registro
+      name: Nombre de usuario
+      last_name: Apellido
       email: Email
       password: Contraseña
-      confirm-password: Confirmar contraseña
-      register-button: Registrarme
-      google-login: Regristrarme con Google
+      confirm_password: Confirmar contraseña
+      register_button: Registrarme
+      google_login: Regristrarme con Google
 
     new:
       login: Sesión
-      sign-up: Registro
-      title: Ingresar a mi cuenta
+      sign_up: Registro
+      title_form: Ingresar a mi cuenta
       email: Email
       password: Contraseña
-      remember-me: Recordarme
-      sign-in: Ingresar
-      recoverd-password: Olvidé mi contraseña
-      register-google: Registrarme con google
+      remember_me: Recordarme
+      sign_in: Ingresar
+      recoverd_password: Olvidé mi contraseña
+      register_google: Registrarme con google

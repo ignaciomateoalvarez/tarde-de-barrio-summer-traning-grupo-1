@@ -1,0 +1,106 @@
+.student--container{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+}
+
+.student--container-tittle {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 2rem;
+  font-size: 16px;
+  line-height: 1.1875rem;
+  color: #474747;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-left: 1rem;
+}
+
+.student--container-name {
+  font-style: normal;
+  font-weight: 2rem;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0090AF;
+  margin-left: 0.25rem;
+}
+
+.student-chevron-right {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.student--card-name {
+  margin: 1.25rem 4rem 1rem 1.25rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 2rem;
+  font-size: 18px;
+  line-height: 1.4375rem;
+  color: #474747;
+}
+
+.student--card-subtittle {
+  margin: 1.25rem 2rem 0rem 1.25rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 1.5rem;
+  font-size: 14px;
+  line-height: 1.1875rem;
+  color: #0090af;
+}
+
+.student--card-label {
+  margin: 1.25rem 0rem 0rem 1.25rem;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 1.5rem;
+  font-size: 14px;
+  line-height: 1rem;
+  color: #474747;
+}
+
+.student--card-data {
+  margin: 1.25rem 0rem 0rem 1.25rem;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.1875rem;
+  color: #474747;
+}
+.student-card{
+  display: flex;
+}
+
+.student-card-section {
+    width: 23%;
+    display: flex;
+    border-right: 0.0625rem solid #DADADA;
+}
+
+.comments{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+
+.comments-text{
+  width: 70%;
+  height: 30%;
+  background: #F1F3F4;
+  border-radius: 0.5rem;
+  margin-top: 25px;
+}
+
+.comments-tittle{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1875rem;
+  color: #000000;
+}

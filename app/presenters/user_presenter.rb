@@ -1,7 +1,7 @@
 class UserPresenter
   attr_reader :params
 
-  def initialize(params)
+  def initialize(params, students = [])
     @params = params
   end
 
@@ -11,6 +11,14 @@ class UserPresenter
 
   def users
     @users ||= filter.call
+  end
+
+  def user
+    User.find_by(id: @params[:id]).decorate
+  end
+
+  def decorated_users
+    @users = StudentDecorator.decorate_collection(@users)
   end
 
   private

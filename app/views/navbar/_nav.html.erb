@@ -1,12 +1,34 @@
 <nav class="navbar">
-  <%= image_tag( "bars-solid.svg", class: 'menu-icon') %> 
+  <div data-controller="logout">
+    <button class="boton-menu-nav" data-action="click->logout#openMenu keyup@window->logout#closeWithKeyboardMenu click@window->logout#closeBackgroundMenu" data-logout-target="botonMenu">
+      <%= image_tag( "menu.svg", class: 'menu-icon') %> 
+    </button>
+    <div class="slide-menu" data-logout-target="menu">
+      <div class="slide-menu-item-saludo" >
+        <li><h1 class="slide-menu-item-saludo-h1"><%=t('.hi')%> <%= current_user.first_name %></h1></li>
+      </div>
+      <div class="slide-menu-item">
+        <li><%=t('.profile')%></li>
+      </div>
+      <div class="slide-menu-item">
+        <li><%= link_to t('.roles'), users_path, class: "link-student", class: "myButton"%></li>
+      </div> 
+    </div>
+  </div>
   <div class= "nav-link">
     <%= link_to '/' do  %>
-      <%= image_tag("house-solid.svg", class: 'home-icon ')%>
+      <%= image_tag("home.svg", class: 'home-icon ')%>
     <% end %>
-    <%= link_to t('.student'), students_path, class: "link-student" %> 
-    <%= link_to t('.users'), users_path, class: "link-student" %> 
+    <%= link_to t('.student'), students_path, class: "link-menu-student #{current_page?(students_url) ? 'link-menu-student-active' : ''}" %>   
   </div>
-  <%= button_to t('.log-out'), logout_path ,method: :delete, class: "myButton" %>
+  <div class="name-user-current" data-controller="logout">
+    <button class="boton-logout" data-action="click->logout#open keyup@window->logout#closeWithKeyboard click@window->logout#closeBackground" data-logout-target="botonUser"><%=current_user.first_name %>
+    </button>
+    <div class= "myButton-logout" data-logout-target="boton">
+      <%= button_to logout_path, method: :delete, class: "logout-boton" do %>
+        <%= t('.log_out')%>
+        <%= image_submit_tag("log-out.svg")%>
+      <% end %>
+    </div>
+  </div>
 </nav> 
-

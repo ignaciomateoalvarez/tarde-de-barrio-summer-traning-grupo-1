@@ -1,34 +1,35 @@
 <%= turbo_frame_tag "modal" do %>
- <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "container", action: 
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "container", action: 
     "turbo:submit-end->turbo-modal#submitEnd 
     keyup@window->turbo-modal#closeWithKeyboard 
     click@window->turbo-modal#closeBackground" }, class:'modal-container'  do %>
-  <div class='modal' data-turbo-modal-target= "modal">
-    <div class='modal-nav'>
-      <h1><%=t('.title')%></h1>
+    <div class='modal' data-turbo-modal-target= "modal">
+        <div class="modal-title"><h1 class="modal-title-h1"><%=t('.title')%></h1></div>
+        <%= form_with(scope: :user,method: :put, url: user_path) do |form| %>
+          <section class='modal-center-form-user'>
+            <div class= "modal-item-user">
+              <%= form.label :first_name ,t('.name'), {class: 'form-label'}%>
+              <%= form.text_field :first_name, class: 'modal-form-label-user', value: @user.first_name%>
+            </div>
+            <div class="modal-item-user">
+              <%= form.label :last_name ,t('.last_name'), {class: 'form-label'} %>
+              <%= form.text_field :last_name, class: 'modal-form-label-user', value: @user.last_name %>
+            </div>
+            <div class="modal-item-user">
+              <%= form.label :email,t('.email'), {class: 'form-label'} %>
+              <%= form.email_field :email, disabled:true, class: 'modal-form-label-user', value: @user.email %>
+            </div>
+            <div class="modal-item-user">
+              <%= form.label :role ,t('.rol'), {class: 'form-label'} %>
+            </div>
+            <div class="input-form-modal-edit-user">
+              <%= form.select :role, options_for_select(User.roles.keys, selected: @user.role), {} %>
+            </div>
+            <div>
+              <%= form.submit value: t('.edit_user'), class:"modal-new-user" %>
+            </div>
+          </section>
+        <% end %>
     </div>
-    <%= form_with(scope: :user,method: :put, url: user_path) do |form| %>
-      <section class='center-form-content'>
-      <%= form.label :first_name ,t('.first-name'), {class: 'form-label'}%>
-      <%= form.text_field :first_name,value: params[:first_name],value: @user.first_name%>
-      </section>
-      <section class='center-form-content'>
-      <%= form.label :last_name ,t('.last-name'), {class: 'form-label'} %>
-      <%= form.text_field :last_name,value: params[:last_name], value: @user.last_name %>
-      </section>
-      <section class='center-form-content'>
-      <%= form.label :email,t('.email'), {class: 'form-label'} %>
-      <%= form.email_field :email,disabled:true,value: params[:email], value: @user.email %>
-      </section>
-      <section class='center-form-content'>
-      <%= form.label :role ,t('.rol'), {class: 'form-label'} %>
-      <%= form.select :role, options_for_select(User.roles.keys, selected: @user.role), {} %>
-      </section>
-      <section class='center-form-content'>
-      <%= form.submit :value => t('.edit-user')%>
-      </section>
-    <% end %>
-    <%= button_tag t('.close'), data: { action: "turbo-modal#hideModal" }, type: "button"%>
-    <% end %>
-  </div>
+  <% end %>
 <% end %>
