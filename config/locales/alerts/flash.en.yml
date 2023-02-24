@@ -24,3 +24,11 @@ en:
     create:
       notice: New Student created successfully
       warning: Failed to create new student
+    destroy: 
+      notice: Student removed
+      warning: Student NOT removed
+  comments:
+      create:
+        notice: Comment create
+        warning: Comment NOT create
+      

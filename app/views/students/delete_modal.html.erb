@@ -5,7 +5,7 @@
     click@window->turbo-delete#closeBackground" }, class:'modal-container-delete' do %>
     <div class='modal' data-turbo-modal-target= "delete">
  <section class='section-modal-delete'>
-  <div class='title-student-delete'>¿Seguro deseas eliminar este estudiante?</div>
+  <div class='title-student-delete'><%= t('.message')%></div>
   <div class='button-student-delete'><%= button_to 'delete', student_path(@student), method: :delete, class:'button-modal-delete' %></div>
   </section>
  </div>

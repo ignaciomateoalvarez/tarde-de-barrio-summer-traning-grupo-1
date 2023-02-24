@@ -6,8 +6,7 @@ class StudentsController < ApplicationController
     @presenter = StudentPresenter.new(params, @students)
   end
 
-  def show;
-  end
+  def show; end
 
   def create
     @student = Student.new(student_params.merge({ user: current_user }))
@@ -35,14 +34,13 @@ class StudentsController < ApplicationController
 
   def destroy
     if @student.destroy
-      redirect_to(students_path, warning: "Estudiante eliminado")
+      redirect_to students_path, notice: t('.notice')
     else
-      redirect_to(students_path, warning: "Estudiante NO eliminado")
+      redirect_to students_path, warning: t('.warning')
     end
   end
 
-  def delete_modal;
-  end
+  def delete_modal; end
 
   private
 

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root 'session#login'
+  root 'home#index'
 
   delete 'logout' => 'session#destroy', :as => 'logout'
   get 'login' => 'session#login', :as => 'get_login'

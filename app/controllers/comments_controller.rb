@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.new(comment_params.merge(user: current_user, student_id: params[:student_id]))
+    @comment = Comment.new(comment_params.merge(user: current_user))
     if @comment.save
       redirect_to student_comments_path, notice: t('.notice')
     else
@@ -9,9 +9,10 @@ class CommentsController < ApplicationController
   end
 
   def new; end
-    
+
   private
+
   def comment_params
-    params.require(:comment).permit(:body)
+    params.require(:comment).permit(:body).merge(student_id: params[:student_id])
   end
 end

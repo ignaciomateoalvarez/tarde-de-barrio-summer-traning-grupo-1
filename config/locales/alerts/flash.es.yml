@@ -24,3 +24,10 @@ es:
     create:
       notice: Estudiante creado con exito!
       warning: Error al crear Estudiante
+    destroy: 
+      notice: Estudiante eliminado
+      warning: Estudiante NO eliminado
+  comments:
+      create:
+        notice: Comentario creado
+        warning: Comentario NO creado

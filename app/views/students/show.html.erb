@@ -25,7 +25,7 @@
            <h1 class=comentario-h1><%=t('.comments')%></h1>
            <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post) do |form| %>
              <%= form.text_area :body, class:"conteiner-comment" %>
-             <%= form.submit 'Publicar', class:'button-comment' %>
+             <%= form.submit t('.public'), class:'button-comment' %>
             <% end %>
          </div>
          <div class='conteiner-text-comment'>

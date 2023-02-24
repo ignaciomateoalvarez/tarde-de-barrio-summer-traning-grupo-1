@@ -53,6 +53,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_23_133250) do
     t.index ["remember_me_token"], name: "index_users_on_remember_me_token"
   end
 
-  add_foreign_key "comments", "students"
-  add_foreign_key "comments", "users"
 end

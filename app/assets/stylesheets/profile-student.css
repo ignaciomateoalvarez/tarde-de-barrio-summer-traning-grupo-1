@@ -9,24 +9,22 @@
 .student--container-tittle {
   width: 100%;
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 2rem;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.1875rem;
   color: #474747;
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  margin-bottom: 10px;
-  margin-top: 25px;
+  margin-bottom: 0.625rem;
+  margin-top: 1.5625rem;
   margin-left: 1rem;
 }
 
-.student--container-name {
-  font-style: normal;
+.student-name {
   font-weight: 2rem;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #0090AF;
   margin-left: 0.25rem;
 }
@@ -39,9 +37,8 @@
 .student--card-name {
   margin: 1.25rem 4rem 1rem 1.25rem;
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 2rem;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.4375rem;
   color: #474747;
 }
@@ -49,9 +46,8 @@
 .student--card-subtittle {
   margin: 1.25rem 2rem 0rem 1.25rem;
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 1.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.1875rem;
   color: #0090af;
 }
@@ -59,9 +55,8 @@
 .student--card-label {
   margin: 1.25rem 0rem 0rem 1.25rem;
   font-family: Roboto, sans-serif;
-  font-style: normal;
   font-weight: 1.5rem;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1rem;
   color: #474747;
 }
@@ -69,7 +64,7 @@
 .student--card-data {
   margin: 1.25rem 0rem 0rem 1.25rem;
   font-family: Roboto, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.1875rem;
   color: #474747;
 }
@@ -77,10 +72,10 @@
   display: flex;
 }
 
-.student-card-section {
-    width: 23%;
-    display: flex;
-    border-right: 0.0625rem solid #DADADA;
+.student-contenedor {
+  width: 23%;
+  display: flex;
+  border-right: 0.0625rem solid #DADADA;
 }
 
 .comments{
@@ -95,15 +90,13 @@
   height: 30%;
   background: #F1F3F4;
   border-radius: 0.5rem;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
 }
 
 .comentario-h1{
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #474747;
 }
 
@@ -112,13 +105,10 @@
 }
 
 .conteiner-comment {
-  position: absolute;
-  width: 800px;
-  height: 114px;
-  left: 360px;
-  top: 178px;
+  width: 50rem;
+  height: 7.125rem;
   background: #F1F3F4;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .button-comment{
@@ -126,52 +116,36 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  position: absolute;
-  width: 100px;
-  height: 40px;
-  left: 1050px;
-  top: 305px;
+  gap: 0.625rem;
+  width: 6.25rem;
+  height: 2.5rem;
   background: #0090AF;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #FFFFFF;
 }
 
 .conteiner-text-comment{
   box-sizing: border-box;
-
-  position: absolute;
-  width: 800px;
-  height: 261px;
-  left: 360px;
-  top: 396px;
-
-  border: 1px solid #DADADA;
-  border-radius: 8px;
+  width: 50rem;
+  height: 16.3125rem;
+  border: 0.0625rem solid #DADADA;
+  border-radius: 0.5rem;
 }
 
 .text-comment{
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #000000;
 }
 
 .text-comment-each{
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: #0090AF;
 }
