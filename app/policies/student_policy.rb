@@ -14,6 +14,10 @@ class StudentPolicy
     update?
   end
 
+  def destroy?
+    student_created_by_me?
+  end
+
   private
   def student_created_by_me?
     @user.administrador? || (@user.colaborador? && @user == @record.user)

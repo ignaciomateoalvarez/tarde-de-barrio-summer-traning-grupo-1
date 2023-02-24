@@ -42,3 +42,7 @@ es:
       school_level: Grado de escolaridad
       study: Escolarizado
       comments: Comentarios
+      public: Publicar
+    
+    delete_modal:
+       message: ¿Seguro deseas eliminar este estudiante?

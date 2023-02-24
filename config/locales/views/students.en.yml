@@ -22,6 +22,9 @@ en:
       new_student: New student
       createStudent: Create student
 
+    delete_modal:
+       message: Are you sure you want to delete this student?
+
     new:
       new_student: New student
       name: Name

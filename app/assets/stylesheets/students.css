@@ -1,7 +1,7 @@
 .student-table-container {
   background: white;
-  margin: 0px;
-  padding: 0px;
+  margin: 0rem;
+  padding: 0rem;
 
   
 }
@@ -29,16 +29,16 @@
   height: 1.25rem;
   width: 1.5625rem;
   position:relative;
-  left:10px;
+  left:0.625rem;
 }
 
 .student-pen-icon:hover {
-  border-bottom: 2px solid #0090af;
+  border-bottom: 0.125rem solid #0090af;
 }
 
 .student-trash-icon {
   position:relative;
-  left:260px;
+  left:16.25rem;
 }
 
 .student-td:hover {
@@ -46,48 +46,48 @@
 }
 
 .student-name-index {
-  min-width: 250px;
+  min-width: 15.625rem;
   text-align: left;
   font-weight: 570;
 }
 
 .student-age {
-  min-width: 200px;
+  min-width: 12.5rem;
   text-align: center;
 }
 
 .student-level {
-  min-width: 160px;
+  min-width: 10rem;
   text-align: center;
 }
 
 .student-status {
-  min-width: 250px;
+  min-width: 15.625rem;
   text-align: center;
 }
 
 .columna-vacia{
-  min-width: 180px;
+  min-width: 11.25rem;
 }
 
 .student-name-index-th {
-  min-width: 285px;
+  min-width: 17.8125rem;
   text-align: left;
   margin-left: 1.15rem;
 }
 
 .student-age-th {
-  min-width: 140px;
+  min-width: 8.75rem;
   text-align: center;
 }
 
 .student-level-th {
-  min-width: 230px;
+  min-width: 14.375rem;
   text-align: center;
 }
 
 .student-status-th {
-  min-width: 170px;
+  min-width: 10.625rem;
   text-align: center;
 }
 .modal-new-student {
@@ -99,12 +99,62 @@
   font-size: 1rem;
   line-height: 1.125rem;
   border: none;
-  margin: 10px;
+  margin: 0.625rem;
   font-weight: bold;
 }
 
 .modal-new-student:hover {
   color: rgba(255, 255, 255, 1) !important;
-  box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+  box-shadow: 0 0.25rem 1rem rgba(49, 138, 172, 1);
   transition: all 0.2s ease;
+}
+
+.title-student-delete{
+  margin-top: 2.5rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+  text-align: center;
+  color: #474747;
+}
+
+.modal-container-delete{
+  position: absolute;
+  top: 0rem; left: 0rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button-modal-delete{
+  width: 6rem;
+  height: 2.5rem;
+  background: #0090af;
+  border-radius: 0.2159rem;
+  color: rgb(254, 254, 254);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  border: none;
+  font-weight: bold;
+}
+
+.section-modal-delete{
+  box-sizing: border-box;
+  position: absolute;
+  height: 6.25rem;
+  left: 50rem;
+  top: 8.75rem;
+  background: #DADADA;
+  border: 0.0625rem solid #DADADA;
+  box-shadow: -0.125rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.button-student-delete{
+  margin-left: 6.875rem;
 }

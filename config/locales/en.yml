@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+
+  activerecord:
+    attributes:
+      student/school_level:
+        kinder_garder: Garder
+        primary: Primary
+        secondary: Secondary

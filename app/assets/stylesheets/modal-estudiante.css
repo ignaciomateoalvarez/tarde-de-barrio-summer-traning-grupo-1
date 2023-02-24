@@ -1,6 +1,6 @@
 .modal-container {
   position: fixed;
-  top: 0px; left: 0px;
+  top: 0rem; left: 0rem;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -13,55 +13,55 @@
 .modal {
   background-color: white;
   width: fit-content;
-  border-radius: 8px;
-  margin: 0px;
-  padding: 0px;
+  border-radius: 0.5rem;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 .modal-title {
-  height: 69px;
+  height: 4.3125rem;
   background: #0090AF;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
   justify-content: center;
 }
 
 .modal-title-h1{
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
   justify-content: center;
   position: relative;
-  top: 25px;
+  top: 1.5625rem;
 }
 
 .modal-center-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: center;
-  width: 400px;
-  height:500px;
-  left: 452px;
-  top: 109px;
+  width: 25rem;
+  height:31.25rem;
+  left: 28.25rem;
+  top: 6.8125rem;
   background: #FFFFFF;
-  box-shadow: -7px 7px 30px rgba(0, 76, 92, 0.2);
-  border-radius: 8px;  
+  box-shadow: -0.4375rem 0.4375rem 1.875rem rgba(0, 76, 92, 0.2);
+  border-radius: 0.5rem;  
 }
 
 .modal-item {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 0.1875rem;
 }
 
 .modal-form-label{
-  height: 30px;
-  width: 300px;
-  left: 675px;
-  top: 132px;
+  height: 1.875rem;
+  width: 18.75rem;
+  left: 42.1875rem;
+  top: 8.25rem;
   background: #FAFAFA;
-  border: 1.29514px solid #CCCCCC;
-  border-radius: 7.06992px;
+  border: 0.0809rem solid #CCCCCC;
+  border-radius: 0.4419rem;
   text-align: left;
 }
 
@@ -71,26 +71,26 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .form-label{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 0.8125rem;
+  line-height: 0.9375rem;
   color: #000000;
   text-align: left;
 }
 
 .input-form-modal-edit select{
-  height: 30px;
-  width: 300px;
-  left: 675px;
+  height: 1.875rem;
+  width: 18.75rem;
+  left: 42.1875rem;
   text-align: center;
-  top: 132px;
+  top: 8.25rem;
   background: #FAFAFA;
-  border: 1.29514px solid #CCCCCC;
-  border-radius: 7.06992px;
+  border: 0.0809rem solid #CCCCCC;
+  border-radius: 0.4419rem;
 }

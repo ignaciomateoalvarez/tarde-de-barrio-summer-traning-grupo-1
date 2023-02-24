@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   resources :users do
     put 'toggle_deactivate', to: 'users#toggle_deactivate'
   end
-  resources :students
+  resources :students do
+    get 'delete_modal', to: 'students#delete_modal', on: :member
+    resources :comments, only: [:create]
+  end
 end

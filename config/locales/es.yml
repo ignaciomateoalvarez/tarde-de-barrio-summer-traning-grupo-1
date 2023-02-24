@@ -1,0 +1,7 @@
+es:  
+  activerecord:
+    attributes:
+      student/school_level:
+        kinder_garder: Jardin
+        primary: Primaria
+        secondary: Secundaria

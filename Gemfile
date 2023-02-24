@@ -82,6 +82,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'byebug'
 end
 
 gem "view_component", "~> 2.82"
