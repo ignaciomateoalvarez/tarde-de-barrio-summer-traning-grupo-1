@@ -12,10 +12,10 @@
   padding-top: 1.25rem;
   background: #FFFFFF;
   border-radius: 0.5rem;
-  min-height: 520px;
-  min-width: 820px;
-  margin-top: 130px;
-  margin-bottom: 250px;
+  min-height: 32.5rem;
+  min-width: 51.25rem;
+  margin-top: 8.125rem;
+  margin-bottom: 15.625rem;
 }
 
 .login-register-menu-card {
@@ -28,7 +28,7 @@
   align-items: center;
   text-align: center;
   background: white;
-  height:10px ;
+  height:0.625rem ;
 }
 
 .link {
@@ -36,7 +36,7 @@
   line-height: 1.8125rem;
   color: #0090af;
   background: white;
-  height:10px ;
+  height:0.625rem ;
 }
 
 .link:visited {
@@ -45,7 +45,7 @@
 
 .link-active {
   font-size: 1.125rem;
-  height:30px ;
+  height:1.875rem ;
   color: #0090af !important;
   border-bottom: 0.13rem solid #0090af;
   padding-bottom: 0.5rem;
@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly; 
-  min-height: 450px;
+  min-height: 28.125rem;
 }
 
 a {
@@ -67,7 +67,7 @@ a {
   margin-top: 0.625rem;
   margin-left: auto;
   margin-right: auto;
-  border: 0.5px solid #BEC2C4;
+  border: 0.0313rem solid #BEC2C4;
 }
 
 .signin-button {
@@ -82,8 +82,8 @@ a {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1rem;
+  line-height: 1.125rem;
   text-align: center;
   color: #FFFFFF;
 }
@@ -105,14 +105,14 @@ a {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #000000;
 }
 
 .signin-button, .signin-button-google {
   align-self: center;
-  width: 257px;
+  width: 16.0625rem;
 }
 
 .recover-password {
@@ -123,8 +123,8 @@ a {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 13px;
-  line-height: 29px;
+  font-size: 0.8125rem;
+  line-height: 1.8125rem;
   color: #0090AF;
 }
 
@@ -141,8 +141,8 @@ a {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 300;
-  font-size: 12.0879px;
-  line-height: 16px;
+  font-size: 0.7555rem;
+  line-height: 1rem;
   color: #000000;
 }
 .form-card {
@@ -175,14 +175,14 @@ h1{
 }
 
 .login-register-form-label{
-  height: 25px;
+  height: 1.5625rem;
   background: #FAFAFA;
-  border: 1.29514px solid #CCCCCC;
-  border-radius: 5px;
+  border: 0.0809rem solid #CCCCCC;
+  border-radius: 0.3125rem;
 }
 
 .logo-imagen{
-  width: 300px;
-  height: 300px;
-  margin-right: 25px;
+  width: 18.75rem;
+  height: 18.75rem;
+  margin-right: 1.5625rem;
 }
