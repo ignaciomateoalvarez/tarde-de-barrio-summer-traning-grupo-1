@@ -1,8 +1,8 @@
 class Comment < ApplicationRecord
+  authenticates_with_sorcery!
+
   belongs_to :student
   belongs_to :user
 
-  def self.chronological
-    self.order("created_at ASC")
-  end
+  validates :body, presence: true, length: { maximum: 500 }
 end
