@@ -9,16 +9,16 @@ es:
       level: Escolaridad alcanzada
       goes_to_school: ¿Va a la escuela?
       submit: Guardar cambios
-      yes: Si
-      no: No
+      'yes': Si
+      'no': 'No'
 
     index:
       students: Estudiantes
       age: Edad
       school_level: Escolaridad Alcanzada
       study: Escolarizado
-      yes: Si
-      no: No
+      'yes': Si
+      'no': 'No'
       new_student: Nuevo estudiante
       createStudent: Crear estudiante
 
@@ -31,8 +31,8 @@ es:
       level: Escolaridad alcanzada
       goes_to_school: ¿Va a la escuela?
       create_student: Registrar estudiante
-      yes: Si
-      no: No
+      'yes': Si
+      'no': 'No'
 
     show:
       students: Estudiantes
@@ -43,6 +43,8 @@ es:
       study: Escolarizado
       comments: Comentarios
       public: Publicar
+      placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
     
     delete_modal:
        message: ¿Seguro deseas eliminar este estudiante?
+       delete: Eliminar

@@ -1,10 +1,9 @@
 class StudentPresenter
   include Pagy::Backend
-  attr_reader :students
-  attr_reader :params
+  attr_reader :students, :params
 
-  def initialize(params, students = []) 
-    @students = students
+  def initialize(_params, students = [])    
+    @students = students.order(created_at: :desc)
   end
 
   def student

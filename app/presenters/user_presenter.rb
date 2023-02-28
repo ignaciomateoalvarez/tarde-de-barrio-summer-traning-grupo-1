@@ -10,7 +10,7 @@ class UserPresenter
   end
 
   def users
-    @users ||= filter.call
+    @users ||= filter.call.order(created_at: :desc)
   end
 
   def user

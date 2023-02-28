@@ -9,21 +9,22 @@ en:
       level: School level
       goes_to_school: Goes to school
       submit: Save changes
-      yes: Yes
-      no: No
+      'yes': 'Yes'
+      'no': 'No'
 
     index:
       students: Students
       age: Age
       school_level: School level
       goes_to_school: Goes to school
-      yes: Si
-      no: No
+      'yes': 'Yes'
+      'no': 'No'
       new_student: New student
       createStudent: Create student
 
     delete_modal:
        message: Are you sure you want to delete this student?
+       delete: Delete
 
     new:
       new_student: New student
@@ -34,8 +35,8 @@ en:
       level: School level
       goes_to_school: Goes to school
       create_student: Create student
-      yes: Yes
-      no: No
+      'yes': 'Yes'
+      'no': 'No'
 
     show:
       students: Students
@@ -45,3 +46,5 @@ en:
       school_level: School level
       goes_to_school: Goes to school
       comments: Comments
+      placeholder: What do you want to post? You can "@" people to mention them. 
+

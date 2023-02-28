@@ -19,24 +19,35 @@
         <h3 class="student--card-label"><%=t('.study')%></h3>
         <p class="student--card-data"><%= @student.goes_to_school%><p>
       </section>
-      </div>
-      <div class="comentarios">
-         <div>
-           <h1 class=comentario-h1><%=t('.comments')%></h1>
-           <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post) do |form| %>
-             <%= form.text_area :body, class:"conteiner-comment" %>
-             <%= form.submit t('.public'), class:'button-comment' %>
-            <% end %>
-         </div>
-         <div class='conteiner-text-comment'>
-           <% @student.comments.each do |comment| %>
-            <div class="text-comment-each">
-              <%= current_user.first_name %>
-              <%= comment.created_at.strftime('%H:%M') %>
-            </div>
-            <p class='text-comment'><%= comment.body %></p>
-           <% end %>
-         </div>
-      </div>
-   </div> 
+    </div>
+    <hr/>
+    <div class="comentarios">
+        <div>
+          <h1 class=comentario-h1><%=t('.comments')%></h1>
+          <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post) do |form| %>
+            <%= form.text_area :body, class:"conteiner-comment", placeholder: t('.placeholder')%>
+              <div class='icons-and-public-button'>
+                <div class='slash-buttons'>
+                  <div class='icons-buttons'>
+                    <%= image_tag "smile.svg" %>
+                    <%= image_tag "image.svg" %>
+                  </div>
+                  <input type='checkbox' value='1'>
+                  <label><%= "Destacar publicacion"%></label>
+                </div>
+                <%= form.submit t('.public'), class:'button-comment' %>
+              </div>
+          <% end %>
+        </div>
+        <div class='conteiner-text-comment'>
+          <% @student.comments.each do |comment| %>
+          <div class="text-comment-each">
+            <%= current_user.first_name %>
+            <%= comment.created_at.strftime('%H:%M') %>
+          </div>
+          <p class='text-comment'><%= comment.body %></p>
+          <% end %>
+        </div>
+    </div>
+  </div>
 </div>
