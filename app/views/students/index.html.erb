@@ -27,18 +27,20 @@
         <tr class='student-td'>
             <td class="student-name-index"><%= link_to student.full_name, student_path(student.id)%></td>
             <td class="student-age"><%= student.calculate_age %></td>
-            <td class="student-level"><%= student.school_level %></td>
-            <td class="student-status"><%= student.status_school %></td> 
+            <td class="student-level"><%= translate_enum(Student, 'school_level', student.school_level) %></td>
+            <td class="student-status"><%= student.status_school %></td>
             <% if policy(student).edit? %>
-              <td><%= link_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
-                <%= image_tag( "pen.svg", class: 'student-pen-icon') %>
-              <% end %></td>
-              <td class="columna-vacia"></td> 
-              <td><%= link_to delete_modal_student_path(student), data: { turbo_frame: 'delete' } do%>
-               <%= image_tag( "trash-2.svg", class: 'student-pen-icon') %>
-               <% end %> 
-               </td>
-            <% end %> 
+              <div>
+                <td class="columna-vacia"></td>
+                <td><%= link_to edit_student_path(student), method: :get, data: { turbo_frame: 'modal' } do%>
+                  <%= image_tag( "pen.svg", class: 'student-pen-icon') %>
+                <% end %></td>
+                <td><%= link_to delete_modal_student_path(student), data: { turbo_frame: 'modal' } do%>
+                <%= image_tag( "trash-2.svg", class: 'student-pen-icon') %>
+                <% end %>
+                </td>
+               </div>
+            <% end %>
         </tr>
       <% end %>
     </table>

@@ -2,13 +2,11 @@
   background: white;
   margin: 0rem;
   padding: 0rem;
-
-  
 }
 
 .student-th {
   display: flex;
-  justify-content: flex-start
+  justify-content: flex-start;
   color: #0090af;
   padding: 0.3125rem;
   text-transform: uppercase;
@@ -23,6 +21,7 @@
   border: 0.0625rem solid #dadada;
   padding: 1.40rem;
   height: 0.1rem;
+  position: relative;
 }
 
 .student-pen-icon {
@@ -110,14 +109,15 @@
 }
 
 .title-student-delete{
-  margin-top: 2.5rem;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.3125rem;
+  font-size: 18px;
+  line-height: 21px;
   text-align: center;
   color: #474747;
+  margin: 5px;
+  padding: 5px;
 }
 
 .modal-container-delete{
@@ -132,29 +132,62 @@
 }
 
 .button-modal-delete{
-  width: 6rem;
-  height: 2.5rem;
-  background: #0090af;
-  border-radius: 0.2159rem;
-  color: rgb(254, 254, 254);
-  font-size: 1rem;
-  line-height: 1.125rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #0090AF;
+  border-radius: 4px;
+  gap: 10px;
+  width: 117px;
+  height: 33px;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
   border: none;
-  font-weight: bold;
 }
 
-.section-modal-delete{
-  box-sizing: border-box;
-  position: absolute;
-  height: 6.25rem;
-  left: 50rem;
-  top: 8.75rem;
-  background: #DADADA;
-  border: 0.0625rem solid #DADADA;
-  box-shadow: -0.125rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+.section-modal-delete {
+  position: fixed;
+  background: #f4f4f4;
+  border: 0.0625rem solid #D95234;
+  box-shadow: -0.125rem 0.25rem 0.625rem rgb(0 0 0 / 10%);
   border-radius: 0.5rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  padding: 2.5rem 0.5rem 1.5rem 0.3rem;
 }
 
 .button-student-delete{
-  margin-left: 6.875rem;
+  display: flex;
+  justify-content: center;
+  color: #474747;
 }
+
+.student-table-container table tr td:last-child  {
+  position: absolute;
+  right: -2rem;
+}
+
+.student-card hr {
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
+
+.student-card-section {
+  max-width: 15rem;
+}
+
+.conteiner-comment{
+  width: 100%;
+  background: #F1F3F4;
+  border-radius: 0.5rem;
+  resize: none;
+  outline: none;
+  padding: 1rem;
+  height: 7.125rem;
+  border: none;
+  }

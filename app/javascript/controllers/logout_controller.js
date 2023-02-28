@@ -3,11 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["boton","menu", "botonMenu", "botonUser"]
 //eventos asociados al boton de logout
-  connect(){
-    console.log(this.botonTarget)
-    console.log(this.menuTarget)
-  }
-
   open() {
     this.botonTarget.style.transform = "translate(0,1px)";
     this.botonTarget.style.transitionDuration = "1s";

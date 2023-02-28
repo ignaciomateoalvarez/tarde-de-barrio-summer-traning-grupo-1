@@ -35,6 +35,6 @@ en:
   activerecord:
     attributes:
       student/school_level:
-        kinder_garder: Garder
-        primary: Primary
-        secondary: Secondary
+        kinder_garder: Kinder Garden
+        primary: Primary School
+        secondary: Secondary School

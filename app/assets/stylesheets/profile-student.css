@@ -98,34 +98,36 @@
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #474747;
+  text-align: center;
+  padding: 1rem;
 }
 
 .emoji{
  align-items: flex-start;
 }
 
-.conteiner-comment {
-  width: 50rem;
-  height: 7.125rem;
-  background: #F1F3F4;
-  border-radius: 0.5rem;
-}
-
-.button-comment{
+.icons-and-public-button{
+  padding: 0.7rem 0rem 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
-  width: 6.25rem;
-  height: 2.5rem;
+}
+
+.button-comment{
   background: #0090AF;
   border-radius: 0.25rem;
-
+  margin-left: auto;
+  width: 8.4375rem;
+  height: 2.5rem;
+  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #FFFFFF;
+  border: none;
 }
 
 .conteiner-text-comment{
@@ -148,4 +150,9 @@
   font-size: 0.875rem;
   line-height: 1rem;
   color: #0090AF;
+}
+
+.slash-buttons{
+  display: flex;
+  align-items: center;
 }

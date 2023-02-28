@@ -1,45 +1,31 @@
-.flash-message {
+.notice, .success, .warning {
   position: absolute;
-  top: 6.5rem;
-  left: 31.25rem;
-  right: 0; 
+  left: 0;
+  right: 0;
   background-color: white;
   padding: 0.5rem;
   border-radius: 0.625rem;
   width: fit-content;
-  border: 0.125rem solid green;
-  color: green;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .link-student:hover {
   color: black
 }
 
-.login-warning {
+.warning {
   color: red;
-  position: absolute;
-  top: 3rem;
-  background-color: white;
-  padding: 0.5rem;
-  border-radius: 0.625rem;
-  width: fit-content;
-  left: 0; 
-  right: 0; 
-  margin-left: 6.25rem; 
-  margin-right: auto;
+  border: 0.125rem solid red;
 }
 
-.login-success {
+.notice { 
+  color: grey;
+  border: 0.125rem solid grey;
+}
+
+.success {
   color: green;
-  position: absolute;
-  top: 7rem;
-  margin: auto;
-  background-color: white;
-  padding: 0.5rem;
-  border-radius: 0.625rem;
-  width: fit-content;
-  left: 0; 
-  right: 0; 
-  margin-left: 18.125rem; 
-  margin-right: auto;
+  border: 0.125rem solid green;
+
 }

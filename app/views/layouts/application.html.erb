@@ -12,21 +12,20 @@
 <body>
     <% flash.each do |type, msg| %>
       <% case type when "warning" %>
-      <div class="login-warning">
+      <div class="warning" data-controller="flash">
         <%= msg %>
       </div>
       <% when "success" %>
-        <div class="login-success">
+        <div class="success" data-controller="flash">
           <%= msg %>
         </div>
       <% when "notice" %>
-        <div class="flash-message">
+        <div class="notice" data-controller="flash">
           <%= msg %>
         </div>
       <% end %>
       <% end %>
       <%= turbo_frame_tag "modal" %>
-      <%= turbo_frame_tag "delete" %>
     <%= yield %>
 </body>
 </html>

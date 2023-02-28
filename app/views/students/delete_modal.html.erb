@@ -1,13 +1,14 @@
-<%= turbo_frame_tag "delete" do %>
-  <%= tag.div data: { controller: "turbo-delete", turbo_modal_target: "container",action: 
-    "turbo:submit-end->turbo-delete#submitEnd 
-    keyup@window->turbo-delete#closeWithKeyboard 
-    click@window->turbo-delete#closeBackground" }, class:'modal-container-delete' do %>
-    <div class='modal' data-turbo-modal-target= "delete">
- <section class='section-modal-delete'>
-  <div class='title-student-delete'><%= t('.message')%></div>
-  <div class='button-student-delete'><%= button_to 'delete', student_path(@student), method: :delete, class:'button-modal-delete' %></div>
-  </section>
- </div>
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", turbo_modal_target: "container", action: 
+    "turbo:submit-end->turbo-modal#submitEnd 
+    keyup@window->turbo-modal#closeWithKeyboard 
+    click@window->turbo-modal#closeBackground" }, class:'modal-container-delete' do %>
+  
+    <div class='modal' data-turbo-modal-target= "modal">
+      <section class='section-modal-delete'>
+        <div class='title-student-delete'><%= t('.message')%></div>
+        <div class='button-student-delete'><%= button_to t('.delete'), student_path(@student), method: :delete, class:'button-modal-delete' %></div>
+      </section>
+    </div>
 <% end %>
 <% end %>

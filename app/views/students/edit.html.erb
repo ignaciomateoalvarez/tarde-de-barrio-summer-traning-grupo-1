@@ -28,7 +28,10 @@
             <%= form.label :school_level ,t('.level'), {class: 'form-label'} %>
           </div>
           <div class= 'input-form-modal-edit'>
-            <%= form.select :school_level, options_for_select(Student.school_levels.keys.map { |key| translate_enum(Student, 'school_level', key) }) %>          </div>
+          
+            <%= form.select :school_level, options_for_select(Student.school_levels.keys.map { |key| [translate_enum(Student, 'school_level', key), key] }) %>         
+ 
+          </div>
           <p class="form-label"><%=t('.goes_to_school')%></p>
           <div class="modal-item radio-button-form">
             <%= form.label :goes_to_school, t('.yes'), class: 'radio-button-form' %>
