@@ -5,3 +5,7 @@ es:
         kinder_garder: Jardin
         primary: Primaria
         secondary: Secundaria
+  
+  date:
+    formats:
+      month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]

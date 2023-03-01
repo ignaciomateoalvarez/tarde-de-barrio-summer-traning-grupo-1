@@ -6,7 +6,9 @@ class StudentsController < ApplicationController
     @presenter = StudentPresenter.new(params, @students)
   end
 
-  def show; end
+  def show
+    @comments_by_day = @presenter.comments_by_day
+  end
 
   def create
     @student = Student.new(student_params.merge({ user: current_user }))

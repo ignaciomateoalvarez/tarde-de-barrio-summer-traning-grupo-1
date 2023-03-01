@@ -38,3 +38,7 @@ en:
         kinder_garder: Kinder Garden
         primary: Primary School
         secondary: Secondary School
+  
+  date:
+    formats:
+      month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
