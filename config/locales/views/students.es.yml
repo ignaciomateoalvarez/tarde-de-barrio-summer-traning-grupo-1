@@ -44,7 +44,8 @@ es:
       comments: Comentarios
       public: Publicar
       placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
-    
+      placeholder_answer: Escribe tu comentario. Recuerda que puedes utilizar “@” para mencionar personas.
+      post: Publicar
     delete_modal:
        message: ¿Seguro deseas eliminar este estudiante?
        delete: Eliminar

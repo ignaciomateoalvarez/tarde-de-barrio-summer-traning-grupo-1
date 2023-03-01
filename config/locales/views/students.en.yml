@@ -47,4 +47,5 @@ en:
       goes_to_school: Goes to school
       comments: Comments
       placeholder: What do you want to post? You can "@" people to mention them. 
-
+      placeholder_answer: Write your comment. You can "@" people to mention them. 
+      post: Post

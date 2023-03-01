@@ -15,9 +15,9 @@
         <h3 class="student--card-label"><%=t('.address')%></h3>
         <p class="student--card-data"><%= @student.address %><p>
         <h3 class="student--card-label"><%=t('.school_level')%></h3>
-        <p class="student--card-data"><%= @student.school_level %><p>
+        <p class="student--card-data"><%= translate_enum(Student, 'school_level', @student.school_level) %><p>
         <h3 class="student--card-label"><%=t('.study')%></h3>
-        <p class="student--card-data"><%= @student.goes_to_school%><p>
+        <p class="student--card-data"><%= @student.decorate.status_school%><p>
       </section>
     </div>
     <hr/>
@@ -26,28 +26,58 @@
           <h1 class=comentario-h1><%=t('.comments')%></h1>
           <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post) do |form| %>
             <%= form.text_area :body, class:"conteiner-comment", placeholder: t('.placeholder')%>
-              <div class='icons-and-public-button'>
-                <div class='slash-buttons'>
-                  <div class='icons-buttons'>
-                    <%= image_tag "smile.svg" %>
-                    <%= image_tag "image.svg" %>
-                  </div>
-                  <input type='checkbox' value='1'>
-                  <label><%= "Destacar publicacion"%></label>
+            <div class='icons-and-public-button'>
+              <div class='slash-buttons'>
+                <div class='icons-buttons'>
+                  <%= image_tag "smile.svg" %>
+                  <%= image_tag "image.svg" %>
                 </div>
-                <%= form.submit t('.public'), class:'button-comment' %>
+                <input type='checkbox' value='1'>
+                <label><%= "Destacar publicacion"%></label>
               </div>
+              <%= form.submit t('.public'), class:'button-comment' %>
+            </div>
           <% end %>
         </div>
-        <div class='conteiner-text-comment'>
-          <% @student.comments.each do |comment| %>
-          <div class="text-comment-each">
-            <%= current_user.first_name %>
-            <%= comment.created_at.strftime('%H:%M') %>
+        <% @comments_by_day.each do |day, comments|%>
+          <h2 class = 'comment-date'> <%= day.strftime("%A, %B, %e") %></h2>
+          <% comments.each do |comment| %>
+            <div class='conteiner-text-comment'>
+              <div class="text-comment-each">
+                <span class = 'comment-name-time'>
+                  <%= current_user.first_name %>
+                  <p class = 'comment-time'><%= comment.created_at.strftime('%H:%M') %></p>
+                </span>
+                <p class='text-comment'><%= comment.body %></p>
+              </div>
+              <details>
+                <hr class ='hr-answers'>
+                <summary class='summary-btn'></summary>
+                <div class = 'answers-container'>
+                  <% comment.answers.each do |answer| %>
+                    <div class='conteiner-answer-comment'>
+                      <div class="text-comment-each">
+                        <span class = 'answer-name-time'>
+                          <%= answer.user.first_name %>
+                          <p class = 'comment-time'><%= comment.created_at.strftime('%H:%M') %></p>
+                        </span>
+                      <p class='answer-comment'><%= answer.reply%></p>
+                      </div>
+                    </div>
+                  <%end%>
+                </div>
+                <div class='placeholder-answers'>
+                  <%= form_with(scope: :answer, url: student_comment_answers_path(@student, comment), method: :post) do |form| %>
+                    <%= form.text_area :reply,class:"aswers-textarea", placeholder: t('.placeholder')%>
+                    <%= button_tag :submit, class: 'form-btn-sub-comment' do %>
+                      <%= image_tag 'send.svg' %>
+                    <% end %>
+                  <% end %>
+                </div>
+            </details>
+          <% end %>
           </div>
-          <p class='text-comment'><%= comment.body %></p>
-          <% end %>
-        </div>
+        <% end %>
     </div>
   </div>
 </div>

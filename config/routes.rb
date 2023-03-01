@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   end
   resources :students do
     get 'delete_modal', to: 'students#delete_modal', on: :member
-    resources :comments, only: [:create]
+    resources :comments, only: [:create] do
+      resources :answers, only: [:create]
+    end
   end
 end
