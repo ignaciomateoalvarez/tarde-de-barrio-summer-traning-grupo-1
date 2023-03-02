@@ -36,4 +36,10 @@ RSpec.describe User, type: :model do
   describe 'Enum Type' do
     it { should define_enum_for(:role).with_values([:administrador, :colaborador]) }
   end
+
+  describe 'Associations' do
+    it { should have_many(:students) }
+    it { should have_many(:comments) }
+  end
+
 end

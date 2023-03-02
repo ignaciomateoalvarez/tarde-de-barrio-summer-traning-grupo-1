@@ -43,9 +43,16 @@ es:
       study: Escolarizado
       comments: Comentarios
       public: Publicar
+      post: Publicar
       placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
       placeholder_answer: Escribe tu comentario. Recuerda que puedes utilizar “@” para mencionar personas.
-      post: Publicar
+      highlight_comment: Destacar publicación
+
     delete_modal:
        message: ¿Seguro deseas eliminar este estudiante?
        delete: Eliminar
+
+    comment:
+      today: Hoy
+      placeholder_answer: Escribe tu comentario. Recuerda que puedes utilizar “@” para mencionar personas.
+

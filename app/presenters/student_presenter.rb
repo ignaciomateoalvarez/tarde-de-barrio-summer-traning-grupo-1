@@ -2,9 +2,9 @@ class StudentPresenter
   include Pagy::Backend
   attr_reader :students, :params
 
-  def initialize(params, students = [])    
+  def initialize(params, students = [])
     @params = params
-    @students = students.order(created_at: :desc)
+    @students = students
   end
 
   def student
@@ -12,11 +12,13 @@ class StudentPresenter
   end
 
   def decorated_students
-    @students = StudentDecorator.decorate_collection(@students)
+    @students = StudentDecorator.decorate_collection(@students.order(created_at: :desc))
   end
 
-  def comments_by_day
-    @student.comments.group_by{ |c| c.created_at.to_date }.sort.reverse
+  def grouped_comments
+    {
+      highlighted: @students.comments.highlighted.group_by { |c| c.created_at.to_date }.sort.reverse,
+      not_highlighted: @students.comments.not_highlighted.group_by { |c| c.created_at.to_date }.sort.reverse
+    }
   end
 end
-

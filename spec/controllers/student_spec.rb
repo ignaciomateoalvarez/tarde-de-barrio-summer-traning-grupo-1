@@ -20,8 +20,9 @@ RSpec.describe 'StudentsController', type: %i[request controller] do
       expect(response).to redirect_to(students_path)
     end
   end
+
   describe 'POST destroy' do
-    let!(:student) { destroy(:student) }
+    let!(:student) { create(:student) }
     before { post students_path student: student.attributes }
     it 'renders destroy student' do
       expect(response).to redirect_to(students_path)
