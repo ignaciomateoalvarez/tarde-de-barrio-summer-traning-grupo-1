@@ -22,25 +22,26 @@
     </div>
     <hr/>
     <div class="comentarios">
-      <div>
-        <h1 class=comentario-h1><%=t('.comments')%></h1>
-        <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post) do |form| %>
-          <%= form.text_area :body, class:"conteiner-comment", placeholder: t('.placeholder')%>
-          <div class='icons-and-public-button'>
-            <div class='slash-buttons'>
-              <div class='icons-buttons'>
-                <%= image_tag "smile.svg" %>
-                <%= image_tag "image.svg" %>
+        <div>
+          <h1 class=comentario-h1><%=t('.comments')%></h1>
+          <%= form_with(scope: :comment, url: student_comments_path(@student), method: :post, data: {controller: 'emoji'}) do |form| %>
+            <%= form.text_area :body, class:"conteiner-comment", placeholder: t('.placeholder'), data: { 'emoji-target': 'body'} %>
+            <div class='icons-and-public-button'>
+              <div class='slash-buttons'>
+                <div class='icons-buttons'>          
+                  <div data-emoji-target = 'pickerContainer' ></div>
+                  <%= image_tag "smile.svg", data: { 'emoji-target': 'button', action: 'click->emoji#open' }%>
+                  <%= image_tag "image.svg" %>
+                </div>
+                <input type='checkbox' name='comment[highlight]' value='1' >
+                <label><%= t('.highlight_comment') %></label>
               </div>
-              <%= form.check_box :highlight, { class: 'form-check-input' }, 1, nil %>
-              <%= form.label :highlight, t('.highlight_comment'), class: 'form-check-label' %>
+              <%= form.submit t('.public'), class:'button-comment' %>
             </div>
-            <%= form.submit t('.public'), class:'button-comment' %>
-          </div>
-        <% end %>
-      </div>
-      <%= render partial: 'comment', locals: { comments: @presenter.grouped_comments[:highlighted], student: @student } %>
-      <%= render partial: 'comment', locals: { comments: @presenter.grouped_comments[:not_highlighted], student: @student } %>
+          <% end %>
+        </div>
+        <%= render partial: 'comment', locals: { comments: @presenter.grouped_comments[:highlighted], student: @student } %>
+        <%= render partial: 'comment', locals: { comments: @presenter.grouped_comments[:not_highlighted], student: @student } %>
     </div>
   </div>
 </div>
