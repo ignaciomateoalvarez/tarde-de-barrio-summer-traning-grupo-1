@@ -6,4 +6,7 @@ class Comment < ApplicationRecord
   has_many :answers
 
   validates :body, presence: true, length: { maximum: 500 }
+
+  scope :highlighted, -> { where(highlight: true) }
+  scope :not_highlighted, -> { where(highlight: false) }
 end

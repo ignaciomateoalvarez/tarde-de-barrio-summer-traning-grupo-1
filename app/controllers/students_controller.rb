@@ -2,12 +2,12 @@ class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy, :delete_modal]
 
   def index
-    @pagy, @students = pagy(Student.all)
-    @presenter = StudentPresenter.new(params, @students)
+    @pagy, @students_per_page = pagy(Student.all)
+    @presenter = StudentPresenter.new(params, @students_per_page)
   end
 
   def show
-    @comments_by_day = @presenter.comments_by_day
+    @presenter ||= StudentPresenter.new(params, @student)
   end
 
   def create

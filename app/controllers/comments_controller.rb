@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params.merge(user: current_user))
+    @comment.highlight = params[:comment][:highlight].present?
+
     if @comment.save
       redirect_to student_comments_path, notice: t('.notice')
     else

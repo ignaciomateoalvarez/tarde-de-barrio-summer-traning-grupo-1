@@ -22,5 +22,9 @@ RSpec.describe Student, type: :model do
     it { should_not allow_value('Acuña Fulanito12').for(:lastname) }
     it { should_not allow_value('Gomez!').for(:lastname) }
   end
-  
+
+  describe 'Associations' do
+    it { should belong_to(:user) }
+    it { should have_many(:comments) }
+  end
 end
