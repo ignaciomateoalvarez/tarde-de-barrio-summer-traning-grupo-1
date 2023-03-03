@@ -9,6 +9,8 @@ export default class extends Controller {
     
     this.picker = createPopup({
       rootElement: this.pickerContainerTarget, //modal
+      hideOnEmojiSelect: false,
+      hideOnClickOutside: false,
     },{
       triggerElement: this.buttonTarget, //boton carita
       referenceElement: this.buttonTarget, //boton carita

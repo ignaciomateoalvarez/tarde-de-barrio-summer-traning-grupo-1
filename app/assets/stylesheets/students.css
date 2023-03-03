@@ -112,12 +112,12 @@
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
   text-align: center;
   color: #474747;
-  margin: 5px;
-  padding: 5px;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
 }
 
 .modal-container-delete{
@@ -135,16 +135,16 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1rem;
+  line-height: 1.1875rem;
   color: #FFFFFF;
   background: #0090AF;
-  border-radius: 4px;
-  gap: 10px;
-  width: 117px;
-  height: 33px;
-  margin: 5px;
-  padding: 5px;
+  border-radius: 0.25rem;
+  gap: 0.625rem;
+  width: 7.3125rem;
+  height: 2.0625rem;
+  margin: 0.3125rem;
+  padding: 0.3125rem;
   cursor: pointer;
   border: none;
 }
@@ -191,3 +191,8 @@
   height: 7.125rem;
   border: none;
   }
+
+.my-picker-comment {
+  z-index: 1;
+  position: relative;
+}
