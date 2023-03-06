@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post 'login' => 'session#create', :as => 'login'
   get 'signup' => 'session#register', :as => 'signup'
   post 'signup' => 'users#create', :as => 'post_signup'
-  post 'post_new_user',  to: 'users#new_user'
+  post 'post_new_user', to: 'users#new_user'
 
   resources :users do
     put 'toggle_deactivate', to: 'users#toggle_deactivate'
@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :students do
     get 'delete_modal', to: 'students#delete_modal', on: :member
     resources :comments, only: [:create] do
+      post 'likes/create'
+      delete 'likes/destroy'
       resources :answers, only: [:create]
     end
   end

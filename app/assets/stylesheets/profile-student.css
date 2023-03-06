@@ -243,6 +243,7 @@ details[open] summary::after {
 .comment-name-time {
   display: flex;
   padding: 0.625rem;
+  position: relative;
 }
 
 .conteiner-answer-comment {
@@ -278,4 +279,31 @@ details[open] summary::after {
   border: 0.0625rem solid #DADADA;
   border-radius: 0.5rem;
   border-left: 0.3125rem solid #D95234;
+}
+
+.likes { 
+  position: absolute;
+  width: 100%;
+  right: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: black;
+  font-family: 'Roboto';
+  font-style: normal;
+  gap: 0.3rem;
+}
+
+.likes button {
+  background: none;
+  border: none;
+  
+}
+
+.liked-comment { 
+  color: red;
+}
+
+.likes-count {
+  display :contents
 }
