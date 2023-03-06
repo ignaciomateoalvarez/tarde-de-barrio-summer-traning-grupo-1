@@ -1,0 +1,15 @@
+<span class="likes-count" id="<%=dom_id(comment, :like)%>">
+  <% if comment.likes.any? %>
+    <%= comment.likes.count%>
+  <% end%>
+  <% liked = comment.likes.find { |like| like.user_id == current_user.id} %>
+  <% if liked%>
+    <%= button_to student_comment_likes_destroy_path(student, comment), method: :delete do %>
+      <%= image_tag("thumbs-down.svg") %>
+    <%end%>
+  <%else%>
+    <%= button_to student_comment_likes_create_path(student, comment), method: :post do %>
+        <%=image_tag("thumbs-up.svg")%>
+    <%end%>
+  <%end%>
+</span>  

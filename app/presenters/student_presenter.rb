@@ -19,6 +19,6 @@ class StudentPresenter
     {
       highlighted: @students.comments.highlighted.group_by { |c| c.created_at.to_date }.sort.reverse,
       not_highlighted: @students.comments.not_highlighted.group_by { |c| c.created_at.to_date }.sort.reverse
-    }
+  }
   end
 end
