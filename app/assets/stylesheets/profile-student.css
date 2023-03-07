@@ -307,3 +307,15 @@ details[open] summary::after {
 .likes-count {
   display :contents
 }
+
+.choosebtn{
+  display: none;
+}
+
+.icons-buttons {
+  white-space: nowrap;
+}
+
+.pickerContainer, .file-tbtn {
+  display: inline-block
+}
