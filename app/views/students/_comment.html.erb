@@ -11,6 +11,13 @@
           </div>
         </div>
         <p class='text-comment'><%= comment.body %></p>
+        <% if comment.attachment.attached? %>
+        <ul>
+          <% comment.attachment.each do |attachment| %>
+            <li> <%= link_to attachment.filename, url_for(attachment), download: attachment.filename %> </li>
+            <% end %>
+        </ul>
+        <% end %>
       </div>
       <details>
         <summary class='summary-btn'></summary>

@@ -27,3 +27,5 @@ passenger-standalone.json
 # Ignore application configuration
 /config/application.yml
 .dumps/
+
+/storage

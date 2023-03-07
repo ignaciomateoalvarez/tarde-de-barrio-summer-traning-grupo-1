@@ -1,11 +1,18 @@
-es:  
+es:
   activerecord:
     attributes:
       student/school_level:
         kinder_garder: Jardin
         primary: Primaria
         secondary: Secundaria
-  
+
+    errors:
+      models:
+        comment:
+          attributes:
+            attachment:
+              invalid_extension: "El formato %{extension} no esta permitido. Los formatos validos son: %{allowed_extensions}"
+
   date:
     formats:
       month_names: [~, Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
