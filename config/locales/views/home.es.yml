@@ -1,0 +1,21 @@
+es:
+  home:
+    attendance:
+      attendance: Asistencia
+      student-body: Alumnado
+      present: P
+      absent: A 
+      left: R
+      present-hover: Alumnos presentes
+      absent-hover: Alumnos ausentes
+      left-hover: Alumnos que se retiraron
+
+    summary:
+      attendance: Asistencia
+      highlighted: Destacado
+      team: Equipo
+
+    posts:
+      highlight_post: Destacar publicación
+      publication_placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
+      post: Publicar

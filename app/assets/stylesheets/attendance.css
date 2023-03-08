@@ -1,0 +1,217 @@
+table {
+  border-collapse: collapse;
+}
+
+/** Attendance details **/
+
+.attendance-container {
+  width: 16.0625rem;
+  padding: 0.3125rem;
+  position: relative;
+}
+
+.h2-container {
+  display: flex;
+  justify-content: center;
+}
+
+.h2-attendance {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #000000;
+  margin-left: auto;  
+}
+
+.th-h-attendance {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #000000;
+  text-align: center;
+}
+
+.th-attendance {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #000000;
+  padding: 0.5rem;
+}
+
+.th-student-body {
+  text-align: left;
+}
+
+.tr-attendance {
+  border-bottom: 0.0625rem solid #BDBDBD;
+}
+
+.td-attendance {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #000000;
+  padding: 0.5rem;
+}
+
+.hr-attendance {
+  border: 0.0625rem solid #BDBDBD;
+  width: 100%;
+}
+
+.dot {
+  height: 1.5625rem;
+  width: 1.5625rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  background-color: #4AAB88;
+}
+
+.red-dot {
+  background-color: #D95234;
+}
+
+.yellow-dot {
+  background-color: #D6C104;
+}
+
+.vector-up {
+  margin-left: auto;
+}
+
+.text {
+  position: relative;
+}
+
+.text:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 8.75rem;
+  background-color: white;
+  text-align: center;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #cccccc;
+  padding: 0.4375rem;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  z-index: 3;
+  right: 2rem;
+  top: 0.1rem;
+}
+
+.text:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/** Attendance summary **/
+
+.attendance-summary-table {
+  padding-top: 0.625rem;
+}
+
+.summary-table {
+  border-spacing: 0.625rem;
+}
+
+div p:first-child {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+.tr-attendance-summary {
+  display: flex;
+}
+
+.attendance-summary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.attendance-summary, .team-summary { 
+  display: flex;
+  flex-direction: row;
+}
+
+
+.td-summary {
+  height: 1.5625rem;
+  width: 1.5625rem;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.9375rem 0 0;
+}
+
+.attendance-green {
+  border: 0.0625rem solid #657c74;
+}
+
+.attendance-red {
+  border: 0.0625rem solid #D95234;
+}
+
+.attendance-yellow {
+  border: 0.0625rem solid #D6C104;
+  border-radius: 50%;
+}
+
+.quantity { 
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #000000;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  border-radius: 50%;
+}
+
+.q-highlight {
+  border: 0.0625rem solid #D95234;
+  border-radius: 0.25rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #D95234;
+  width: 25%;
+  padding: 0.3125rem;
+}
+
+.green-circle {
+  border: 0.0625rem solid #4AAB88;
+}
+
+.red-circle {
+  border: 0.0625rem solid #D95234;
+}
+
+.yellow-circle {
+  border: 0.0625rem solid #D6C104;
+}
+
+.vector-up-summary {
+  margin-left: 100%;
+}

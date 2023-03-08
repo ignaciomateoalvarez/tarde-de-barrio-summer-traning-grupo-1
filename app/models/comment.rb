@@ -12,13 +12,14 @@ class Comment < ApplicationRecord
   scope :not_highlighted, -> { where(highlight: false) }
 
   validate :correct_file_type
+
   private
 
   def correct_file_type
     allowed_types = %w[image/jpeg image/png application/pdf application/msword]
     attachment.each do |attachment|
       unless attachment.content_type.in?(allowed_types)
-        errors.add(:attachment, :invalid_etension, allowed_extension: ".jpg, .png, .doc, .pdf", extension: attachment.content_type)
+        errors.add(:attachment, :invalid_etension, allowed_extension: '.jpg, .png, .doc, .pdf', extension: attachment.content_type)
       end
     end
   end

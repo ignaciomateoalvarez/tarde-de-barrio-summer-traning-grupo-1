@@ -1,0 +1,21 @@
+en:
+  home:
+    attendance:
+      attendance: Attendance
+      student-body: Students
+      present: P
+      absent: A 
+      left: L
+      present-hover: Present students
+      absent-hover: Absent students
+      left-hover: Students who left
+
+    summary:
+      attendance: Attendance
+      highlighted: Highlighted
+      team: Team
+
+    posts:
+      highlight_post: Highlight post
+      publication_placeholder: What do you want to post? You can "@" people to mention them.
+      post: Post
