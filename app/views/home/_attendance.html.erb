@@ -1,0 +1,56 @@
+<section class='attendance-container' data-controller='attendance'>
+  <span class='h2-container'>
+    <h2 class='h2-attendance'><%=t('.attendance')%></h2>
+    <%= image_tag('Vector-up.svg', class:'vector-up', data: { action: 'click->attendance#toggle' }) %>
+  </span>
+  <table class='attendance-table' data-attendance-target='table'>
+    <tr class='tr-attendance'>
+      <th class='th-attendance th-student-body'><%=t('.student-body')%></th>
+      <th class='th-attendance text' data-hover='<%=t('.present-hover')%>'><%=t('.present')%></th>
+      <th class='th-attendance text' data-hover='<%=t('.absent-hover')%>'><%=t('.absent')%></th>
+      <th class='th-attendance text' data-hover='<%=t('.left-hover')%>'><%=t('.left')%></th>
+    </tr>
+    <tr class='tr-attendance'>
+      <td class='td-attendance'>Carla Rodriguez</td>
+      <td class='td-attendance'><span class='dot green-dot' ></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+    </tr>
+    <tr class='tr-attendance'>
+    <td class='td-attendance'>Facundo Lucero</td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot red-dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+    </tr>
+    <tr class='tr-attendance'>
+      <td class='td-attendance'>Juan Cruz Juez</td>
+      <td class='td-attendance'><span class='dot green-dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot yellow-dot'></span></td>
+    </tr>
+    <tr class='tr-attendance'>
+      <td class='td-attendance'>Micaela López</td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot red-dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+    </tr>
+    <tr class='tr-attendance'>
+      <td class='td-attendance'>Manuel Gómez</td>
+      <td class='td-attendance'><span class='dot green-dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+    </tr>
+    <tr class='tr-attendance'>
+      <td class='td-attendance'>María Romero</td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot red-dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+    </tr>
+    <tr>
+      <td class='td-attendance'>Pablo R. Monte</td>
+      <td class='td-attendance'><span class='dot green-dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><span class='dot'></span></td>
+    </tr>
+  </table>
+</section>

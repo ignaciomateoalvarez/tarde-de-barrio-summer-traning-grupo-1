@@ -1,0 +1,46 @@
+ <div class="comentarios">
+  <div>
+    <h1 class="comentario-h1"><%=t('.comments')%></h1>
+    <form action="" method="post">
+      <textarea class="conteiner-comment" placeholder="<%=t('.publication_placeholder')%>"></textarea>
+      <div class="icons-and-public-button">
+        <div class="slash-buttons">
+          <div class="icons-buttons">
+            <%= image_tag "smile.svg" %>
+            <%= image_tag "image.svg" %>
+          </div>
+          <input type="checkbox" value="1">
+          <label><%=t('.highlight_post')%></label>
+        </div>
+        <input type="submit" value=<%=t('.post')%> class="button-comment">
+      </div>
+    </form>
+  </div>
+  <div class="conteiner-text-comment">
+    <div class="text-comment-each">
+      Usuario1
+      12:34
+    </div>
+    <p class="text-comment">Este es el primer comentario</p>
+    <div class="text-comment-each">
+      Usuario2
+      13:45
+    </div>
+    <p class="text-comment">Este es el segundo comentario</p>
+  </div>
+    <div class="text-comment-each">
+      Usuario1
+      12:34
+    </div>
+    <p class="text-comment">Este es el primer comentario</p>
+      <div class="text-comment-each">
+      Usuario1
+      12:34
+    </div>
+    <p class="text-comment">Este es el primer comentario</p>
+      <div class="text-comment-each">
+      Usuario1
+      12:34
+    </div>
+    <p class="text-comment">Este es el primer comentario</p>
+</div>

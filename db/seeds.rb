@@ -1,30 +1,14 @@
 require 'faker'
 
-# 50.times do 
-#   first_name= Faker::Name.first_name
-#   last_name= Faker::Name.last_name
-#   full_name= first_name+last_name
-#   u= User.new(first_name: first_name, last_name: last_name, email: Faker::Internet.email(name: full_name),password:'123',deactivated: false) 
-#   unless u.save
-#     puts u.errors.full_messages
-#   end
-  
-# end
-User.create(first_name: "Cami", last_name: "alumne", email: "cami@gmail.com",password:'123', active: true, role: 0)
-User.create(first_name: "Charly", last_name: "Alumne", email: "charly@gmail.com",password:'123', active: true, role: 0)
-User.create(first_name: "Juan", last_name: "Bottassi", email: "juan@gmail.com",password:'123', active: true, role: 1)
-User.create(first_name: "Juli", last_name: "mentora", email: "juli@gmail.com",password:'123', active: true, role: 1)
-User.create(first_name: "Fere", last_name: "dementor", email: "fere@gmail.com",password:'123', active: true, role: 1)
-
-30.times do
-  User.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    email: Faker::Internet.unique.email,
-    password: '123'
-  )
-end
-
+User.create(first_name: 'Cami', last_name: 'alumne', email: 'cami@gmail.com', password: '123', active: true, role: 0)
+User.create(first_name: 'Charly', last_name: 'Alumne', email: 'charly@gmail.com', password: '123', active: true,
+            role: 0)
+User.create(first_name: 'Juan', last_name: 'Bottassi', email: 'juan@gmail.com', password: '123', active: true, role: 1)
+User.create(first_name: 'Juli', last_name: 'mentora', email: 'juli@gmail.com', password: '123', active: true, role: 1)
+User.create(first_name: 'Fere', last_name: 'dementor', email: 'fere@gmail.com', password: '123', active: true, role: 1)
+User.create(first_name: 'Carla', last_name: 'Campetella', email: 'carla@gmail.com', password: '123', active: true,
+            role: 1)
+User.create(first_name: 'Nicolas', last_name: 'García', email: 'nico@gmail.com', password: '123', active: true, role: 1)
 
 20.times do
   Student.create(

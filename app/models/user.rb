@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_many :students
   has_many :comments
   has_many :likes, dependent: :destroy
+  has_many :publications
 
   def save_with_validations(validate_password: true)
     self.validate_password = validate_password
