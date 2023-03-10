@@ -27,4 +27,6 @@ Rails.application.routes.draw do
       resources :answers, only: [:create]
     end
   end
+
+  post 'attendance/create_or_update', to: 'attendance#create_or_update'
 end

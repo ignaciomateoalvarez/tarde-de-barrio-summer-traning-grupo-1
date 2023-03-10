@@ -9,6 +9,7 @@ class Student < ApplicationRecord
 
   belongs_to :user
   has_many :comments
+  has_many :attendances
 
   def calculate_age
     Time.now.year - birth.year

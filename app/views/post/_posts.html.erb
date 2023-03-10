@@ -59,7 +59,7 @@
             </div>
             <div class='placeholder-answers'>
               <%= form_with(scope: :answer, url: post_answers_create_post_path(post), method: :post) do |form| %>
-                <%= form.text_area :reply, class:"aswers-textarea", placeholder: t('.placeholder_answer')%>
+                <%= form.text_area :reply, class:"aswers-textarea", placeholder: t('.placeholder')%>
                 <%= button_tag :submit, class: 'form-btn-sub-comment' do %>
                   <%= image_tag 'send.svg' %>
                 <% end %>
