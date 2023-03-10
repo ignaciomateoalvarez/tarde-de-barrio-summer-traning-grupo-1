@@ -24,6 +24,8 @@
   background: #FFFFFF;
   box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  height: 40rem;
+  overflow-y: auto;
   }
 
 .small-box {

@@ -5,7 +5,8 @@
     </button>
     <div class="slide-menu" data-logout-target="menu">
       <div class="slide-menu-item-saludo" >
-        <li><h1 class="slide-menu-item-saludo-h1"><%=t('.hi')%> <%= current_user.first_name %></h1></li>
+        <h1 class="slide-menu-item-saludo-h1"><%=t('.hi')%> <%= "#{current_user.first_name} "  %></h1>
+        <h2 class='slide-menu-item-saludo-h2'><%= "(#{translate_enum(User, 'role', current_user.role)})" %></h2>
       </div>
       <div class="slide-menu-item">
         <li><%=t('.profile')%></li>

@@ -1,0 +1,15 @@
+<span class="likes-count" id="<%=dom_id(post, :like)%>">
+  <% if post.likes.any? %>
+    <%= post.likes.count%>
+  <% end%>
+  <% liked = post.likes.find { |like| like.user_id == current_user.id} %>
+  <% if liked%>
+    <%= button_to post_likes_destroy_post_path(post), method: :delete do %>
+      <%= image_tag("thumbs-down.svg") %>
+    <%end%>
+  <%else%>
+    <%= button_to post_likes_create_post_path(post), method: :post do %>
+        <%=image_tag("thumbs-up.svg")%>
+    <%end%>
+  <%end%>
+</span>  

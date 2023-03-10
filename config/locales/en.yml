@@ -39,6 +39,10 @@ en:
         primary: Primary School
         secondary: Secondary School
   
+      user/role:
+        administrador: admin
+        colaborador: collab
+
   date:
     formats:
       month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]

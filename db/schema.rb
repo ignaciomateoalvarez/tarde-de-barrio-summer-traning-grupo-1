@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_133624) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_08_231908) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -44,10 +44,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_133624) do
 
   create_table "answers", force: :cascade do |t|
     t.text "reply"
-    t.bigint "comment_id", null: false
+    t.bigint "comment_id"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "post_id"
     t.index ["comment_id"], name: "index_answers_on_comment_id"
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
@@ -68,6 +69,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_133624) do
     t.integer "comment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "post_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text "body"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "highlight", default: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "students", force: :cascade do |t|

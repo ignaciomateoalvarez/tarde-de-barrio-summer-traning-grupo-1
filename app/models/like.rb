@@ -1,7 +1,6 @@
 class Like < ApplicationRecord
-  belongs_to :comment
+  belongs_to :comment, optional: true
   belongs_to :user
-  belongs_to :publication
+  belongs_to :post, optional: true
 
-  validates :user_id, uniqueness: { scope: %i[comment_id user_id] }
 end

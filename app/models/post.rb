@@ -1,6 +1,5 @@
-class Comment < ApplicationRecord
+class Post < ApplicationRecord
 
-  belongs_to :student
   belongs_to :user
   has_many :answers
   has_many :likes, dependent: :destroy
@@ -11,7 +10,7 @@ class Comment < ApplicationRecord
   scope :not_highlighted, -> { where(highlight: false) }
 
   validate :correct_file_type
-
+  
   private
 
   def correct_file_type

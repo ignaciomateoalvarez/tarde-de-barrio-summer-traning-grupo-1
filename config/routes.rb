@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root 'home#index'
+  root 'post#index'
+  resources :post, only: [:create] do
+    post 'likes/create_post'
+    delete 'likes/destroy_post'
+    post 'answers/create_post'
+  end
 
   delete 'logout' => 'session#destroy', :as => 'logout'
   get 'login' => 'session#login', :as => 'get_login'

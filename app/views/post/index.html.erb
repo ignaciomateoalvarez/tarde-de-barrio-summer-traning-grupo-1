@@ -1,12 +1,14 @@
 <%= render "navbar/nav" %>
 <div class="container">
   <div class="big-box">
-    <%= render partial: 'posts'%>
+    <%= render partial: 'posts', locals: {posts: @posts} %>
   </div>
+  <div class='small-box-wrapper'>
     <div class="small-box box-2">
       <%= render partial: 'attendance'%>
     </div>
     <div class="small-box box-1">
       <%= render partial: 'summary'%>
+    </div>
   </div>
 </div>

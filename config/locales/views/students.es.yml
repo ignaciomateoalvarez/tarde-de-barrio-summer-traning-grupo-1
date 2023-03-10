@@ -52,7 +52,7 @@ es:
        message: ¿Seguro deseas eliminar este estudiante?
        delete: Eliminar
 
-    comment:
+    comments:
       today: Hoy
       placeholder_answer: Escribe tu comentario. Recuerda que puedes utilizar “@” para mencionar personas.
 

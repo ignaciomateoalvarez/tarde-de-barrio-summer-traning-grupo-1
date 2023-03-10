@@ -1,5 +1,5 @@
 es:
-  home:
+  post:
     attendance:
       attendance: Asistencia
       student-body: Alumnado
@@ -16,6 +16,11 @@ es:
       team: Equipo
 
     posts:
-      highlight_post: Destacar publicación
-      publication_placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
+      highlight_comment: Destacar publicación
+      placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
       post: Publicar
+      news: Novedades
+      
+    create:
+      warning: Publicación no creada
+      notice: Publicación creada 
