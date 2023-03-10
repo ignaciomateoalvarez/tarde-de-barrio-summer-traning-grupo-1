@@ -1,4 +1,4 @@
-<section class='attendance-container' data-controller='attendance'>
+<section class='attendance-container'>
   <span class='h2-container'>
     <h2 class='h2-attendance'><%=t('.attendance')%></h2>
     <%= image_tag('Vector-up.svg', class:'vector-up', data: { action: 'click->attendance#toggle' }) %>
@@ -10,47 +10,16 @@
       <th class='th-attendance text' data-hover='<%=t('.absent-hover')%>'><%=t('.absent')%></th>
       <th class='th-attendance text' data-hover='<%=t('.left-hover')%>'><%=t('.left')%></th>
     </tr>
+    <% students.each do |student| %>
     <tr class='tr-attendance'>
-      <td class='td-attendance'>Carla Rodriguez</td>
-      <td class='td-attendance'><span class='dot green-dot' ></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
+      <td class='td-attendance'><%= " #{student.name} #{student.lastname}"%> </td>
+      <td><%= form_with url: attendance_create_or_update_path, method: :post, data: { controller: 'attendance', 'attendance-url-value': attendance_create_or_update_path, attendance_student_id_value: student.id } do |form| %> 
+        <label><%= form.radio_button :state, 0, data: {action: 'change->attendance#submit'}  %></label>
+        <label><%= form.radio_button :state, 1, data: {action: 'change->attendance#submit'} %></label>
+        <label><%= form.radio_button :state, 2, data: {action: 'change->attendance#submit'} %></label>
+      </td>
+      <%end%>
     </tr>
-    <tr class='tr-attendance'>
-    <td class='td-attendance'>Facundo Lucero</td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot red-dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-    </tr>
-    <tr class='tr-attendance'>
-      <td class='td-attendance'>Juan Cruz Juez</td>
-      <td class='td-attendance'><span class='dot green-dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot yellow-dot'></span></td>
-    </tr>
-    <tr class='tr-attendance'>
-      <td class='td-attendance'>Micaela López</td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot red-dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-    </tr>
-    <tr class='tr-attendance'>
-      <td class='td-attendance'>Manuel Gómez</td>
-      <td class='td-attendance'><span class='dot green-dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-    </tr>
-    <tr class='tr-attendance'>
-      <td class='td-attendance'>María Romero</td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot red-dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-    </tr>
-    <tr>
-      <td class='td-attendance'>Pablo R. Monte</td>
-      <td class='td-attendance'><span class='dot green-dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-      <td class='td-attendance'><span class='dot'></span></td>
-    </tr>
+    <%end%>
   </table>
 </section>

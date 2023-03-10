@@ -47,6 +47,7 @@
   order: -1;
   overflow-y: auto;
   width: auto;
+  height: 30rem;
 }
 
 .hidden {
