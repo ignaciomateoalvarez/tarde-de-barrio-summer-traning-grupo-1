@@ -6,6 +6,10 @@ es:
         primary: Primaria
         secondary: Secundaria
 
+      user/role:
+        administrador: admin
+        colaborador: collab
+    
     errors:
       models:
         comment:

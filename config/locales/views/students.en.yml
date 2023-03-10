@@ -50,6 +50,6 @@ en:
       highlight_comment: Highlight comment
       post: Post
 
-    comment:
-      today: Hoy
+    comments:
+      today: Today
       placeholder_answer: Write your comment. You can "@" people to mention them. 

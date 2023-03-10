@@ -34,6 +34,7 @@
 	width: 100%;
 	border-bottom: 0.0625rem solid #0090AF;
 	align-items: center;
+	gap: 0.3125rem;
 }
 
 .slide-menu-item-saludo-h1{
@@ -45,6 +46,15 @@
 	color: #0090AF;
 	align-self: flex-start;
 	margin-left: 3.125rem;
+}
+
+.slide-menu-item-saludo-h2 {
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 500;
+	font-size: 0.9375rem;
+	line-height: 1.125rem;
+	color: #BEC2C4;
 }
 
 .slide-menu-item{
