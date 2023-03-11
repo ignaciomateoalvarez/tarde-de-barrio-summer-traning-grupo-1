@@ -15,12 +15,12 @@ es:
       highlighted: Destacado
       team: Equipo
 
-    posts:
+    form:
       highlight_comment: Destacar publicación
       placeholder: ¿Qué deseas publicar?. Puedes utilizar “@” para mencionar personas.
       post: Publicar
       news: Novedades
-      
+
     create:
       warning: Publicación no creada
       notice: Publicación creada 

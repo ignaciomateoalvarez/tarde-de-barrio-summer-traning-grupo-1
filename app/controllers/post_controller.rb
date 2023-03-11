@@ -3,7 +3,12 @@ class PostController < ApplicationController
 
   def index
     @presenter = PostPresenter.new(Post.all)
-    @posts = @presenter.order_by_day
+    @date = params[:date]&.to_date || Date.today
+    @posts = @presenter.order_by_day(@date)
+    @highlighted_post_count = Post.highlighted.count
+    @students = Student.all
+    @users = User.all
+    @attendances = Attendance.all
   end
 
   def create
@@ -18,6 +23,6 @@ class PostController < ApplicationController
   private
 
   def post_params
-    params.require(:post_home).permit(:body, attachment: []).merge(user_id: current_user.id)
+    params.require(:post_home).permit(:body, :highlight, attachment: []).merge(user_id: current_user.id)
   end
 end

@@ -21,12 +21,11 @@ Rails.application.routes.draw do
   end
   resources :students do
     get 'delete_modal', to: 'students#delete_modal', on: :member
+    post 'attendance/create_or_update'
     resources :comments, only: [:create] do
       post 'likes/create'
       delete 'likes/destroy'
       resources :answers, only: [:create]
     end
   end
-
-  post 'attendance/create_or_update', to: 'attendance#create_or_update'
 end

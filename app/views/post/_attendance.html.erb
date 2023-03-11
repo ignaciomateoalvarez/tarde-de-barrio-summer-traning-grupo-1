@@ -11,14 +11,13 @@
       <th class='th-attendance text' data-hover='<%=t('.left-hover')%>'><%=t('.left')%></th>
     </tr>
     <% students.each do |student| %>
-    <tr class='tr-attendance'>
+    <tr class='tr-attendance' data-controller='attendance' data-attendance-url-value='<%= student_attendance_create_or_update_path(student) %>'>
       <td class='td-attendance'><%= " #{student.name} #{student.lastname}"%> </td>
-      <td><%= form_with url: attendance_create_or_update_path, method: :post, data: { controller: 'attendance', 'attendance-url-value': attendance_create_or_update_path, attendance_student_id_value: student.id } do |form| %> 
-        <label><%= form.radio_button :state, 0, data: {action: 'change->attendance#submit'}  %></label>
-        <label><%= form.radio_button :state, 1, data: {action: 'change->attendance#submit'} %></label>
-        <label><%= form.radio_button :state, 2, data: {action: 'change->attendance#submit'} %></label>
+      <td>
+        <%= radio_button_tag "assistant#{student.id}", 0, false, data: {action: 'click->attendance#submit'} %>
+        <%= radio_button_tag "assistant#{student.id}", 1, false, data: {action: 'click->attendance#submit'} %>
+        <%= radio_button_tag "assistant#{student.id}", 2, false, data: {action: 'click->attendance#submit'} %>
       </td>
-      <%end%>
     </tr>
     <%end%>
   </table>

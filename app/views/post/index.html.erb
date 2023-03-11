@@ -1,14 +1,30 @@
 <%= render "navbar/nav" %>
+<div>
+  <div class="month-year">
+    <%= @date.strftime("%B %Y") %>
+  </div>
+  <div class ="day-number">
+  <%= link_to root_path(date: @date - 1.day) do %>
+    <%= tag.button "<" %>
+  <% end %>
+  <%= link_to root_path(date: @date + 1.day) do %>
+    <%= tag.button ">"%>
+  <% end %>
+    <%= @date.strftime("%A %d") %>
+  </div>
+</div>
 <div class="container">
   <div class="big-box">
-    <%= render partial: 'posts', locals: {posts: @posts} %>
+    <%= render partial: 'form' %>
+    <%= render partial: 'posts', locals: { posts: @presenter.grouped_posts(@date)[:highlighted], student: current_user } %>
+    <%= render partial: 'posts', locals: { posts: @presenter.grouped_posts(@date)[:not_highlighted], student: current_user } %>
   </div>
   <div class='small-box-wrapper'>
     <div class="small-box box-2">
-      <%= render partial: 'attendance', locals: {students: Student.all} %>
+      <%= render partial: 'attendance', locals: {students: @students} %>
     </div>
     <div class="small-box box-1">
-      <%= render partial: 'summary'%>
+      <%= render partial: 'summary', locals: {users: @users, attendances: @attendances} %>
     </div>
   </div>
 </div>

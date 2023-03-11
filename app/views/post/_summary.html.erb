@@ -8,17 +8,25 @@
       <td class='td-summary yellow-circle'>1</td>
     </tr>
     <tr class='tr-attendance'>
-      <th class='th-attendance th-student-body'><%=t('.highlighted')%></th>
-      <td>
-        <p class='q-highlight'>1</p>
-      </td>
+      <% if @presenter.highlighted_post_count %>
+        <th class='th-attendance th-student-body'><%= t('.highlighted') %></th>
+        <td>
+          <p class='q-highlight'><%= @presenter.highlighted_post_count %></p>
+        </td>
+      <% end %>
     </tr>
     <tr class='tr-attendance'>
       <th class='th-attendance th-student-body'><%=t('.team')%></th>
       <td colspan=3>
-        <ul class='td-attendance'>Agustina Chirino</ul>
-        <ul class='td-attendance'>Nicolas García</ul>
-        <ul class='td-attendance'>Agustina Chirino</ul>
+        <ul>
+          <%users.each do |user|%>
+          <% if user.role == 'colaborador'%>
+            <li>
+              <%=user.decorate.full_name_user %>
+            <%end%>
+            </li>
+          <%end%>
+        </ul>
       </td>
     </tr>
   </table>
