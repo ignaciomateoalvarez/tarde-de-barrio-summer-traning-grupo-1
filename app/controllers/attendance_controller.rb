@@ -5,14 +5,14 @@ class AttendanceController < ApplicationController
     if @attendance
       @attendance.update(attendance_params)
     else
-      @attendance = Attendance.create(attendance_params)
+      @attendance = Attendance.new(attendance_params)
+      @attendance.save
     end
   end
 
   private
 
   def attendance_params
-    params.require(:attendance).permit(:state, :date).merge(student_id: params[:student_id])
+    params.require(:attendance).permit(:state, :date, :student_id).merge(student_id: params[:student_id])
   end
-
 end

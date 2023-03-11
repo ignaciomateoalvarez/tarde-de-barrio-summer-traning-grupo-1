@@ -1,0 +1,23 @@
+<div class="comentarios">
+    <h1 class=comentario-h1><%=t('.news')%></h1>
+    <%= form_with scope: :post_home, url: post_index_path, method: :post, data: {controller: 'emoji'} do |form| %>
+      <%= form.text_area :body, class:"conteiner-comment", placeholder: t('.placeholder'), data: { 'emoji-target': 'body'} %>
+      <div class='icons-and-public-button'>
+        <div class='slash-buttons'>
+          <div class='icons-buttons'>
+            <div data-emoji-target = 'pickerContainer' class='my-picker-comment'></div>
+            <%= image_tag "smile.svg", data: { 'emoji-target': 'button', action: 'click->emoji#open' }%>
+            <div data-controller="file" class='file-tbtn' >
+              <%= image_tag "image.svg", data: { action: 'click->file#openFileDialog' } %>
+              <%= form.file_field :attachment, multiple: true, data: {action: 'change->file#addFile'},class:"choosebtn"%>
+              <ul data-file-target='list'> </ul>
+              <ul data-file-target="image"> </ul>
+            </div>
+          </div>
+          <%= form.check_box :highlight , class: 'highlight-checkbox' %>
+          <label><%= t('.highlight_comment') %></label>
+        </div>
+        <%= form.submit t('.post'), class:'button-comment' %>
+      </div>
+    <% end %>
+  </div>

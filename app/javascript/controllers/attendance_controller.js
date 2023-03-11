@@ -11,7 +11,7 @@ export default class extends Controller {
     this.tableTarget.classList.toggle('hidden');
   }
 
-  submit() {
+  submit(event) {
     const csrfToken = document.querySelector("[name='csrf-token']").content
     return fetch(this.urlValue, {
       method: "POST",
@@ -19,7 +19,7 @@ export default class extends Controller {
         "X-CSRF-Token": csrfToken,
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ student_id: this.studentIdValue })
+      body: JSON.stringify({ student_id: this.studentIdValue, state: parseInt(event.target.value) })
     }) 
   }
 }

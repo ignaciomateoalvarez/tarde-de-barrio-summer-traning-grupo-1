@@ -52,4 +52,23 @@
 
 .hidden {
   display: none;
-} 
+}
+
+.month-year {
+  height: auto;
+  width: auto;
+  margin-left: 2rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.day-number {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
