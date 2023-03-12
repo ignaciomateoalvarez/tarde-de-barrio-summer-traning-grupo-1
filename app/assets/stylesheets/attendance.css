@@ -51,6 +51,12 @@ table {
 
 .tr-attendance {
   border-bottom: 0.0625rem solid #BDBDBD;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.tr-attendance1 {
+  border-bottom: 0.0625rem solid #BDBDBD;
 }
 
 .td-attendance {

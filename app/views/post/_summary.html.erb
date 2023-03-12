@@ -1,13 +1,13 @@
 <section class='attendance-summary-table'  data-controller='attendance'> 
   <%= image_tag('Vector-up.svg', class:'vector-up-summary', data: { action: 'click->attendance#toggle' }) %>
   <table class='summary-table' data-attendance-target='table'>
-    <tr class='tr-attendance'>
+    <tr class='tr-attendance1'>
       <th class='th-attendance th-student-body'><%=t('.attendance')%></th>
       <td class='td-summary green-circle'>4</td>
       <td class='td-summary red-circle'>3</td>
       <td class='td-summary yellow-circle'>1</td>
     </tr>
-    <tr class='tr-attendance'>
+    <tr class='tr-attendance1'>
       <% if @presenter.highlighted_post_count %>
         <th class='th-attendance th-student-body'><%= t('.highlighted') %></th>
         <td>
@@ -15,7 +15,7 @@
         </td>
       <% end %>
     </tr>
-    <tr class='tr-attendance'>
+    <tr class='tr-attendance1'>
       <th class='th-attendance th-student-body'><%=t('.team')%></th>
       <td colspan=3>
         <ul>
